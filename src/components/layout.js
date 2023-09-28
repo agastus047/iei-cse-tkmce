@@ -3,7 +3,8 @@ import Footer from "./Footer";
 import Head from "next/head";
 
 export default function Layout({children}) {
-    return(<>
+    return(
+    <>
         <Head>
             <title>IEI CSE TKMCE</title>
         </Head>
@@ -12,5 +13,6 @@ export default function Layout({children}) {
             <main className="flex-auto">{children}</main>
             <Footer/>
         </div>
-    </>);
+    </>
+    );
 };
