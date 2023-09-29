@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height:{
+        '500': '500px',
+      },
+      width: {
+        '500': '500px',
+       },
       fontFamily:{
         Michroma:['Michroma'],
       },
