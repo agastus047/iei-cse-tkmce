@@ -26,15 +26,15 @@ const TestComponent2 = () => {
     background: '#1F2025',
     
     zIndex: '0',
-    clipPath: ' polygon(21% 0, 100% 0, 100% 0, 100% 70%, 100% 100%, 13% 100%, 1% 89%, 0 20%)',
+    clipPath: 'polygon(0% 30%, 30% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 80%)',
    
   };
 
   return (
     <div className='flex-col'>
-      <div className='flex justify-between md:gap-10 gap-5 items-center mb-10 mr-0'>
+      <div className='flex justify-between md:gap-10 lg:gap-20 xs:gap-5 xxs:gap-5 items-center mb-10 mr-0'>
         <div className='flex-col font-Michroma ml-10 lg:ml-20 w-3/6 text-left'>
-          <h1 className='text-white mb-10 font-semibold lg:text-6xl text-5xl'>Vision</h1>
+          <h1 className='text-white mb-10 font-semibold lg:text-6xl xs:text-2xl xxs:text-2xl xxxs:text-2xl text-5xl'>Vision</h1>
           <p className='text-white lg:text-2xl text-l font-normal xs:p-2'>"A pathway to technological realm"<br /> We envision to be one of the vibrant professional society of technologists and applied scientists in the world.</p>
         </div>
         <div style={customBoxShadowStyle1}>
@@ -44,13 +44,13 @@ const TestComponent2 = () => {
             height={400}
             width={450}
             alt="Picture of the author"
-            className='lg:w-500 lg:h-500 xs:w-40 w-64 h-64'
+            className='lg:w-500 lg:h-500 sm:w-72 sm:h-72  xxs:w-40 xxs:h-40 xxxs:w-36 w-64 h-64'
           />
         </div>
-        <div style={customBoxShadowStyle4} className='lg:w-350 lg:h-350 lg:right-44 lg:mb-36 md:right-16 md:w-32 sm:right-24  xs:w-16 xs:mb-12 xs:right-28 xxs:right-16 xxs:w-16  w-48 h-52  mb-8 '></div>
+        <div style={customBoxShadowStyle4} className='lg:w-350 lg:h-350  lg:right-40  lg:mb-36 md:right-16 md:w-64 md:h-64  sm:right-16 sm:w-60 sm:h-60 xs:h-32      xxs:right-8 xxs:w-32 xxs:h-32  xxxs:w-12 xxxs:right-3 w-48 h-52  mb-8 '></div>
       </div>
 
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between lg:gap-20 items-center'>
       <div className='lg:w-500 lg:h-500  w-3/6   h-64'>
       <Image
 
@@ -59,10 +59,10 @@ const TestComponent2 = () => {
         width={500}
         height={500}
         alt="Picture of the author"
-        className='lg:w-500 lg:h-500 xs:w-42 xxs:w-36 w-44 h-64'
+        className='lg:w-500 lg:h-500 sm:w-72 sm:h-72  xxs:w-40 xxs:h-40 w-44 h-64'
       />
     </div>
-    <div style={customBoxShadowStyle3} className='lg:w-400 lg:h-400 lg:ml-20 lg:mb-64 xs:w-30 xs:ml-6 xxs:w-28 xxs:ml-6 w-52 h-64 mb-12 ml-2'>
+    <div style={customBoxShadowStyle3} className='lg:w-400 lg:h-400 lg:ml-20 lg:mb-64 sm:w-64 sm:h-64   sm:mb-12  xxs:w-32 xxs:h-32 xxs:mb-48 xxs:ml-6 w-52 h-64  ml-2'>
       </div>
 
       <div className='flex-col font-Michroma mr-5 lg:mr-10 w-3/6 text-right'>
