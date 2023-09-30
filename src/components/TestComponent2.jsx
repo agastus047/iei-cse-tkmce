@@ -32,9 +32,9 @@ const TestComponent2 = () => {
 
   return (
     <div className='flex-col'>
-      <div className='flex justify-between md:gap-10 lg:gap-20 xs:gap-5 xxs:gap-5 items-center mb-10 mr-0'>
+      <div className='flex justify-between md:gap-10 lg:gap-5 xs:gap-5 xxs:gap-5 items-center mb-10 mr-0'>
         <div className='flex-col font-Michroma ml-10 lg:ml-20 w-3/6 text-left'>
-          <h1 className='text-white mb-10 font-semibold lg:text-6xl xs:text-2xl xxs:text-2xl xxxs:text-2xl text-5xl'>Vision</h1>
+          <h1 className='text-white mb-10 xxs:mb-5 font-semibold lg:text-6xl xs:text-2xl xxs:text-2xl xxxs:text-2xl text-5xl'>Vision</h1>
           <p className='text-white lg:text-2xl text-l font-normal xs:p-2'>"A pathway to technological realm"<br /> We envision to be one of the vibrant professional society of technologists and applied scientists in the world.</p>
         </div>
         <div style={customBoxShadowStyle1}>
@@ -47,7 +47,7 @@ const TestComponent2 = () => {
             className='lg:w-500 lg:h-500 sm:w-72 sm:h-72  xxs:w-40 xxs:h-40 xxxs:w-36 w-64 h-64'
           />
         </div>
-        <div style={customBoxShadowStyle4} className='lg:w-350 lg:h-350  lg:right-40  lg:mb-36 md:right-16 md:w-64 md:h-64  sm:right-16 sm:w-60 sm:h-60 xs:h-32      xxs:right-8 xxs:w-32 xxs:h-32  xxxs:w-12 xxxs:right-3 w-48 h-52  mb-8 '></div>
+        <div style={customBoxShadowStyle4} className='xl:w-350 xl:h-350  xl:right-48 lg:w-350 lg:h-350  lg:right-40  lg:mb-36 md:right-16 md:w-64 md:h-64  sm:right-16 sm:w-60 sm:h-60 min-[390px]:right-12 max-[640px]:right-12     xxs:right-8 xxs:w-32 xxs:h-32  xxxs:w-12 xxxs:right-3 w-48 h-52  mb-8 '></div>
       </div>
 
       <div className='flex justify-between lg:gap-20 items-center'>
