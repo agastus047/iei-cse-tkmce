@@ -6,7 +6,7 @@ export default function Home() {
     <main>
     
       <div>Home Page</div>
-      <TestComponent/>
+      
       <TestComponent2/>
     </main>
   )

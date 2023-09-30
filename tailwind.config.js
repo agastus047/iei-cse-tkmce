@@ -9,9 +9,15 @@ module.exports = {
     extend: {
       height:{
         '500': '500px',
+        '400':'400px',
+        '350':'350px',
       },
       width: {
         '500': '500px',
+        '400':'400px',
+        '450':'450px',
+        '350':'350px',
+
        },
       fontFamily:{
         Michroma:['Michroma'],
@@ -21,6 +27,11 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens:{
+        'xs':'390px',
+        
+        'xxs':'360px',
+      }
     },
   },
   plugins: [],
