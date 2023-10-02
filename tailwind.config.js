@@ -10,6 +10,10 @@ module.exports = {
       backgroundColor: {
         'nav-bg': '#222831',
       },
+      fontFamily: {
+        clash : ['Clash'],
+        michroma:['Michroma'],
+      }
     },
   },
   plugins: [],
