@@ -11,7 +11,7 @@ module.exports = {
         'nav-bg': '#222831',
       },
       fontFamily: {
-        clash : ['Clash'],
+        clash : ['var(--font-clash)'],
         michroma:['Michroma'],
       }
     },
