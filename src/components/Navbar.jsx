@@ -11,8 +11,8 @@ function NavLink({to, children}) {
 
 function MobileNav({open, setOpen}) {
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-            <div className="flex items-center justify-center filter drop-shadow-md bg-nav-bg h-20">
+        <div className={`absolute top-0 left-0 h-screen w-60 bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
+            <div className="ml-3 flex items-center justify-center bg-white h-20">
                 <Link className="text-xl font-semibold" href="/">
                   <Image
                     src={Logo}
@@ -23,7 +23,7 @@ function MobileNav({open, setOpen}) {
                   />
                 </Link>
             </div>
-            <div className="flex flex-col ml-4 items-center">
+            <div className="mt-10 flex flex-col ml-4 gap-5 items-center">
                 <Link className="hover:text-[#00ADB5] text-xl font-medium my-4" href="/" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Home
                 </Link>
