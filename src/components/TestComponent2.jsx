@@ -42,12 +42,12 @@ const TestComponent2 = () => {
           <img src="/vision.png"
             
             alt="Picture of the author"
-            className='xl:w-500 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36   '
+            className='xl:w-450 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36   '
           ></img>
           
         </div>
         
-        <div style={customBoxShadowStyle4} className='xl:w-350 xl:h-350  xl:right-48 lg:w-300 lg:h-300  lg:right-32  lg:mb-32 md:right-16 md:w-64 md:h-64  sm:right-16 sm:w-60 sm:h-60 min-[390px]:right-12 max-[640px]:right-12        w-28 h-28 mb-8' ></div>
+        <div style={customBoxShadowStyle4} className='xl:w-350 xl:h-400  xl:right-32 lg:w-300 lg:h-350  lg:right-32  lg:mb-24 md:right-16 md:w-64 md:h-64  sm:right-16 sm:w-60 sm:h-60 min-[390px]:right-12 max-[640px]:right-12        w-28 h-28 mb-8' ></div>
         
         </div>
 
@@ -63,7 +63,7 @@ const TestComponent2 = () => {
         className='xl:w-500 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36  '
       />
     </div>
-    <div style={customBoxShadowStyle3} className='xl:w-400 xl:h-400 lg:w-350 lg:h-350  lg:ml-20 lg:mb-64 sm:w-64 sm:h-64   sm:mb-12  w-28 h-28 ml-7 mb-48'>
+    <div style={customBoxShadowStyle3} className='xl:w-400 xl:h-400 lg:w-350 xl:ml-20 lg:h-350 xl:mb-56  lg:ml-12 lg:mb-64 sm:w-64 sm:h-64   sm:mb-12  w-28 h-28 ml-7 mb-48'>
       </div>
 
       <div className='flex-col font-Michroma mr-5 lg:mr-10 w-3/6 text-right items-center'>
