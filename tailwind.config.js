@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'nav-bg': '#222831',
+        'nav-bg': '#393E46',
       },
       fontFamily: {
         clash : ['Clash'],
         michroma:['Michroma'],
+        oldeenglish: ['Olde English'], 
       }
     },
   },

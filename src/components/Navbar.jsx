@@ -4,14 +4,14 @@ import Image from "next/image";
 import Logo from "/public/assets/logo.png";
 
 function NavLink({to, children}) {
-    return <Link href={to} className={`mx-4 text-white text-xl hover:text-[#00ADB5]`}>
+    return <Link href={to} className={`mx-4 text-white text-2xl hover:text-[#00ADB5]`}>
         {children}
     </Link>
 }//styling
 
 function MobileNav({open, setOpen}) {
     return (
-        <div className={`absolute top-0 left-0 h-screen w-60 bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
+        <div className={`absolute top-0 left-0 h-screen w-80 bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="ml-3 flex items-center justify-center bg-white h-20">
                 <Link className="text-xl font-semibold" href="/">
                   <Image
@@ -50,8 +50,8 @@ export default function Navbar() {
     return (
         <nav className="flex filter drop-shadow-md bg-nav-bg px-4 py-8 h-28 items-center">
             <MobileNav open={open} setOpen={setOpen}/>
-            <div className="w-3/12 p-14 flex items-center">
-                <Link className="text-2xl font-semibold" href="/">
+            <div className="w-3/12 p-6 flex items-center">
+                <Link className="text-2xl font-semibold hidden md:block" href="/">
                   <Image
                     src={Logo}
                     alt="Logo"
@@ -67,9 +67,9 @@ export default function Navbar() {
                     setOpen(!open)
                 }}>
                     {/* hamburger custom */}
-                    <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
-                    <span className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                    <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
+                    <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
+                    <span className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
+                    <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
                 </div>
 
                 <div className="hidden md:flex md:gap-24">
