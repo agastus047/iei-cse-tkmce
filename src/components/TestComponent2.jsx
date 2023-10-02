@@ -63,7 +63,7 @@ const TestComponent2 = () => {
         className='xl:w-500 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36  '
       />
     </div>
-    <div style={customBoxShadowStyle3} className='xl:w-400 xl:h-400 lg:w-350 lg:h-350  lg:ml-10 lg:mb-64 sm:w-64 sm:h-64   sm:mb-12  w-28 h-28 ml-7 mb-48'>
+    <div style={customBoxShadowStyle3} className='xl:w-400 xl:h-400 lg:w-350 lg:h-350  lg:ml-20 lg:mb-64 sm:w-64 sm:h-64   sm:mb-12  w-28 h-28 ml-7 mb-48'>
       </div>
 
       <div className='flex-col font-Michroma mr-5 lg:mr-10 w-3/6 text-right items-center'>
