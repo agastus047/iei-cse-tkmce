@@ -7,11 +7,11 @@ export default function Footer() {
   return (
     <div className="bg-[#222831] pt-4 md:pt-8 pb-4 md:pb-8 grid md:grid-cols-12 px-5 md:px-20 gap-2 md:gap-20 font-michroma" >
       <div className="grid md:col-span-6 gap-2 md:gap-4">
-        <div className="text-4xl text-white font-bold font-clash tracking-wider">
-          IEI TKMCE
+        <div className="text-l text-white font-bold font-clash tracking-wider">
+          IEI CSE TKMCE
 
         </div>
-        <div className="text-xl text-white">
+        <div className="text-xs text-white">
           A pathway to technological realm” We envision to be one of the vibrant professional society of technologists and applied scientists in the world.
         </div>
         <div className='flex gap-2 md:gap-4'>
@@ -21,41 +21,41 @@ export default function Footer() {
           <LinkedInIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
           <WhatsAppIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
         </div>
-        <div className='text-white text-xl'>
+        <div className='text-white text-xs'>
         Terms and condisions
         </div>
       </div>
       <div className="grid md:col-span-6 md:grid-cols-6 gap-2 md:gap-4">
         <div className='grid col-span-2 gap-1 place-content-start'>
-          <div className='text-white font-semibold text-2xl'>
+          <div className='text-white font-semibold text-xs'>
             ABOUT
           </div>
-          <div className='text-white text-xl '>
+          <div className='text-white text-xs hidden md:block'>
             About Us
           </div>
-          <div className='text-white text-xl'>
+          <div className='text-white text-xs hidden md:block'>
             Vision
           </div>
-          <div className='text-white text-xl'>
+          <div className='text-white text-xs hidden md:block'>
             Mision
           </div>
         </div>
         <div className='grid col-span-2 gap-2 place-content-start'>
-          <div className='text-white font-semibold text-2xl'>
+          <div className='text-white font-semibold text-xs'>
             TEAM
           </div>
-          <div className='text-white text-xl '>
+          <div className='text-white text-xs hidden md:block'>
             Execom
           </div>
-          <div className='text-white text-xl'>
+          <div className='text-white text-xs hidden md:block'>
             Web Team
           </div>   
         </div>
         <div className='grid col-span-2 gap-2 place-content-start'>
-          <div className='text-white font-semibold text-2xl '>
+          <div className='text-white font-semibold text-xs '>
             CONTACT
           </div>
-          <div className='text-white text-xl '>
+          <div className='text-white text-xs hidden md:block'>
             ieicse@tkmce.in
           </div>
         </div>
