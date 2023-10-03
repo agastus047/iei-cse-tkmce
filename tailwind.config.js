@@ -7,6 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height:{
+        '500': '500px',
+        '400':'400px',
+        '350':'350px',
+        '350':'300px',
+        '420':'420px',
+
+      },
+      width: {
+        '500': '500px',
+        '400':'400px',
+        '450':'450px',
+        '350':'350px',
+        '300':'300px',
+
+       },
+     
       backgroundColor: {
         'nav-bg': '#393E46',
       },
@@ -14,6 +31,7 @@ module.exports = {
         clash : ['var(--font-clash)'],
         michroma:['Michroma'],
         oldeenglish: ['Olde English'], 
+        Poppins:['Poppins'],
       }
     },
   },

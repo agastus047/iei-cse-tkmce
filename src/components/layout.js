@@ -9,7 +9,8 @@ const myFont = localFont({
 });
 
 export default function Layout({children}) {
-    return(<>
+    return(
+    <>
         <Head>
             <title>IEI CSE TKMCE</title>
         </Head>
@@ -18,5 +19,6 @@ export default function Layout({children}) {
             <main className="flex-auto">{children}</main>
             <Footer/>
         </div>
-    </>);
+    </>
+    );
 };
