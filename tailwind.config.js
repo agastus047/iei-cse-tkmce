@@ -23,11 +23,16 @@ module.exports = {
         '300':'300px',
 
        },
-      fontFamily:{
-        Poppins:['Poppins'],
-      },
      
-      
+      backgroundColor: {
+        'nav-bg': '#393E46',
+      },
+      fontFamily: {
+        clash : ['var(--font-clash)'],
+        michroma:['Michroma'],
+        oldeenglish: ['Olde English'], 
+        Poppins:['Poppins'],
+      }
     },
   },
   plugins: [],

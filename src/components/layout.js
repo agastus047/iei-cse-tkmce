@@ -1,6 +1,12 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Head from "next/head";
+import localFont from 'next/font/local';
+
+const myFont = localFont({
+  src: '../../public/fonts/ClashDisplay-Bold.otf',
+  variable: '--font-clash'
+});
 
 export default function Layout({children}) {
     return(
@@ -8,7 +14,7 @@ export default function Layout({children}) {
         <Head>
             <title>IEI CSE TKMCE</title>
         </Head>
-        <div className="flex flex-col min-h-screen">
+        <div className={`${myFont.variable} flex flex-col min-h-screen`}>
             <Navbar/>
             <main className="flex-auto">{children}</main>
             <Footer/>
