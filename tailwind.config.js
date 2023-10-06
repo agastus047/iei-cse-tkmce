@@ -13,7 +13,7 @@ module.exports = {
         '350':'350px',
         '350':'300px',
         '420':'420px',
-
+        '390':'390px',
       },
       width: {
         '500': '500px',
@@ -23,11 +23,16 @@ module.exports = {
         '300':'300px',
 
        },
-      fontFamily:{
-        Poppins:['Poppins'],
-      },
      
-      
+      backgroundColor: {
+        'nav-bg': '#393E46',
+      },
+      fontFamily: {
+        clash : ['var(--font-clash)'],
+        michroma:['Michroma'],
+        oldeenglish: ['Olde English'], 
+        Poppins:['Poppins'],
+      }
     },
   },
   plugins: [],
