@@ -1,21 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 const TestComponent2 = () => {
-  const customBoxShadowStyle1 = {
-    
-   
-    clipPath: 'polygon(0% 30%, 30% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 100%, 10% 100%, 0% 80%)',
-  };
+  
 
-  const customBoxShadowStyle2 = {
-    clipPath: 'polygon(0% 0%, 90% 0%, 100% 5%, 100% 90%, 90% 100%, 90% 100%, 20% 100%, 0% 80%)',
-    position: 'absolute', 
-     
-    marginLeft: '0',
-  };
+ 
 
   const customBoxShadowStyle3 = {
-    position: 'absolute', 
+   
     background: '#1F2025',
    
    
@@ -23,7 +14,7 @@ const TestComponent2 = () => {
    
   };
   const customBoxShadowStyle4 = {
-    position: 'absolute', 
+    
     background: '#1f2025',
     
    
@@ -37,12 +28,12 @@ const TestComponent2 = () => {
         <div className='flex-col font-Poppins ml-10 lg:ml-20 w-3/6 text-left' style={{background:'#00ADB5'}}>
           <h1 style={{background:'#00ADB5'}} className='text-white sm:mb-10 mb-2 font-extrabold   lg:text-6xl text-xl'>Vision</h1>
           <p style={{background:'#00ADB5'}} className='text-white lg:text-2xl text-sm font-normal p-2'>"A pathway to technological realm"<br /> We envision to be one of the vibrant professional society of technologists and applied scientists in the world.</p>
-          <hr style={{position: 'relative',top: '20px',border: 'none',height: '12px',background: '#393E46',marginBottom:'10px'}}></hr>
+          <hr style={{top: '20px',border: 'none',height: '12px',background: '#393E46',marginBottom:'10px'}}></hr>
         </div>
-        <div style={customBoxShadowStyle4} className='xl:w-400 xl:h-500 xl:-mb-4  xl:right-32 lg:w-350 lg:h-390  lg:right-16  lg:-mb-10  sm:right-10 sm:w-64 sm:h-72 sm:-mb-7   min-[360px]:right-5 max-[640px]:right-12        w-32 h-36 -mb-4' ></div>
-        <div style={customBoxShadowStyle1} className='bg-#00ADB5 '>
+        <div style={customBoxShadowStyle4} className='absolute xl:w-400 xl:h-500 xl:-mb-4  xl:right-32 lg:w-350 lg:h-390  lg:right-16  lg:-mb-10  sm:right-10 sm:w-64 sm:h-72 sm:-mb-7   min-[360px]:right-5 max-[640px]:right-12        w-32 h-36 -mb-4' ></div>
+        <div  className='bg-#00ADB5 '>
 
-        <svg viewBox="0 0 100 100" style={customBoxShadowStyle1} className='xl:w-500 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36   '>
+        <svg viewBox="0 0 100 100"  className='relative xl:w-500 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36   '>
 
         <defs>
           <pattern id="imagePattern1" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -79,10 +70,10 @@ const TestComponent2 = () => {
         </div>
 
       <div className='flex justify-between lg:gap-20 xl:-ml-10  pb-8 pt-8 lg:h-500 sm:h-400  ' style={{backgroundColor:'#393E46'}}>
-      <div style={customBoxShadowStyle3} className='lg:w-80 lg:h-80 xl:ml-24 lg:ml-20   lg:-mt-6    sm:w-64 sm:h-64   sm:-mt-6  w-28 h-28 ml-7 -mt-4'>
+      <div style={customBoxShadowStyle3} className='absolute  lg:w-80 lg:h-80 xl:ml-24 lg:ml-20   lg:-mt-6    sm:w-64 sm:h-64   sm:-mt-6  w-28 h-28 ml-7 -mt-4'>
       </div>
       <div>
-          <svg viewBox="0 0 100 100" style={customBoxShadowStyle2}  className='xl:w-450 xl:h-450 xl:mb-72 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36  '>
+          <svg viewBox="0 0 100 100"   className='relative xl:w-450 xl:h-450 xl:mb-72 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36  '>
 
 
 

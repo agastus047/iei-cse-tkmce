@@ -4,15 +4,15 @@ import Image from "next/image";
 import Logo from "/public/assets/logo.png";
 
 function NavLink({to, children}) {
-    return <Link href={to} className={`mx-4 text-white text-2xl hover:text-[#00ADB5]`}>
+    return <Link href={to} className={`mx-4  text-white text-2xl hover:text-[#00ADB5]`}>
         {children}
     </Link>
 }//styling
 
 function MobileNav({open, setOpen}) {
     return (
-        <div className={`absolute top-0 left-0 h-screen w-80 bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-            <div className="ml-3 flex items-center justify-center bg-white h-20">
+        <div className={`absolute  top-0 left-0 h-screen w-80 bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `} >
+            <div className="ml-3  flex items-center justify-center bg-white h-20 ">
                 <Link className="text-xl font-semibold" href="/">
                   <Image
                     src={Logo}
@@ -48,7 +48,7 @@ export default function Navbar() {
 
     const [open, setOpen] = useState(false)
     return (
-        <nav className="flex filter drop-shadow-md bg-nav-bg px-4 py-8 h-28 items-center">
+        <nav className="flex filter drop-shadow-md bg-nav-bg px-4 py-8 h-28 items-center z-10">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 p-6 flex items-center">
                 <Link className="text-2xl font-semibold hidden md:block" href="/">
