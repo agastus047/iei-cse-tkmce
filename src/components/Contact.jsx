@@ -10,13 +10,16 @@ const Contact = () =>
         '@media (max-width: 768px)': {
           fontSize: '60px', // Adjust size for screens smaller than 768px
         },
+        '@media (min-width: 1440px)': {
+          fontSize: '100px', // Adjust size for screens smaller than 768px
+        },
         // Add more media queries and size adjustments as needed
       };
       
     return(
-    <div className=" h-80 bg-cyanblue flex flex-col items-center text-white ">
-        <div className=" text-5xl h-full my-16  font-bold">Contact Us</div>
-        <div className="flex flex-row gap-14 w-full items-center justify-center items-baseline h-full mb-16 ml-11">
+    <div className=" h-96 bg-cyanblue flex flex-col items-center text-white ">
+        <div className="text-4xl lg:text-5xl flex items-center h-24 my-6 lg:my-16  font-bold">Contact Us</div>
+        <div className="flex flex-row flex-wrap gap-14 lg:gap-20 items-center justify-center items-baseline   mx-3">
           <a href='https://www.youtube.com/watch?v=O0N4Ona214g'>  <FacebookOutlinedIcon sx={iconStyle}/></a>
            <a href='google.com'> <TwitterIcon sx={iconStyle}/></a>
             <a href='google.com'><InstagramIcon sx={iconStyle}/></a>

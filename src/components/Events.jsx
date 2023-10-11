@@ -1,4 +1,4 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide,Responsive } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,22 +25,22 @@ const Events = () =>{
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        // slidesPerView={1}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper w-full my-20 h-96"
       >
-      {cards}
         
-        
-      </Swiper></div>
+    {cards}
+  
+    </Swiper></div>
       </div>
   )
 }
@@ -88,3 +88,15 @@ export default Events
         <SwiperSlide className='w-80 h-80 bg-center bg-cover'>
         <Eventcard/>
         </SwiperSlide> */}
+
+        {/* <Responsive breakpoints={{
+    // When the screen width is less than 640px (mobile size)
+    640: {
+      slidesPerView: 1, // Set slidesPerView to 1
+    },
+    // When the screen width is greater than or equal to 641px (other screen sizes)
+    641: {
+      slidesPerView: 3, // Set slidesPerView to 3 (or your desired value)
+    },
+  }}> 
+  </Responsive>*/}

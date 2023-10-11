@@ -4,7 +4,7 @@ const Eventcard =({items})=>
 {
     // console.log({items})
     return(
-        <div className="w-72 h-96 m-auto flex flex-col">
+        <div className="w-60 lg:w-72 h-96 m-auto flex flex-col">
         <div className="card-image w-full h-72 relative overflow-hidden border-4 border-cyan-500">
             <img src={items.img} className="absolute object-cover object-center h-full w-full rounded-t-md z-10" alt="Image"/>
         </div>
