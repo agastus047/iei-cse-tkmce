@@ -1,4 +1,4 @@
-import TestComponent2 from "@/components/TestComponent2"
+import TestComponent2 from "@/components/visionMision"
 import Hero from "@/components/Hero"
 import Contact from "@/components/Contact"
 import Events from "@/components/Events"

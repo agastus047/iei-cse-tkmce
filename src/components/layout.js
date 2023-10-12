@@ -16,7 +16,7 @@ export default function Layout({children}) {
         </Head>
         <div className={`${myFont.variable} flex flex-col min-h-screen`}>
             <Navbar/>
-            <main className="flex-auto">{children}</main>
+            <main className="flex-auto bg-hero-bg">{children}</main>
             <Footer/>
         </div>
     </>

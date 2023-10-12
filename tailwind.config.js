@@ -26,12 +26,13 @@ module.exports = {
      
       backgroundColor: {
         'nav-bg': '#393E46',
-        'cyanblue':'#00ADB5'
+        'cyanblue':'#00ADB5',
+        'hero-bg': '#EEEEEE',
       },
       fontFamily: {
         clash : ['var(--font-clash)'],
         michroma:['Michroma'],
-        oldeenglish: ['Olde English'], 
+        oldEnglish: ['Olde English'], 
         Poppins:['Poppins'],
       },
       minWidth: {
