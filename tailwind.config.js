@@ -26,13 +26,15 @@ module.exports = {
      
       backgroundColor: {
         'nav-bg': '#393E46',
+        'cyanblue':'#00ADB5'
       },
       fontFamily: {
         clash : ['var(--font-clash)'],
         michroma:['Michroma'],
         oldeenglish: ['Olde English'], 
         Poppins:['Poppins'],
-      }
+      },
+      
     },
   },
   plugins: [],
