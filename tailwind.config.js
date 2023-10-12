@@ -26,6 +26,7 @@ module.exports = {
      
       backgroundColor: {
         'nav-bg': '#393E46',
+        'cyanblue':'#00ADB5'
       },
       fontFamily: {
         clash : ['var(--font-clash)'],
@@ -36,7 +37,6 @@ module.exports = {
       minWidth: {
         '1/2': '50%',
       },
-     
     },
   },
   plugins: [],
