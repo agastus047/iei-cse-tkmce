@@ -34,7 +34,9 @@ module.exports = {
         oldeenglish: ['Olde English'], 
         Poppins:['Poppins'],
       },
-      
+      minWidth: {
+        '1/2': '50%',
+      },
     },
   },
   plugins: [],

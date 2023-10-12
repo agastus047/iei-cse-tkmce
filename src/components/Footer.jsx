@@ -3,6 +3,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Link from 'next/link';
 export default function Footer() {
   return (
     <div className="bg-[#222831] pt-4 md:pt-8 pb-4 md:pb-8 grid md:grid-cols-12 px-5 md:px-20 gap-2 md:gap-20 font-michroma" >
@@ -28,10 +29,10 @@ export default function Footer() {
       <div className="grid md:col-span-6 md:grid-cols-6 gap-2 md:gap-4">
         <div className='grid col-span-2 gap-1 place-content-start'>
           <div className='text-white font-semibold text-xs'>
-            ABOUT
+             ABOUT
           </div>
           <div className='text-white text-xs hidden md:block'>
-            About Us
+            <Link href="/About">About Us</Link>
           </div>
           <div className='text-white text-xs hidden md:block'>
             Vision
