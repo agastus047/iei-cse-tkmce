@@ -26,7 +26,7 @@ export default function Footer() {
         Terms and condisions
         </div>
       </div>
-      <div className="grid md:col-span-6 md:grid-cols-6 gap-2 md:gap-4">
+      <div className="grid md:col-span-6 grid-cols-6 gap-2 md:gap-4">
         <div className='grid col-span-2 gap-1 place-content-start'>
           <div className='text-white font-semibold text-xs'>
              ABOUT
