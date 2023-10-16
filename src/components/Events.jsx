@@ -19,7 +19,7 @@ const Events = () =>{
 ));
 
   return(
-    <div className="flex flex-col">
+    <div className="flex bg-white flex-col">
        <div className="text-5xl mx-auto mt-10  font-bold text-[#393E46]">EVENTS</div>
        <div><Swiper
         effect={'coverflow'}

@@ -32,7 +32,7 @@ module.exports = {
       fontFamily: {
         clash : ['var(--font-clash)'],
         michroma:['Michroma'],
-        oldEnglish: ['Olde English'], 
+        oldEnglish: ['var(--font-olde)'], 
         Poppins:['Poppins'],
       },
       minWidth: {
