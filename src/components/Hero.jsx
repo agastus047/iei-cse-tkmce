@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="bg-hero-bg md:h-30 mb-10 mt-10 md:mb-20 md:mt-30 py-16">
+    <div className="bg-hero-bg md:h-30 mb-5 mt-5 md:mb-20 md:mt-30 py-16">
       <div className="container mx-auto text-center">
         <h1 className="text-5xl font-oldEnglish text-black md:text-8xl">
           The Institution of Engineers India
