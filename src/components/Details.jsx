@@ -18,7 +18,7 @@ function Details() {
           <div className="absolute top-0 right-0 w-4 h-4 md:w-12 md:h-12 bg-white border-t-4 border-r-4 border-black rounded-lg"></div>
           <div className="absolute bottom-0 left-0 w-4 h-4 md:w-12 md:h-12 bg-white border-b-4 border-l-4 border-black rounded-lg"></div>
           <div className="absolute bottom-0 right-0 w-4 h-4 md:w-12 md:h-12 bg-white border-b-4 border-r-4 border-black rounded-lg"></div>
-          <h1 className='text-xl md:text-5xl font-Poppins font-bold mt-4'>Members</h1>
+          <h1 className='text-xl md:text-5xl font-Poppins font-bold mt-4'>Members//</h1>
           <h2 className='text-2xl md:text-8xl font-Poppins font-bold'>223+</h2>
         </div>
 
@@ -27,7 +27,7 @@ function Details() {
           <div className="absolute top-0 right-0 w-4 h-4 md:w-12 md:h-12 bg-white border-t-4 border-r-4 border-black rounded-lg"></div>
           <div className="absolute bottom-0 left-0 w-4 h-4 md:w-12 md:h-12 bg-white border-b-4 border-l-4 border-black rounded-lg"></div>
           <div className="absolute bottom-0 right-0 w-4 h-4 md:w-12 md:h-12 bg-white border-b-4 border-r-4 border-black rounded-lg"></div>
-          <h1 className='text-xl md:text-5xl font-Poppins font-bold mt-4'>Events</h1>
+          <h1 className='text-xl md:text-5xl font-Poppins font-bold mt-4'>Events//////</h1>
           <h2 className='text-2xl md:text-8xl font-Poppins font-bold'>007+</h2>
         </div>
       </div>
