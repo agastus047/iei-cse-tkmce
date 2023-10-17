@@ -28,6 +28,7 @@ module.exports = {
         'nav-bg': '#393E46',
         'cyanblue':'#00ADB5',
         'hero-bg': '#EEEEEE',
+        'border-bg':'#222831',
       },
       fontFamily: {
         clash : ['var(--font-clash)'],
