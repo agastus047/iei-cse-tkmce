@@ -67,7 +67,7 @@ function Navbar() {
               <CloseIcon />
             </IconButton>
           </div>
-          <List className="flex flex-col justify-between items-center gap-10 mx-auto">
+          <List className="flex flex-col justify-between items-center gap-10 ml-24 px-10">
             <ListItem button>
               <Link href="/">
                 <ListItemText primary="Home" className='hover:text-[#00ADB5]'/>
