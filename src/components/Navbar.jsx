@@ -67,37 +67,25 @@ function Navbar() {
               <CloseIcon />
             </IconButton>
           </div>
-          <List className="flex flex-col justify-between items-center gap-10 ml-24 px-10">
-            <ListItem button>
+          <List className="flex flex-col justify-between items-center gap-10 mx-auto">
               <Link href="/">
                 <ListItemText primary="Home" className='hover:text-[#00ADB5]'/>
               </Link>
-            </ListItem>
-            <ListItem button>
               <Link href="/About">
                 <ListItemText primary="About" className='hover:text-[#00ADB5]'/>
               </Link>
-            </ListItem>
-            <ListItem button>
               <Link href="/events">
                 <ListItemText primary="Events" className='hover:text-[#00ADB5]'/>
               </Link>
-            </ListItem>
-            <ListItem button>
               <Link href="/team">
                 <ListItemText primary="Team" className='hover:text-[#00ADB5]'/>
               </Link>
-            </ListItem>
-            <ListItem button>
               <Link href="/blog">
                 <ListItemText primary="Blog" className='hover:text-[#00ADB5]'/>
               </Link>
-            </ListItem>
-            <ListItem button>
               <Link href="/login">
                 <ListItemText primary="Login" className='hover:text-[#00ADB5]' />
               </Link>
-            </ListItem>
           </List>
         </div>
       </Drawer>
