@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <div>
       <nav className="bg-nav-bg w-full top-0 left-0 right-0">
-        <div className="container mx-auto flex flex-row justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center">
           <div className="w-3/12 p-6 flex items-center">
             <Link href="/" className="text-2xl font-semibold ">
               <Image
@@ -36,7 +36,7 @@ function Navbar() {
             <Link href="/" className="text-2xl text-white hover:text-[#00ADB5]">
               Home
             </Link>
-            <Link href="/about" className="text-2xl text-white hover:text-[#00ADB5]">
+            <Link href="/About" className="text-2xl text-white hover:text-[#00ADB5]">
               About
             </Link>
             <Link href="/events" className="text-2xl text-white hover:text-[#00ADB5]">
@@ -54,7 +54,7 @@ function Navbar() {
           </div>
           <div className="md:hidden">
             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
-              {open ? <CloseIcon /> : <MenuIcon />}
+              {open ? <CloseIcon /> : <MenuIcon className='text-white' />}
             </IconButton>
           </div>
         </div>
@@ -74,7 +74,7 @@ function Navbar() {
               </Link>
             </ListItem>
             <ListItem button>
-              <Link href="/about">
+              <Link href="/About">
                 <ListItemText primary="About" className='hover:text-[#00ADB5]'/>
               </Link>
             </ListItem>
