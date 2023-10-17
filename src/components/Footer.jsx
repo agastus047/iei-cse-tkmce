@@ -1,3 +1,4 @@
+
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -6,7 +7,8 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Link from 'next/link';
 export default function Footer() {
   return (
-    <div className="bg-[#222831] pt-4 md:pt-8 pb-4 md:pb-8 grid md:grid-cols-12 px-5 md:px-20 gap-2 md:gap-20 font-michroma" >
+
+    <div className="w-fit bg-[#222831] pt-4 md:pt-8 pb-4 md:pb-8 grid md:grid-cols-12 px-5 md:px-20 gap-2 md:gap-20 font-michroma" >
       <div className="grid md:col-span-6 gap-2 md:gap-4">
         <div className="text-l text-white font-bold font-clash tracking-wider">
           IEI CSE TKMCE
@@ -26,7 +28,7 @@ export default function Footer() {
         Terms and condisions
         </div>
       </div>
-      <div className="grid md:col-span-6 grid-cols-6 gap-2 md:gap-4">
+      <div className="grid md:col-span-6 grid-cols-6  md:gap-4">
         <div className='grid col-span-2 gap-1 place-content-start'>
           <div className='text-white font-semibold text-xs'>
              ABOUT
