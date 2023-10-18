@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>     
       <Hero/>
-      {/* <ScrollTrigger1/>
-      <ScrollTrigger2/> */}
+      <ScrollTrigger1/>
+      <ScrollTrigger2/>
       <Details/>
       <TestComponent2/>
       <Events/>
