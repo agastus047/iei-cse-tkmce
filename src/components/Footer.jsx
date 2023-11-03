@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
       <div className="flex  md:w-1/2 md:gap-4 lg:gap-10 md:justify-end justify-between">
         <div className='flex flex-col md:mt-0 mt-2 '>
-          <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onMouseEnter={()=>{
+          <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onClick={()=>{
             setAbout(!about)
           }}>
              ABOUT
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
         <div className='flex flex-col md:mt-0 mt-2'>
-          <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onMouseEnter={()=>{
+          <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onClick={()=>{
             setTeam(!team)
           }}>
             TEAM
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>   
         </div>
         <div className='flex flex-col md:mt-0 mt-2'>
-          <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onMouseEnter={()=>{
+          <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onClick={()=>{
             setContact(!contact)
           }}>
             CONTACT
