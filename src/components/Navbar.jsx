@@ -36,7 +36,7 @@ function Navbar() {
               />
             </Link>
           </div>
-          <div className="hidden md:flex md:flex-row md:mr-0 md:gap-14">
+          <div className="hidden md:flex md:flex-row md:mr-20 md:gap-14">
             <Link href="/" className="text-2xl text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Home
             </Link>
@@ -71,7 +71,7 @@ function Navbar() {
               <CloseIcon />
             </IconButton>
           </div>
-          <List className="mt-10 flex flex-col justify-between items-center gap-10 px-10">
+          <List className="mt-10 flex flex-col justify-between items-center gap-10 px-10 ">
               <Link href="/" onClick={closeDrawer}>
                 <ListItemText primary="Home" className='hover:text-[#00ADB5]'/>
               </Link>
