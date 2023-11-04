@@ -1,36 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Ellipse1 from '/public/assets/Ellipse1.png';
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Ellipse2 from '/public/assets/Ellipse2.png';
 
 function ScrollTrigger1() {
-  // const containerRef = useRef(null);
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-
-  //   const image = containerRef.current.querySelector('.cover');
-  //   const rotationAngle = 180; 
-
-  //   gsap.to(image, {
-  //     rotation: rotationAngle,
-  //     ease: 'none',
-  //     scrollTrigger: {
-  //       trigger: 'body',
-  //       start: 'top center',
-  //       end: 'bottom center',
-  //       scrub: 2,
-  //     },
-  //   });
-  // }, []);
-
   return (
     <div className="bg-cyanblue p-4 md:p-8 relative" >
-      <div className='cover absolute top-80 md:top-40'>
-          <Image src={Ellipse1} className='w-48 md:w-72'/>
+      <div className='absolute bottom-0'>
+          <Image src={Ellipse2} className='w-40 md:w-72'/>
       </div>
-      <div className="md:gap-24 mt-10 md:mt-20 " >
-        <div className="h-1 md:h-2 w-48 md:w-96 text-left bg-[#393E46]"></div>
+      <div className="flex md:flex-row justify-between md:gap-24 mt-10">
+        <div className="h-1 md:h-2 w-32 md:w-96 text-left bg-[#393E46]"></div>
         <div className="font-Poppins md:mr-20 font-bold md:text-6xl sm:text-4xl text-xl text-white text-right md:text-right">
           WHO ARE WE?
         </div>  
