@@ -36,23 +36,23 @@ function Navbar() {
               />
             </Link>
           </div>
-          <div className="hidden md:flex md:flex-row md:mr-20 md:gap-14">
-            <Link href="/" className="text-2xl text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+          <div className="hidden lg:text-2xl md:flex md:flex-row md:mr-20 md:gap-14">
+            <Link href="/" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Home
             </Link>
-            <Link href="/About" className="text-2xl text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/About" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               About
             </Link>
-            <Link href="/events" className="text-2xl text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/events" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Events
             </Link>
-            <Link href="/team" className="text-2xl text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/team" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Team
             </Link>
-            <Link href="/blog" className="text-2xl text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/blog" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Blog
             </Link>
-            <Link href="/login" className="text-2xl text-white hover:text-blue-500" onClick={closeDrawer}>
+            <Link href="/login" className="text-white hover:text-blue-500" onClick={closeDrawer}>
               Login
             </Link>
           </div>

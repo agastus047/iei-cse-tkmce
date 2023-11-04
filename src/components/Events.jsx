@@ -13,7 +13,7 @@ const Events = () =>{
 
 
   const cards = eventlist.map(item => (
-    <SwiperSlide className=' bg-center bg-cover'>
+    <SwiperSlide className=' bg-center bg-cover' key={item.id}>
           <Eventcard items={item}/>
         </SwiperSlide>
 ));

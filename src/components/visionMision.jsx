@@ -85,7 +85,7 @@ const TestComponent2 = () => {
 
 
 
-                <image xlinkHref="/ai.png" x="0" y="0" width="100" height="100" preserveAspectRatio="xMinYMin slice" cla />
+                <image xlinkHref="/ai.png" x="0" y="0" width="100" height="100" preserveAspectRatio="xMinYMin slice" />
 
 
 
