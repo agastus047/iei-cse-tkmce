@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-// import Image from 'next/image';
-// import Ellipse1 from '/public/assets/Ellipse1.png';
+import Image from 'next/image';
+import Ellipse1 from '/public/assets/Ellipse1.png';
 // import gsap from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -26,6 +26,9 @@ function ScrollTrigger1() {
 
   return (
     <div className="bg-cyanblue p-4 md:p-8 relative" >
+      <div className='cover absolute top-80 md:top-40'>
+          <Image src={Ellipse1} className='w-48 md:w-72'/>
+      </div>
       <div className="md:gap-24 mt-10 md:mt-20 " >
         <div className="h-1 md:h-2 w-48 md:w-96 text-left bg-[#393E46]"></div>
         <div className="font-Poppins md:mr-20 font-bold md:text-6xl sm:text-4xl text-xl text-white text-right md:text-right">

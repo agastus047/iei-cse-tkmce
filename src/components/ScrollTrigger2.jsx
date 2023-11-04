@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-// import Image from 'next/image';
-// import Ellipse1 from '/public/assets/Ellipse1.png';
+import Image from 'next/image';
+import Ellipse1 from '/public/assets/Ellipse1.png';
 // import gsap from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -25,10 +25,10 @@ function ScrollTrigger2() {
   // }, []);
 
   return (
-    <div className="bg-hero-bg p-4 md:p-8 relative">
-      {/* <div className='cover absolute top-0 right-6 md:top-60 md:right-8'>
+    <div className="bg-hero-bg p-4 md:p-8 relative" >
+      <div className='cover absolute top-0 right-6 md:top-60 md:right-8'>
           <Image src={Ellipse1} className='w-48 md:w-72'/>
-      </div> */}
+      </div>
       <div className="flex md:flex-row justify-between md:gap-24 mt-20">
         <div className="font-Poppins font-bold md:text-6xl sm:text-4xl text-xl text-black md:text-right md:ml-20">
           WHAT WE DO?
