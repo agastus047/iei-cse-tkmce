@@ -25,12 +25,12 @@ const TestComponent2 = () => {
   return (
     <div className='flex-col justify-start '>
       <div className='flex justify-between md:gap-10 lg:gap-5 gap-5 items-center  mr-0 pt-4 pb-4' style={{background:'#00ADB5'}}>
-        <div className='flex-col font-Poppins ml-10 lg:ml-20 w-3/6 text-left' style={{background:'#00ADB5'}}>
+        <div className='flex-col font-Poppins ml-5 lg:ml-20 w-3/6 text-left md:ml-20' style={{background:'#00ADB5'}}>
           <h1 style={{background:'#00ADB5'}} className='text-white sm:mb-10 mb-2 font-extrabold   md:text-6xl sm:text-4xl text-xl'>Vision</h1>
           <p style={{background:'#00ADB5'}} className='text-white md:text-2xl text-sm font-normal p-2'>"A pathway to technological realm"<br /> We envision to be one of the vibrant professional society of technologists and applied scientists in the world.</p>
           <hr style={{top: '20px',border: 'none',height: '4px',background: '#393E46',marginBottom:'10px'}}></hr>
         </div>
-        <div style={customBoxShadowStyle4} className='absolute xl:w-400 xl:h-500 xl:-mb-4  xl:right-32 lg:w-350 lg:h-390  lg:right-16  lg:-mb-10  sm:right-10 sm:w-64 sm:h-72 sm:-mb-7   min-[360px]:right-5 max-[640px]:right-12        w-32 h-36 -mb-4' ></div>
+        <div style={customBoxShadowStyle4} className='absolute xl:w-400 xl:h-500 xl:-mb-4  xl:right-32 lg:w-350 lg:h-390  lg:right-16  lg:-mb-10  sm:right-10  sm:w-64 sm:h-72 sm:-mb-7   min-[320px]:right-5 max-[640px]:right-12        w-32 h-36 -mb-4' ></div>
         <div  className='bg-#00ADB5 '>
 
         <svg viewBox="0 0 100 100"  className='relative xl:w-500 xl:h-500 lg:w-400 lg:h-400 sm:w-72 sm:h-72  w-36 h-36   '>
@@ -111,9 +111,9 @@ const TestComponent2 = () => {
     </div>
     
 
-      <div className='flex-col font-Poppins mr-5 lg:mr-10 w-3/6 text-right items-center' >
+      <div className='flex-col font-Poppins md:mr-10 mr-5 lg:mr-20 w-3/6 text-right items-center lg:pt-10' >
         <h1 className='text-white sm:mb-10 font-extrabold md:text-6xl  text-xl mb-2 sm:text-4xl '>Mission</h1>
-        <p className='text-white md:text-2xl text-sm font-normal'>Our mission at IEI CSE SB TKMCE is to empower computer science enthusiasts like you with an unparalleled experience. We're not just a club; we're a dynamic hub for future computer science engineers!</p>
+        <p className='text-white md:text-2xl text-sm font-normal '>Our mission at IEI CSE SB TKMCE is to empower computer science enthusiasts like you with an unparalleled experience. We're not just a club; we're a dynamic hub for future computer science engineers!</p>
         <hr style={{position: 'relative',top: '20px',border: 'none',height: '4px',background: '#00ADB5',}}></hr>
       </div>
     </div>

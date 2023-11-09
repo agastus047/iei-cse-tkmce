@@ -10,12 +10,12 @@ function ScrollTrigger2() {
           <Image src={Ellipse1} className='w-40 md:w-72'/>
       </div>
       <div className="flex md:flex-row justify-between md:gap-24 mt-20 md:mt-32">
-        <div className="font-Poppins font-bold md:text-6xl sm:text-4xl text-xl text-black md:text-right md:ml-20">
+        <div className="font-Poppins font-bold md:text-5xl sm:text-4xl text-xl text-black md:text-right lg:ml-12 md:ml-12 ">
           WHAT WE DO?
         </div>
-        <div className="h-1 md:h-2 w-32 md:mt-5 md:w-96 md:text-left bg-cyanblue"></div>
+        <div className="h-1 md:h-2  md:mt-5 w-32 md:w-56 lg:w-96 md:text-left bg-cyanblue"></div>
       </div>
-      <div className="text-black md:text-2xl text-sm md:ml-20 font-Poppins mt-4 md:mt-6 md:text-left mb-20">
+      <div className="text-black md:text-2xl text-sm md:ml-16 lg:ml-12 ml-10 font-Poppins mt-4 md:mt-6 md:text-left mb-20">
         <p>Exclusive Resources: Dive into a treasure trove of cutting-edge<br></br>
         resources, from the latest tech trends to in-depth coding tutorials – we've got your back.</p>
         <p>
