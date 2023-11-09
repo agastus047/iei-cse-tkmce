@@ -14,10 +14,10 @@ function ScrollTrigger1() {
           WHO ARE WE?
         </div>  
       </div>
-      <div className="text-white md:text-2xl text-sm font-Poppins mt-4 md:mr-5 lg:mr-10 md:mt-6 text-right mb-20">
-        IEI CSE SB at TKM College of Engineering is a vibrant community<br></br>
-        functioning under the esteemed banner of IEI Kollam Local Chapter!<br></br>
-        At IEI CSE SB TKMCE we aim to empower computer science enthusiasts <br></br>like you with an unparalleled experience. We're not just a club;<br></br>
+      <div className="text-white break-words md:text-2xl text-sm font-Poppins mt-4 md:mr-5 lg:mr-10 md:ml-5 lg:ml-10 md:mt-6 ml-5 text-right mb-20">
+        IEI CSE SB at TKM College of Engineering is a vibrant community
+        functioning under the esteemed banner of IEI Kollam Local Chapter!
+        At IEI CSE SB TKMCE we aim to empower computer science enthusiasts like you with an unparalleled experience. We're not just a club;
         we're a dynamic hub for future computer science engineers!
       </div>
       
