@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,200;0,700;0,800;1,700&display=swap');
 @tailwind base;
 @tailwind components;
-
-@font-face {
-    font-family: "Clash";
-    font-weight: bold;
-    src: url("../../public/fonts/ClashDisplay-Bold.otf");
-
-}
-
 @tailwind utilities;

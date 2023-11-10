@@ -7,15 +7,38 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      height:{
+        '500': '500px',
+        '400':'400px',
+        '350':'350px',
+        '350':'300px',
+        '420':'420px',
+        '390':'390px',
+      },
+      width: {
+        '500': '500px',
+        '400':'400px',
+        '450':'450px',
+        '350':'350px',
+        '300':'300px',
+
+       },
+     
+      backgroundColor: {
+        'nav-bg': '#393E46',
+        'cyanblue':'#00ADB5',
+        'hero-bg': '#EEEEEE',
+        'border-bg':'#222831',
       },
       fontFamily: {
-        clash : ['Clash'],
+        clash : ['var(--font-clash)'],
         michroma:['Michroma'],
-      }
+        oldEnglish: ['var(--font-olde)'], 
+        Poppins:['Poppins'],
+      },
+      minWidth: {
+        '1/2': '50%',
+      },
     },
   },
   plugins: [],
