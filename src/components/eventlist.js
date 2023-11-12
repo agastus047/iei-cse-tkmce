@@ -19,6 +19,22 @@ const eventlist=[
         name:'Event4',
         img:'/assets/event.png'
     },
+    {
+        id:4,
+        name:'Event4',
+        img:'/assets/event.png'
+    },
+    {
+        id:5,
+        name:'Event5',
+        img:'/assets/event.png'
+    },
+    {
+        id:6,
+        name:'Event6',
+        img:'/assets/event.png'
+    },
+
 ];
 
 export default eventlist;
