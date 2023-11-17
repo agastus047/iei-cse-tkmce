@@ -10,10 +10,10 @@ export default function Footer() {
   const [team , setTeam ]=useState(false)
   const [contact , setContact]=useState(false)
   return (
-    <div className="bg-[#222831] pt-4 md:pt-8 pb-4 md:pb-8  md:flex px-5 md:pr-8 md:pl-8 lg:pr-20 lg:pl-20 lg:gap-10 md:gap-16 font-michroma" >
-      <div className="flex-col gap-10 md:gap-5 md:w-1/2">
-        <div className="text-l text-white font-bold font-clash tracking-wider mb-4">
-          IEI CSE TKMCE
+    <div className="bg-[#222831] pt-8   md:pt-16 pb-8 md:pb-8  md:flex px-5 md:pr-12 md:pl-12  lg:pr-20 lg:pl-20 lg:gap-2  xl:pr-32 xl:pl-32   font-michroma " >
+      <div className="flex-col gap-16 md:gap-5 md:w-1/2">
+        <div className="text-2xl text-white font-bold font-clash tracking-wider mb-4">
+          IEI  TKMCE
 
         </div>
         <div className="text-xs text-white mb-4">
@@ -27,11 +27,11 @@ export default function Footer() {
           <WhatsAppIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
         </div>
         <div className='text-white text-xs mb-4'>
-        Terms and condisions
+        Terms and conditions
         </div>
       </div>
-      <div className="flex  md:w-1/2 md:gap-4 lg:gap-10 md:justify-end justify-between">
-        <div className='flex flex-col md:mt-0 mt-2 '>
+      <div className="flex  md:w-1/2 md:gap-6 lg:gap-10 md:justify-end justify-between">
+        <div className='flex flex-col gap-2 md:mt-0 mt-2 '>
           <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onClick={()=>{
             setAbout(!about)
           }}>
@@ -47,7 +47,7 @@ export default function Footer() {
             Mision
           </div>
         </div>
-        <div className='flex flex-col md:mt-0 mt-2'>
+        <div className='flex flex-col gap-2 md:mt-0 mt-2'>
           <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onClick={()=>{
             setTeam(!team)
           }}>
@@ -60,7 +60,7 @@ export default function Footer() {
             Web Team
           </div>   
         </div>
-        <div className='flex flex-col md:mt-0 mt-2'>
+        <div className='flex flex-col gap-2 md:mt-0 mt-2'>
           <div className='text-white font-semibold text-xs md:cursor-none cursor-pointer' onClick={()=>{
             setContact(!contact)
           }}>
