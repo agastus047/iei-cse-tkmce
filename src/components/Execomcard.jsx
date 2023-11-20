@@ -3,14 +3,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Execomcard = ({ items }) => {
   const iconStyle = {
-    fontSize: '90px', // Default size
+    fontSize: '90px', 
     '@media (max-width: 768px)': {
-      fontSize: '60px', // Adjust size for screens smaller than 768px
+      fontSize: '60px', 
     },
     '@media (min-width: 1440px)': {
-      fontSize: '100px', // Adjust size for screens smaller than 768px
+      fontSize: '100px',
     },
-    // Add more media queries and size adjustments as needed
+    
   };
 
   const handleLinkedInClick = () => {
