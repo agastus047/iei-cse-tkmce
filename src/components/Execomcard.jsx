@@ -14,7 +14,7 @@ const Execomcard = ({ items }) => {
   };
 
   const handleLinkedInClick = () => {
-    window.open("https://www.linkedin.com/in/your-profile", '_blank');
+    window.open(items.linkedIn, '_blank');
   };
 
   return (
@@ -41,7 +41,7 @@ const Execomcard = ({ items }) => {
           <p className='text-xl'>{items.name}</p>
           <p className='text-xs'>{items.position}</p>
         </div>
-        <div className='absolute inset-0 h-full w-full text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] [transform-style:preserve-3d] z-50' style={{ backgroundColor: "#00ADB5" }}>
+        <div className='absolute inset-0 h-full w-full text-center text-slate-200 [transform:rotateY(180deg)]  [backface-visibility:hidden] [transform-style:preserve-3d] z-50' style={{ backgroundColor: "#00ADB5" }}>
           <div className='flex justify-center items-center h-full z-50'>
             <LinkedInIcon sx={{ ...iconStyle, zIndex: 5, cursor: 'pointer' }} onClick={handleLinkedInClick} />
           </div>

@@ -1,6 +1,7 @@
 import React from 'react'
-import execomlist from '@/components/execomlist'
+import {execomlist,webteam} from '@/components/execomlist'
 import Execomcard from '@/components/Execomcard'
+
 const Execom = () => {
   return (
     <div className='flex-col  justify-items-center '>
@@ -16,6 +17,19 @@ const Execom = () => {
         <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mb-10 grid-cols-1'>
         {
             execomlist.map(item => (
+                
+                  <Execomcard items={item}/>      
+        ))
+        }
+        </div>
+        </div>
+        <span style={{ backgroundColor: '#00ADB5', height: '60px', width: '100%', display: 'block' }} className='mt-10'>
+        <div className='flex justify-center pt-3 items-center'><p className='text-white font-extrabold text-3xl'>Web Team</p></div>
+        </span>
+        <div className='xl:pl-10 xl:pr-10  '>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mb-10 grid-cols-1'>
+        {
+            webteam.map(item => (
                 
                   <Execomcard items={item}/>      
         ))

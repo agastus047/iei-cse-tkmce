@@ -1,4 +1,4 @@
-const execomlist=[
+export const execomlist=[
     {
         id:0,
         name:'Sanjay S J',
@@ -59,7 +59,7 @@ const execomlist=[
     {
         id:8,
         name:'Anagha Mohan',
-        img:'',
+        img:'/assets/execommember/Anagha Mohan.jpg',
         position:'Program Coordinator',
         imgcorrect:true
     },
@@ -137,5 +137,13 @@ const execomlist=[
     
     
 ];
-
-export default execomlist;
+export const webteam=[
+    {
+        id:0,
+        name:'Anjana K J',
+        img:'/assets/execommember/anjana .jpeg',
+        position:'Web Team',
+        linkedIn:'https://www.linkedin.com/in/anjana-kj-312136229/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        imgcorrect:true
+    },
+]
