@@ -139,7 +139,7 @@ export const execomlist=[
 ];
 export const webteam=[
     {
-        id:0,
+        id:19,
         name:'Anjana K J',
         img:'/assets/execommember/anjana .jpeg',
         position:'Web Team',

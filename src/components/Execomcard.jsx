@@ -18,7 +18,7 @@ const Execomcard = ({ items }) => {
   };
 
   return (
-    <div className='group [perspective:1000px] mt-10 '>
+    <div className='group [perspective:2000px] mt-10 '>
       <div className='w-60 h-72 lg:w-60 lg:h-72 m-auto bg-white flex flex-col border-4 border-cyan-500 p-2 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] -z-50'>
       <div className="card-image w-full h-60 lg:h-60 relative overflow-hidden inset-0">
       {items.imgcorrect ? (
