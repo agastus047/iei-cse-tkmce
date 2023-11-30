@@ -58,6 +58,11 @@ const Eventpage = ({eventdata}) => {
             <p>+8078213133</p>
           </div>
         </div>
+        <div>
+          <button class="bg-black hover:bg-white text-white hover:text-black font-bold p-4 w-40 ">
+            Register
+          </button>
+        </div>
       </div>
     </div>
   )
