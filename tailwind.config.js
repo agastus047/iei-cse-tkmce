@@ -39,6 +39,10 @@ module.exports = {
       minWidth: {
         '1/2': '50%',
       },
+      screens: {
+        'xs': '390px',
+        
+      },
     },
   },
   plugins: [],
