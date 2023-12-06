@@ -4,15 +4,15 @@ import React from 'react'
 const Eventpage = ({eventdata}) => {
   return (
     <div className=' xl:pr-64 xl:pl-64 lg:pr-36 lg:pl-36 md:pr-10 sm:pr-20 sm:pl-20 pl-2 pr-2 md:pl-10 pb-10 pt-10 '>
-      <div className='border-4  md:flex  md:gap-10 gap-10 bg-white shadow-lg md:p-5 p-5'>
+      <div className='border-4  md:flex  md:gap-10 gap-10 bg-white shadow-lg md:p-5 p-5 font-Poppins'>
         <div className='md:w-1/2 md:block flex justify-center  '>
           <img src={eventdata.img} className="z-10 w-96 h-96" alt="Image" />
         </div>
         <div className='flex flex-col gap-4 md:w-1/2 '>
-          <h1 className='text-3xl text-center'>{eventdata.name}</h1>
-          <p>{eventdata.discription}</p>
+          <h1 className='text-3xl text-center font-Poppins font-bold'>{eventdata.name}</h1>
+          <p className='font-Poppins'>{eventdata.discription}</p>
           <div className='flex flex-col '>
-            <h3 className='font-bold'>Price</h3>
+            <h3 className='font-bold '>Price</h3>
             <p>Rs.100</p>
           </div>
           <div className='flex justify-between gap-10'>
@@ -33,20 +33,20 @@ const Eventpage = ({eventdata}) => {
          
           
           <div>
-            <p className='underline 4xl font-bold'>COORDINATORS</p>
+            <p className=' 4xl font-bold'>COORDINATORS</p>
           </div>
           <div className='flex justify-between'>
             <div className='flex flex-col'>
-              <h3 className='font-bold'>Amalendu</h3>
+              <h3 className='font-semibold'>Amalendu</h3>
               <p>+8078213133</p>
             </div>
             <div className='flex flex-col'>
-              <h3 className='font-bold'>Amalendu</h3>
+              <h3 className='font-semibold'>Amalendu</h3>
               <p>+8078213133</p>
             </div>
           </div>
           <div className='flex justify-end'>
-            <button class="bg-black hover:bg-white text-white hover:text-black font-bold p-4 w-40 ">
+            <button class="bg-black  text-white font-bold p-4 w-40 hover:bg-slate-400 hover:text-black ">
               Register
             </button>
           </div>
