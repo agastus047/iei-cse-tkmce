@@ -46,7 +46,7 @@ const Eventpage = ({eventdata}) => {
             </div>
           </div>
           <div className='flex justify-end'>
-            <button class="bg-black  text-white font-bold p-4 w-40 hover:bg-slate-400 hover:text-black ">
+            <button class="bg-nav-bg  text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black ">
               Register
             </button>
           </div>
