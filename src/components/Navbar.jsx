@@ -63,15 +63,14 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <Drawer anchor="left" open={open} onClose={toggleDrawer}>
-        <div className="bg-hero-bg flex flex-col h-screen w-screen">
+      <Drawer anchor="right" open={open} onClose={toggleDrawer} className=''>
+        <div className="bg-hero-bg flex flex-col h-screen w-screen ">
           <div className="bg-hero-bg flex justify-between items-center p-2 pr-4">
-            <div></div>
-            <IconButton edge="end" color="inherit" aria-label="close" onClick={toggleDrawer}>
+            <IconButton edge="start" color="inherit" aria-label="close" onClick={toggleDrawer}>
               <CloseIcon />
             </IconButton>
           </div>
-          <List className="mt-10 flex flex-col justify-between items-center gap-10 px-10 ">
+          <List className="bg-hero-bg mt-16 flex flex-col justify-between items-center gap-20 px-10 ">
               <Link href="/" onClick={closeDrawer}>
                 <ListItemText primary="Home" className='hover:text-[#00ADB5]'/>
               </Link>
