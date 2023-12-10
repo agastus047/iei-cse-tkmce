@@ -43,10 +43,10 @@ function Navbar() {
             <Link href="/About" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               About
             </Link>
-            <Link href="/events" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/Events" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Events
             </Link>
-            <Link href="/team" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/Execom" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Team
             </Link>
             <Link href="/blog" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
@@ -78,10 +78,10 @@ function Navbar() {
               <Link href="/About" onClick={closeDrawer}>
                 <ListItemText primary="About" className='hover:text-[#00ADB5]'/>
               </Link>
-              <Link href="/events" onClick={closeDrawer}>
+              <Link href="/Events" onClick={closeDrawer}>
                 <ListItemText primary="Events" className='hover:text-[#00ADB5]'/>
               </Link>
-              <Link href="/team" onClick={closeDrawer}>
+              <Link href="/Execom" onClick={closeDrawer}>
                 <ListItemText primary="Team" className='hover:text-[#00ADB5]'/>
               </Link>
               <Link href="/blog" onClick={closeDrawer}>
