@@ -1,12 +1,30 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef ,useState} from 'react';
 import Image from 'next/image';
-import Ellipse2 from '/public/assets/Ellipse2.png';
+import Ellipse2 from '/public/assets/Ellipse2new.png';
 
 function ScrollTrigger1() {
+  const imageRef = useRef(null);
+  const [rotation, setRotation] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newRotation = scrollY * 0.1;
+      setRotation(newRotation);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div className="bg-cyanblue p-4 md:p-8 relative" >
       <div className='absolute bottom-0'>
-          <Image src={Ellipse2} className='w-40 md:w-72'/>
+          <Image 
+            ref={imageRef}
+            style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.2s ease' }}
+            src={Ellipse2} className='mb-[-90px] md:mb-[-180px] w-40 md:w-72'/>
       </div>
       <div className="flex md:flex-row justify-between md:gap-10 mt-10 pt-10 md:mr-5 lg:mr-10">
         <div className="h-1 md:h-2 w-32 md:w-56 lg:w-96 text-left bg-[#393E46]"></div>
