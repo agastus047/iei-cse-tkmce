@@ -16,7 +16,6 @@ export default function Home() {
       <Details/>
       <TestComponent2/>
       <Events/>
-      <Contact/>
     </main>
   )
 }

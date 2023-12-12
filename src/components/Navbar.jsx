@@ -43,10 +43,10 @@ function Navbar() {
             <Link href="/About" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               About
             </Link>
-            <Link href="/events" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/Events" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Events
             </Link>
-            <Link href="/team" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+            <Link href="/Execom" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Team
             </Link>
             <Link href="/blog" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
@@ -63,25 +63,24 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <Drawer anchor="left" open={open} onClose={toggleDrawer}>
-        <div className="bg-hero-bg flex flex-col h-screen w-screen">
+      <Drawer anchor="right" open={open} onClose={toggleDrawer} className=''>
+        <div className="bg-hero-bg flex flex-col h-screen w-screen ">
           <div className="bg-hero-bg flex justify-between items-center p-2 pr-4">
-            <div></div>
-            <IconButton edge="end" color="inherit" aria-label="close" onClick={toggleDrawer}>
+            <IconButton edge="start" color="inherit" aria-label="close" onClick={toggleDrawer}>
               <CloseIcon />
             </IconButton>
           </div>
-          <List className="mt-10 flex flex-col justify-between items-center gap-10 px-10 ">
+          <List className="bg-hero-bg mt-16 flex flex-col justify-between items-center gap-20 px-10 ">
               <Link href="/" onClick={closeDrawer}>
                 <ListItemText primary="Home" className='hover:text-[#00ADB5]'/>
               </Link>
               <Link href="/About" onClick={closeDrawer}>
                 <ListItemText primary="About" className='hover:text-[#00ADB5]'/>
               </Link>
-              <Link href="/events" onClick={closeDrawer}>
+              <Link href="/Events" onClick={closeDrawer}>
                 <ListItemText primary="Events" className='hover:text-[#00ADB5]'/>
               </Link>
-              <Link href="/team" onClick={closeDrawer}>
+              <Link href="/Execom" onClick={closeDrawer}>
                 <ListItemText primary="Team" className='hover:text-[#00ADB5]'/>
               </Link>
               <Link href="/blog" onClick={closeDrawer}>

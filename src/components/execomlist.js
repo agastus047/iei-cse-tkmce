@@ -146,4 +146,12 @@ export const webteam=[
         linkedIn:'https://www.linkedin.com/in/anjana-kj-312136229/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         imgcorrect:true
     },
+    {
+        id:20,
+        name:'YadhuKrishnan B C',
+        img:'/assets/execommember/Yadhukrishnan BC.jpg',
+        position:'Web Team',
+        linkedIn:'https://www.linkedin.com/in/anjana-kj-312136229/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+        imgcorrect:true
+    },
 ]
