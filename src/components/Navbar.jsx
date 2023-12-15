@@ -23,9 +23,9 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="bg-nav-bg w-full top-0 left-0 right-0 h-20 xss:h-24 sm:h-28 lg:h-32">
-        <div className="container mx-auto flex justify-between items-center ">
-          <div className="w-3/12 p-6 flex items-center ">
+      <nav className="bg-nav-bg w-full top-0 left-0 right-0 h-20 xss:h-24 sm:h-28 lg:h-28">
+        <div className="container mx-auto flex justify-between items-center  ">
+          <div className="w-3/12 p-5 flex items-center ">
             <Link href="/" className="text-2xl font-semibold ">
               <Image
                 src={Logo}
