@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Eventcard = ({ items }) => {
   return (
-    <Link href="/event/[eventId]" as={`/event/${items.link}`}>
+    <Link href={`/event/${items.link}`}>
       <div className="w-60 lg:w-72 h-96 m-auto flex flex-col">
         <div className="card-image w-full h-72 relative overflow-hidden border-4 border-cyan-500">
           <img
