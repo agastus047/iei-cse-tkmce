@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="bg-hero-bg md:h-screen  py-48 md:py-32 flex justify-center content-center min-h-screen -mb-20 xss:-mb-24 sm:-mb-28 xl:-mb-32">
+    <div className="bg-hero-bg md:h-screen  py-48 md:py-32 flex justify-center content-center min-h-screen -mb-20 xss:-mb-24 sm:-mb-28 xl:-mb-28">
       
       <div className="container mx-auto text-center">
         <div className='md:h-40 xl:h-0 h-0'></div>
