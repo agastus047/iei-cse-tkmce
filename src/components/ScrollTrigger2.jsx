@@ -21,11 +21,14 @@ function ScrollTrigger2() {
   return (
     <div className="bg-hero-bg p-4 md:p-8 relative">
       <div className='absolute top-0 right-6 md:top-0 md:right-8'>
-        <Image 
+      <div className="overflow-hidden h-[50%] relative">
+          <Image
             ref={imageRef}
-            style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.2s ease' }} 
-            src={Ellipse1} 
-            className='w-40 md:w-72 mt-[-90px] md:mt-[-140px]'/>
+            style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.2s ease' }}
+            src={Ellipse1}
+            className='w-40 md:w-72 mt-[-90px] md:mt-[-140px]'
+          />
+        </div>
       </div>
       <div className="flex md:flex-row justify-between md:gap-24 mt-20 md:mt-32 relative">
         <div className="font-Poppins font-bold md:text-5xl sm:text-4xl text-xl text-black md:text-right lg:ml-12 md:ml-5 ">

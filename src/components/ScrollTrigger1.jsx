@@ -24,7 +24,7 @@ function ScrollTrigger1() {
           <Image 
             ref={imageRef}
             style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.2s ease' }}
-            src={Ellipse2} className='mb-[-90px] md:mb-[-180px] w-40 md:w-72'/>
+            src={Ellipse2} className='mb-[-90px] md:mb-[-160px] w-40 md:w-72'/>
       </div>
       <div className="flex md:flex-row justify-between md:gap-10 mt-10 pt-10 md:mr-5 lg:mr-10">
         <div className="h-1 md:h-2 w-32 md:w-56 lg:w-96 text-left bg-[#393E46]"></div>
