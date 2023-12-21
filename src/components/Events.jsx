@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination} from 'swiper/modules';
 import Eventcard from './Eventcard';
 import eventlist from './eventlist';
 
@@ -23,13 +23,13 @@ const Events = () =>{
   }}> 
   </Responsive>
   const cards = eventlist.map(item => (
-    <SwiperSlide className=' bg-center bg-cover'>
-          <Eventcard items={item}/>
+    <SwiperSlide className=' bg-center bg-cover' key={item.id}>
+          <Eventcard items={item}  />
         </SwiperSlide>
 ));
 
   return(
-    <div className="flex flex-col">
+    <div className="flex bg-white flex-col">
        <div className="text-5xl mx-auto mt-10  font-bold text-[#393E46]">EVENTS</div>
        <div><Swiper
         effect={'coverflow'}

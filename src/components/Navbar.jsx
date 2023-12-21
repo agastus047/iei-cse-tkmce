@@ -1,94 +1,99 @@
-import { useState } from 'react'
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "/public/assets/logo.png";
+import React, { useState } from 'react';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import Image from 'next/image';
+import Logo from '/public/assets/logo.png';
+import Link from 'next/link';
+import IconButton from '@mui/material/IconButton';
 
-function NavLink({to, children}) {
-    return <Link href={to} className={`mx-4 text-white text-2xl hover:text-[#00ADB5]`}>
-        {children}
-    </Link>
-}//styling
+function Navbar() {
+  const [open, setOpen] = useState(false);
 
-function MobileNav({open, setOpen}) {
-    return (
-        <div className={`absolute top-0 left-0 h-screen w-80 bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-            <div className="ml-3 flex items-center justify-center bg-white h-20">
-                <Link className="text-xl font-semibold" href="/">
-                  <Image
-                    src={Logo}
-                    alt="Logo"
-                    width={75}
-                    height={75}
-                    className="cursor-pointer"
-                  />
-                </Link>
-            </div>
-            <div className="mt-10 flex flex-col ml-4 gap-5 items-center">
-                <Link className="hover:text-[#00ADB5] text-xl font-medium my-4" href="/" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    Home
-                </Link>
-                <Link className="hover:text-[#00ADB5] text-xl font-medium my-4" href="/events" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    Events
-                </Link>
-                <Link className="hover:text-[#00ADB5] text-xl font-medium my-4" href="/team" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    Team
-                </Link>
-                <Link className="hover:text-[#00ADB5] text-xl font-medium my-4" href="/blog" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    Blog
-                </Link>
-                <Link className="hover:text-blue-500 text-xl font-medium my-4" href="/" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    Login
-                </Link>
-            </div>  
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
+
+  const closeDrawer = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <nav className="bg-nav-bg w-full top-0 left-0 right-0 h-20 xss:h-24 sm:h-28 lg:h-28">
+        <div className="container mx-auto flex justify-between items-center  ">
+          <div className="w-3/12 p-5 flex items-center ">
+            <Link href="/" className="text-2xl font-semibold ">
+              <Image
+                src={Logo}
+                alt="Logo"
+                width={70}
+                height={95}
+                className="cursor-pointer transition-all hover:scale-95 md:hover:scale-100"
+              />
+            </Link>
+          </div>
+          <div className="hidden lg:text-2xl md:flex md:flex-row md:mr-20 md:gap-14">
+            <Link href="/" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+              Home
+            </Link>
+            <Link href="/About" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+              About
+            </Link>
+            <Link href="/Events" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+              Events
+            </Link>
+            <Link href="/Execom" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+              Team
+            </Link>
+            <Link href="/blog" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
+              Blog
+            </Link>
+            <Link href="/login" className="text-white hover:text-blue-500" onClick={closeDrawer}>
+              Login
+            </Link>
+          </div>
+          <div className="md:hidden">
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
+              {open ? <CloseIcon /> : <MenuIcon className='text-white' />}
+            </IconButton>
+          </div>
         </div>
-    )
+      </nav>
+      <Drawer anchor="right" open={open} onClose={toggleDrawer} className=''>
+        <div className="bg-hero-bg flex flex-col h-screen w-screen ">
+          <div className="bg-hero-bg flex justify-between items-center p-2 pr-4">
+            <IconButton edge="start" color="inherit" aria-label="close" onClick={toggleDrawer}>
+              <CloseIcon />
+            </IconButton>
+          </div>
+          <List className="bg-hero-bg mt-16 flex flex-col justify-between items-center gap-20 px-10 ">
+              <Link href="/" onClick={closeDrawer}>
+                <ListItemText primary="Home" className='hover:text-[#00ADB5]'/>
+              </Link>
+              <Link href="/About" onClick={closeDrawer}>
+                <ListItemText primary="About" className='hover:text-[#00ADB5]'/>
+              </Link>
+              <Link href="/Events" onClick={closeDrawer}>
+                <ListItemText primary="Events" className='hover:text-[#00ADB5]'/>
+              </Link>
+              <Link href="/Execom" onClick={closeDrawer}>
+                <ListItemText primary="Team" className='hover:text-[#00ADB5]'/>
+              </Link>
+              <Link href="/blog" onClick={closeDrawer}>
+                <ListItemText primary="Blog" className='hover:text-[#00ADB5]'/>
+              </Link>
+              <Link href="/login" onClick={closeDrawer}>
+                <ListItemText primary="Login" className='hover:text-[#00ADB5]' />
+              </Link>
+          </List>
+        </div>
+      </Drawer>
+    </div>
+  );
 }
 
-export default function Navbar() {
-
-    const [open, setOpen] = useState(false)
-    return (
-        <nav className="flex filter drop-shadow-md bg-nav-bg px-4 py-8 h-28 items-center">
-            <MobileNav open={open} setOpen={setOpen}/>
-            <div className="w-3/12 p-6 flex items-center">
-                <Link className="text-2xl font-semibold hidden md:block" href="/">
-                  <Image
-                    src={Logo}
-                    alt="Logo"
-                    width={95}
-                    height={75}
-                    className="cursor-pointer"
-                  />
-                </Link>
-            </div>
-            <div className="w-9/12 flex justify-end items-center">
-
-                <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
-                    setOpen(!open)
-                }}>
-                    {/* hamburger custom */}
-                    <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
-                    <span className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                    <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
-                </div>
-
-                <div className="hidden md:flex md:gap-24">
-                    <NavLink to="/">
-                        Home
-                    </NavLink>
-                    <NavLink to="/events">
-                        Events
-                    </NavLink>
-                    <NavLink to="/team">
-                        Team
-                    </NavLink>
-                    <NavLink to="/blog">
-                        Blog
-                    </NavLink>
-                    <NavLink to="/">
-                        Login
-                    </NavLink>
-                </div>
-            </div>
-        </nav>
-    )}
+export default Navbar;

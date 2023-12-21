@@ -17,14 +17,14 @@ const Contact = () =>
       };
       
     return(
-    <div className=" h-96 bg-cyanblue flex flex-col items-center text-white ">
-        <div className="text-4xl lg:text-5xl flex items-center h-24 my-6 lg:my-16  font-bold">Contact Us</div>
-        <div className="flex flex-row flex-wrap gap-14 lg:gap-20 items-center justify-center items-baseline   mx-3">
-          <a href='https://www.youtube.com/watch?v=O0N4Ona214g'>  <FacebookOutlinedIcon sx={iconStyle}/></a>
-           <a href='google.com'> <TwitterIcon sx={iconStyle}/></a>
-            <a href='google.com'><InstagramIcon sx={iconStyle}/></a>
+    <div className=" h-64 md:h-96 bg-cyanblue flex flex-col items-center text-white ">
+        <div className="text-4xl lg:text-5xl flex items-center h-24 my-6 lg:my-14  font-bold">Contact Us</div>
+        <div className="flex flex-row flex-wrap gap-14 lg:gap-20 items-center   mx-3">
+           <a href='google.com'><InstagramIcon sx={iconStyle}/></a>
            <a href='google.com'> <LinkedInIcon sx={iconStyle}/></a>
-           <a href='google.com'> <WhatsAppIcon  sx={iconStyle}/></a>
+           <a href='google.com'> <WhatsAppIcon sx={iconStyle}/></a>
+           <a href='https://www.youtube.com/watch?v=O0N4Ona214g'><FacebookOutlinedIcon className="hidden md:block" sx={iconStyle}/></a>
+           <a href='google.com' className='hidden md:block'> <TwitterIcon sx={iconStyle}/></a>
         </div>
     </div>
     )

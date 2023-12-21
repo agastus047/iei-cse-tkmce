@@ -13,7 +13,7 @@ module.exports = {
         '350':'350px',
         '350':'300px',
         '420':'420px',
-
+        '390':'390px',
       },
       width: {
         '500': '500px',
@@ -26,15 +26,24 @@ module.exports = {
      
       backgroundColor: {
         'nav-bg': '#393E46',
-        'cyanblue':'#00ADB5'
+        'cyanblue':'#00ADB5',
+        'hero-bg': '#EEEEEE',
+        'border-bg':'#222831',
       },
       fontFamily: {
         clash : ['var(--font-clash)'],
         michroma:['Michroma'],
-        oldeenglish: ['Olde English'], 
+        oldEnglish: ['var(--font-olde)'], 
         Poppins:['Poppins'],
       },
-      
+      minWidth: {
+        '1/2': '50%',
+      },
+      screens: {
+        'xss':'370px',
+        'xs': '390px',
+        
+      },
     },
   },
   plugins: [],
