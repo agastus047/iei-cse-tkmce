@@ -11,7 +11,17 @@ import eventlist from './eventlist';
 
 const Events = () =>{
 
-
+<Responsive breakpoints={{
+    // When the screen width is less than 640px (mobile size)
+    640: {
+      slidesPerView: 1, // Set slidesPerView to 1
+    },
+    // When the screen width is greater than or equal to 641px (other screen sizes)
+    641: {
+      slidesPerView: 3, // Set slidesPerView to 3 (or your desired value)
+    },
+  }}> 
+  </Responsive>
   const cards = eventlist.map(item => (
     <SwiperSlide className=' bg-center bg-cover'>
           <Eventcard items={item}/>
@@ -25,7 +35,7 @@ const Events = () =>{
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        // slidesPerView={1}
+        slidesPerView={1}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
