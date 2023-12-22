@@ -13,8 +13,8 @@ const Execom = () => {
         <span style={{ backgroundColor: '#00ADB5', height: '60px', width: '100%', display: 'block' }} className='mt-10'>
         <div className='flex justify-center pt-3 items-center'><p className='text-white font-extrabold text-3xl'>EXECOM</p></div>
         </span>
-        <div className='xl:pl-10 xl:pr-10  '>
-        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mb-10 grid-cols-1'>
+        <div className='xl:pl-10 xl:pr-10 '>
+        <div className='flex flex-wrap gap-10 xl:gap-16 justify-center content-center '>
         {
             execomlist.map(item => (
                 
@@ -27,7 +27,7 @@ const Execom = () => {
         <div className='flex justify-center pt-3 items-center'><p className='text-white font-extrabold text-3xl'>Web Team</p></div>
         </span>
         <div className='xl:pl-10 xl:pr-10  '>
-        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mb-10 grid-cols-1'>
+        <div className='flex flex-wrap gap-10 xl:gap-16 justify-center content-center mb-10'>
         {
             webteam.map(item => (
                 
