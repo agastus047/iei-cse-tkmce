@@ -2,11 +2,11 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="bg-hero-bg md:h-screen  py-48 md:py-32 flex justify-center content-center min-h-screen -mb-20 xss:-mb-24 sm:-mb-28 xl:-mb-32">
+    <div className="bg-hero-bg md:h-screen pb-20 md:pb-32 flex justify-center content-center min-h-screen -mb-20 xss:-mb-24 sm:-mb-28 xl:-mb-28">
       
-      <div className="container mx-auto text-center">
-        <div className='md:h-40 xl:h-0 h-0'></div>
-        <h1 className="text-5xl font-oldEnglish text-black md:text-8xl">
+      <div className="container mx-auto text-center flex flex-col justify-center content-center">
+        
+        <h1 className="text-5xl font-oldEnglish text-black md:text-6xl xl:text-8xl">
           The Institution of Engineers India
         </h1>
         <h2 className='text-5xl font-oldEnglish text-black md:text-8xl'>
