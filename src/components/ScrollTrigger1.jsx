@@ -1,6 +1,6 @@
 import React, { useEffect, useRef ,useState} from 'react';
 import Image from 'next/image';
-import Ellipse2 from '/public/assets/Ellipse2new.png';
+import Ellipse2 from '/public/assets/Ellipse2w.png';
 
 function ScrollTrigger1() {
   const imageRef = useRef(null);
