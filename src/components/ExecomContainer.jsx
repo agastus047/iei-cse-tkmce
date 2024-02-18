@@ -14,13 +14,13 @@ const ExecutiveTeam = () => {
         </div>
         <div className="rounded-lg overflow-hidden p-6 mx-auto">
          
-          <img src='/assets/execommember/Sanjay S J.jpg' className="ml-4 md:ml-0 border-4 border-cyablue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg" />
+          <img src='/assets/execommember/Sanjay S J.jpg' className="ml-5 md:ml-0 border-4 border-cyablue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg" />
           <h2 className="text-xl font-semibold mb-4 text-center">FACULTY COORDINATOR</h2>
 
         </div>
         <div className="mt-0 md:mt-10 rounded-lg overflow-hidden p-6 mx-auto">
 
-          <img src='/assets/execommember/Mohammed sinan pakkada .jpg' className="border-4 border-cyablue shadow-md  w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg" />
+          <img src='/assets/execommember/Mohammed sinan pakkada .jpg' className="ml-5 border-4 border-cyablue shadow-md  w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg" />
           <h2 className="text-xl font-semibold mb-4 text-center">GENERAL SECRETARY</h2>
 
         </div>
