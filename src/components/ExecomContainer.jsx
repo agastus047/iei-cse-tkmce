@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const ExecutiveTeam = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-hero-bg">
-      <div className="text-5xl mx-auto mt-10  font-bold text-[#393E46]">EXECOM</div>
+    <div className="flex flex-col items-center justify-center bg-hero-bg text-[#393E46]">
+      <div className="text-5xl mx-auto mt-10  font-bold ">EXECOM</div>
       <div className="grid grid-cols-1 sm:grid sm:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-8">
         
         <div className="mt-0 md:mt-10 rounded-lg overflow-hidden p-6 mx-auto">

@@ -36,6 +36,15 @@ const Events = () =>{
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper w-full my-20 h-96"
+        slidesPerView={1}
+        initialSlide={1}
+        freeMode={true}
+        spaceBetween={0.1} // Set the space between slides
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
       >
         
     {cards}
