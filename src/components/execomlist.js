@@ -154,5 +154,12 @@ export const webteam=[
         linkedIn:'https://www.linkedin.com/in/anjana-kj-312136229/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         imgcorrect:true
     },
+    {
+        id:21,
+        name:'Bharath Vishnu',
+        img:'/assets/execommember/Bharath Vishnu.jpg',
+        position:'Treasurer',
+        imgcorrect:false
+    },
 ]
 
