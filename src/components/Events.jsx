@@ -1,47 +1,51 @@
-import { Swiper, SwiperSlide,Responsive } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
 import { EffectCoverflow, Pagination} from 'swiper/modules';
 import Eventcard from './Eventcard';
 import eventlist from './eventlist';
+import Carousel from 'react-material-ui-carousel';
+import { Button } from '@mui/material';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const Events = () =>{
 
 
-  const cards = eventlist.map(item => (
-    <SwiperSlide className=' bg-center bg-cover' key={item.id}>
-          <Eventcard items={item}  />
-        </SwiperSlide>
-));
-
   return(
-    <div className="flex bg-white flex-col">
-       <div className="text-5xl mx-auto mt-10  font-bold text-[#393E46]">EVENTS</div>
-       <div><Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        // slidesPerView={1}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper w-full my-20 h-96"
-      >
-        
-    {cards}
-  
-    </Swiper></div>
-      </div>
+    <div className='py-8 px-8 '>
+    <p className='text-[#393e46] text-center sm:mb-10 mb-2 font-extrabold   md:text-6xl sm:text-4xl text-2xl'>Events</p>
+    <div className='w-full md:px-8 lg:px-32 xl:px-80'>
+    <Carousel interval='3500' animation='slide' duration='850'
+    NavButton={({onClick, next, prev}) => {
+    // Other logic
+
+    return (
+        <Button onClick={onClick} className="top-1/3 " >
+            {next && <ArrowForwardIosIcon sx={{ color: '#000000', '&:hover': { color: '#ffffff' } }} />}
+            {prev && <ArrowBackIosNewIcon sx={{ color: '#000000', '&:hover': { color: '#ffffff' } }}/>}
+        </Button>
+    )
+}}
+indicatorIconButtonProps={{
+    style: {
+        padding: '10px',    // 1
+        color: 'black'       // 3
+    }
+}}
+
+activeIndicatorIconButtonProps={{
+    style: {
+        color: '#00adb5' // 2
+    }
+}}
+
+fullHeightHover={false}
+>
+
+        {
+            eventlist.map(item => <Eventcard key={item.id} items={item} /> )
+        }
+    </Carousel>
+</div>
+    </div>
   )
 }
 
