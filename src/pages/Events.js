@@ -1,6 +1,6 @@
 import React from 'react';
 import Eventcard from '../components/Eventspgcard';
-import eventlist from '../components/eventlist';
+import eventlist from '../data/eventlist';
 
 const Events = () => {
   const cards = eventlist.map(item => (
