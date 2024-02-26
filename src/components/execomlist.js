@@ -122,7 +122,7 @@ export const execomlist=[
     {
         id:17,
         name:'Asiya Muhammed ',
-        img:'/assets/execommember/Asiya Muhammed.jpg',
+        img:'/assets/execommember/Asiya Muhammed .jpg',
         position:'Documentation Team',
         imgcorrect:true
     },

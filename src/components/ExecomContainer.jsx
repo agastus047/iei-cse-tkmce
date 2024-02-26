@@ -22,7 +22,7 @@ const ExecutiveTeam = () => {
 
         <div className="mt-0 md:mt-10 rounded-lg overflow-hidden p-6 mx-auto">
           <img src='/assets/execommember/Mohammed sinan pakkada.jpg' className="bg-cyanblue border-4 border-cyanblue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg mx-auto" />
-          <h1 className="text-2xl font-bold text-center">Muhohammed Sinan Pakkada</h1>
+          <h1 className="text-2xl font-bold text-center">Mohammed Sinan Pakkada</h1>
           <h2 className="text-xl font-medium mb-4 text-center">General Secretary</h2>
         </div>
 
