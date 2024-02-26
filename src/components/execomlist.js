@@ -80,7 +80,7 @@ export const execomlist=[
     {
         id:11,
         name:'Akhila C',
-        img:'/assets/execommember/Akhila C.jpg',
+        img:'/assets/execommember/Akhila C.JPG',
         position:'Tech Team',
         imgcorrect:true
     },
@@ -101,7 +101,7 @@ export const execomlist=[
     {
         id:14,
         name:'Krishnapriya V R',
-        img:'/assets/execommember/Krishnapriya V R.jpg',
+        img:'/assets/execommember/Krishnapriya V R.JPG',
         position:'Design Team',
         imgcorrect:true
     },
