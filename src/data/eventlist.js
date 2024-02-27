@@ -1,10 +1,32 @@
 const eventlist=[
     {
         id:0,
-        name:'Event1',
-        discription:'event1',
+        name:'Codebytes - Romeo & Juliet',
+        discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
         img:'/assets/event.png',
-        link:'event1'
+        link:'event1',
+        date:'11/12/2023',
+        isPaid:false,
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'10 to 10pm',
+        venue:'Hackerrank',
+        cordinator: {
+            1: ["Abhinand", "8590813125"],
+            2: ["Sangheeth", "8589011080"]
+        },
+        pref1:{
+            desc:["Enter the size of the T-shirt "],
+            option:{
+                1:["2xl","xl","L","M","S"],
+            }
+        },
+        pref2:{
+            desc:["Enter why did you register for this event","Enter the feedback"],
+        },
+        referalId:true,
     },
     {
         id:1,
