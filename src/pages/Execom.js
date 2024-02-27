@@ -1,5 +1,5 @@
 import React from 'react'
-import {execomlist,webteam} from '@/components/execomlist'
+import {execomlist,webteam} from '@/data/execomlist'
 import Execomcard from '@/components/Execomcard'
 
 const Execom = () => {

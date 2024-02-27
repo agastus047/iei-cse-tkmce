@@ -1,4 +1,4 @@
-import eventlist from '@/components/eventlist';
+import eventlist from '@/data/eventlist';
 import React from 'react'
 import { useRouter } from 'next/router';
 

@@ -1,6 +1,6 @@
 import { EffectCoverflow, Pagination} from 'swiper/modules';
 import Eventcard from './Eventcard';
-import eventlist from './eventlist';
+import eventlist from '../data/eventlist';
 import Carousel from 'react-material-ui-carousel';
 import { Button } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
