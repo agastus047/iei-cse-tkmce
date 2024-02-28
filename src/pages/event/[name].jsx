@@ -1,14 +1,14 @@
 import eventlist from '@/data/eventlist';
 import React from 'react'
 import { useRouter } from 'next/router';
-
+import Link from 'next/link';
 const Eventpage = () => {
 
   const router = useRouter();
-  const {name} = router.query;
-  
+  const { name } = router.query;
+
   const eventdata = eventlist.find((event) => event.link === name);
-  
+
   return (
     <div className=' xl:pr-64 xl:pl-64 lg:pr-36 lg:pl-36 md:pr-10 sm:pr-20 sm:pl-20 pl-2 pr-2 md:pl-10 pb-10 pt-10 '>
       <div className='border-4  md:flex  md:gap-10 gap-10 bg-white shadow-lg md:p-5 p-5 font-Poppins'>
@@ -20,13 +20,13 @@ const Eventpage = () => {
           <p className='font-Poppins'>{eventdata?.discription}</p>
           <div className='flex flex-col '>
             <h3 className='font-bold '>Price</h3>
-            <p>Rs.100</p>
+            <p>Rs.{eventdata?.price.ieiMember}</p>
           </div>
           <div className='md:flex  justify-between gap-10 grid xs:grid-cols-3 grid-cols-2  xs:gap-5' >
 
             <div className='flex flex-col'>
               <h3 className='font-bold'>Start Date</h3>
-              <p>06-10-2023</p>
+              <p>{eventdata?.date}</p>
             </div>
             <div className='flex flex-col'>
               <h3 className='font-bold'>End Date</h3>
@@ -34,28 +34,30 @@ const Eventpage = () => {
             </div>
             <div className='flex flex-col'>
               <h3 className='font-bold'>Venue</h3>
-              <p>Tkm</p>
+              <p>{eventdata?.venue}</p>
             </div>
           </div>
-         
-          
+
+
           <div>
             <p className=' 4xl font-bold'>COORDINATORS</p>
           </div>
           <div className='flex justify-between'>
             <div className='flex flex-col'>
-              <h3 className='font-semibold'>Amalendu</h3>
-              <p>+8078213133</p>
+              <h3 className='font-semibold'>{eventdata?.cordinator[1][0]}</h3>
+              <p>{eventdata?.cordinator[1][1]}</p>
             </div>
             <div className='flex flex-col'>
-              <h3 className='font-semibold'>Amalendu</h3>
-              <p>+8078213133</p>
+              <h3 className='font-semibold'>{eventdata?.cordinator[2][0]}</h3>
+              <p>{eventdata?.cordinator[2][1]}</p>
             </div>
           </div>
           <div className='flex justify-end'>
-            <button className="bg-nav-bg  text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black ">
-              Register
-            </button>
+            <Link href={`/Register/${eventdata?.link}`}>
+              <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+                Register
+              </button>
+            </Link>
           </div>
         </div>
 

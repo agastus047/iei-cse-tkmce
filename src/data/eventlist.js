@@ -4,8 +4,8 @@ const eventlist=[
         name:'Codebytes - Romeo & Juliet',
         discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
         img:'/assets/event.png',
-        link:'event1',
-        date:'11/12/2023',
+        link:'Codebytes-Romeo&Juliet',
+        date:'11-12-2023',
         isPaid:false,
         price:{
             ieiMember:0,
