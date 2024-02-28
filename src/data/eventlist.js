@@ -6,6 +6,8 @@ const eventlist=[
         img:'/assets/event.png',
         link:'Codebytes-Romeo&Juliet',
         date:'11-12-2023',
+        isTeamevent:true,
+        teammember:2,
         isPaid:false,
         price:{
             ieiMember:0,
