@@ -17,12 +17,13 @@ const eventlist=[
             1: ["Abhinand", "8590813125"],
             2: ["Sangheeth", "8589011080"]
         },
-        pref1:{
-            desc:["Enter the size of the T-shirt "],
-            option:{
-                1:["2xl","xl","L","M","S"],
-            }
+        pref1:[
+            {
+            desc:"Enter the size of the T-shirt ",
+            option:["2xl","xl","L","M","S"],
+            
         },
+    ],
         pref2:{
             desc:["Enter why did you register for this event","Enter the feedback"],
         },
