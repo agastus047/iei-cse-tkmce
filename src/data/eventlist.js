@@ -13,6 +13,8 @@ const eventlist=[
         },
         time:'10 to 10pm',
         venue:'Hackerrank',
+        teamevent:true,
+        teammmber:2,
         cordinator: {
             1: ["Abhinand", "8590813125"],
             2: ["Sangheeth", "8589011080"]
