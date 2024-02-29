@@ -155,4 +155,3 @@ export const webteam=[
         imgcorrect:true
     },
 ]
-
