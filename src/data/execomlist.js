@@ -10,7 +10,7 @@ export const execomlist=[
     {
         id:1,
         name:'Mohammed Sinan Pakkada',
-        img:'/assets/execommember/Mohammed sinan pakkada .jpg',
+        img:'/assets/execommember/Mohammed sinan pakkada.jpg',
         position:'Secretary',
         imgcorrect:true
     },
@@ -30,21 +30,21 @@ export const execomlist=[
     },
     {
         id:4,
-        name:'AGASTUS JOYSON',
+        name:'Agastus Joyson',
         img:'/assets/execommember/AGASTUS JOYSON.jpeg',
         position:'Tech Head',
         imgcorrect:true
     },
     {
         id:5,
-        name:'KRIPA ANIL',
+        name:'Kripa Anil',
         img:'/assets/execommember/KRIPA ANIL.jpg',
         position:'Design Head',
         imgcorrect:true
     },
     {
         id:6,
-        name:'PARVATHY S',
+        name:'Parvathy S',
         img:'/assets/execommember/PARVATHY S .jpg',
         position:'Documentation Head',
         imgcorrect:true
@@ -65,7 +65,7 @@ export const execomlist=[
     },
     {
         id:9,
-        name:'ANNA TOMSON',
+        name:'Anna Tomson',
         img:'/assets/execommember/ANNA TOMSON.jpg',
         position:'Program Coordinator',
         imgcorrect:true
@@ -107,7 +107,7 @@ export const execomlist=[
     },
     {
         id:15,
-        name:'NIBAL IQBAL',
+        name:'Nibal Iqbal',
         img:'/assets/execommember/NIBAL IQBAL.jpg',
         position:'Documentation Team',
         imgcorrect:false
@@ -128,7 +128,7 @@ export const execomlist=[
     },
     {
         id:18,
-        name:'SANGEETH S ',
+        name:'Sangeeth S ',
         img:'/assets/execommember/SANGEETH S.jpg',
         position:'P R Team',
         imgcorrect:true
