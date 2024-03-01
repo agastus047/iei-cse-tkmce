@@ -1,7 +1,7 @@
 import eventlist from '@/data/eventlist';
 import React from 'react'
 import { useRouter } from 'next/router';
-
+import Link from 'next/link';
 const Eventpage = () => {
 
   const router = useRouter();
@@ -24,13 +24,13 @@ const Eventpage = () => {
         <div className='flex flex-col gap-4 md:w-full '>
           <div className='flex flex-col '>
             <h3 className='font-bold '>Price</h3>
-            <p>Rs.100</p>
+            <p>Rs.{eventdata?.price.ieiMember}</p>
           </div>
           <div className='md:flex  justify-between gap-10 grid xs:grid-cols-3 grid-cols-2  xs:gap-5' >
 
             <div className='flex flex-col'>
               <h3 className='font-bold'>Start Date</h3>
-              <p>06-10-2023</p>
+              <p>{eventdata?.date}</p>
             </div>
             <div className='flex flex-col'>
               <h3 className='font-bold'>End Date</h3>
@@ -38,7 +38,7 @@ const Eventpage = () => {
             </div>
             <div className='flex flex-col'>
               <h3 className='font-bold'>Venue</h3>
-              <p>Tkm</p>
+              <p>{eventdata?.venue}</p>
             </div>
           </div>
 
@@ -48,18 +48,20 @@ const Eventpage = () => {
           </div>
           <div className='flex gap-10'>
             <div className='flex flex-col'>
-              <h3 className='font-semibold'>Amalendu</h3>
-              <p>+8078213133</p>
+              <h3 className='font-semibold'>{eventdata?.cordinator[1][0]}</h3>
+              <p>{eventdata?.cordinator[1][1]}</p>
             </div>
             <div className='flex flex-col'>
-              <h3 className='font-semibold'>Amalendu</h3>
-              <p>+8078213133</p>
+              <h3 className='font-semibold'>{eventdata?.cordinator[2][0]}</h3>
+              <p>{eventdata?.cordinator[2][1]}</p>
             </div>
           </div>
           <div className='flex justify-end'>
-            <button className="bg-nav-bg  text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black ">
-              Register
-            </button>
+            <Link href={`/Register/${eventdata?.link}`}>
+              <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+                Register
+              </button>
+            </Link>
           </div>
         </div>
 
