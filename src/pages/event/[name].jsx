@@ -42,7 +42,7 @@ const Eventpage = () => {
           <div>
             <p className=' 4xl font-bold'>COORDINATORS</p>
           </div>
-          <div className='flex justify-between'>
+          <div className='flex gap-10'>
             <div className='flex flex-col'>
               <h3 className='font-semibold'>{eventdata?.cordinator[1][0]}</h3>
               <p>{eventdata?.cordinator[1][1]}</p>
