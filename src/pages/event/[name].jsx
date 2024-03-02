@@ -22,8 +22,8 @@ const Eventpage = () => {
           </div>
         </div>
         <div className='flex flex-col gap-4 md:w-full '>
-          <div className='flex flex-col '>
-            <h3 className='font-bold '>Price</h3>
+          <div className='flex flex-col mt-3 md:mt-0'>
+            <h3 className='font-bold  '>Price</h3>
             <p>Rs.{eventdata?.price.ieiMember}</p>
           </div>
           <div className='md:flex  justify-between gap-10 grid xs:grid-cols-3 grid-cols-2  xs:gap-5' >
