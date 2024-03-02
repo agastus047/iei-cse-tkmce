@@ -18,7 +18,7 @@ const Eventpage = () => {
           </div>
           <div className='flex flex-col md:w-1/2 mb-10 '>
             <h1 className='text-3xl text-center font-Poppins font-bold mt-10 mb-8'>{eventdata?.name}</h1>
-            <p className='font-Poppins'>{eventdata?.discription}</p>
+            <p className='font-Poppins whitespace-pre-wrap'>{eventdata?.discription}</p>
           </div>
         </div>
         <div className='flex flex-col gap-4 md:w-full '>

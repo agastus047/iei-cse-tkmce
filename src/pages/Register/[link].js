@@ -32,7 +32,7 @@ const Register = () => {
       <div className='md:flex font-Poppins w-full  gap-5 bg-white '>
         <div className='md:w-1/2 flex flex-col gap-4 p-4 md:h-screen  justify-center items-center md:min-h-screen   md:sticky  md:top-0'>
           <h1 className='text-4xl font-bold '>{eventdata?.name}</h1>
-          <p className="font-semibold">{eventdata?.discription}</p>
+          <p className="font-semibold whitespace-pre-wrap">{eventdata?.discription}</p>
         </div>
         <div className="md:w-1/2 w-full p-2 ">
           <form className='flex flex-col justify-center items-center'>
@@ -145,7 +145,7 @@ const Register = () => {
                 ))
               }
               </> : <><div className="relative z-0  px-2 w-full group">
-                <label className="font-mono uppercase font-bold  text-11  text-gray-900 dark:text-gray-300
+                <label className="font-mono uppercase font-bold  text-11  text-black
           bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                   Full Name
                 </label>
