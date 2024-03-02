@@ -5,13 +5,14 @@ const eventlist=[
         discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
         img:'/assets/event.png',
         link:'Codebytes-Romeo&Juliet',
+        isRegistrationOpen:true,
         date:'11-12-2023',
         isTeamevent:true,
         teammember:2,
         isPaid:false,
         price:{
-            ieiMember:0,
-            nonieiMember:0
+            ieiMember:200,
+            nonieiMember:300
         },
         time:'10 to 10pm',
         venue:'Hackerrank',
@@ -27,11 +28,12 @@ const eventlist=[
             option:["2xl","xl","L","M","S"],
             
         },
+       
     ],
         pref2:{
             desc:["Enter why did you register for this event","Enter the feedback"],
         },
-        referalId:true,
+        referalId:false,
     },
     {
         id:1,
