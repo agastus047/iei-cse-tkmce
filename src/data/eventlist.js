@@ -52,8 +52,7 @@ const eventlist=[
         },
         time:'4:30 to 6pm',
         venue:'System Software Lab',
-        teamevent:true,
-        teammmber:2,
+     
         cordinator: {
             1: ["Rameesa","8281900584"],
             2: ["Abel", "9497818160"]
@@ -83,8 +82,7 @@ const eventlist=[
         },
         time:'24 * 7',
         venue:'HackerRank',
-        teamevent:true,
-        teammmber:1,
+       
         cordinator: {
             1: ["Abhinand", "8590813125"],
             2: ["Sangheeth", "8589011080"]
@@ -114,8 +112,7 @@ const eventlist=[
         },
         time:'9am to 12 pm',
         venue:'System Software Lab',
-        teamevent:true,
-        teammmber:1,
+    
         cordinator: {
             1: ["Ann Maria", "9784198622"],
             2: ["Joicy Thomas", "9633821809"]
@@ -146,8 +143,7 @@ const eventlist=[
         },
         time:'7.30 to 9.30',
         venue:'G Meet',
-        teamevent:true,
-        teammmber:1,
+       
         cordinator: {
             1: ["Sangheeth", "8589011080"],
             2: ["Liya", "6238742498"]
@@ -177,8 +173,7 @@ const eventlist=[
         },
         time:'10am to 6 PM',
         venue:'Quizizz',
-        teamevent:true,
-        teammmber:1,
+        
         cordinator: {
             1: ["Rohit", "9567031189"],
             2: ["Sathyaki", "9400222420"]
@@ -209,8 +204,6 @@ const eventlist=[
         },
         time:'10am to 10pm',
         venue:'Hackerrank',
-        teamevent:true,
-        teammmber:1,
         cordinator: {
             1: ["Abhinand", "8590813125"],
             2: ["Sangheeth", "8589011080"]
@@ -246,6 +239,96 @@ const eventlist=[
         cordinator: {
             1: ["Sriram", "8590381055"],
             2: ["Ananiah", "9526061629"]
+        },
+
+        pref1:[
+            
+         ],
+        pref2:{
+            desc:[],
+        },
+        referalId:false,
+    },
+    {
+        id:8,
+        name:'IEI Students Day Celebration',
+        discription: "Ignite your passion for sustainable transportation! ⚡️\n\nElevate your understanding of a greener future at the IEI STUDENTS DAY Program's Talk Session.\n\nJoin us for insightful talks, interactive discussions, and a deeper dive into shaping a sustainable transport ecosystem.\n\nEmbark on a journey towards a sustainable future with us! 🌎🤝",
+        img:'/assets/events/IEI-Students-Day-Celebration.jpg',
+        link:'IEI-Students-Day-Celebration',
+        isRegistrationOpen:true,
+        date:'28 November 2023',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'3 to 5 PM',
+        venue:'APJ Hall',
+        cordinator: {
+            1: ["Sinan", "9526075042"],
+            2: ["", ""]
+        },
+        pref1:[
+            
+         ],
+        pref2:{
+            desc:[],
+        },
+        referalId:false,
+    },
+    {
+        id:9,
+        name:'Tech Whiz - November',
+        discription: "🚀 Ready to test your tech knowledge? Join  TechWiz , the monthly quiz  part of THE WEEKEND SHOW presented by IEI CSE TKMCE!\n\n🧠 TechWiz is your chance to showcase your tech prowess and compete with fellow enthusiasts. We've prepared a quiz that will challenge your understanding of the tech world. It's not just about winning; it's about learning, growing, and having fun while you're at it",
+        img:'/assets/events/Tech-Whiz-November.jpg',
+        link:'Tech-Whiz-November',
+        isRegistrationOpen:true,
+        date:'19 November 2023',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'10am to 6 PM',
+        venue:'Quizizz',
+        
+        cordinator: {
+            1: ["Rohit", "9567031189"],
+            2: ["Sathyaki", "9400222420"]
+        },
+
+        pref1:[
+            
+         ],
+        pref2:{
+            desc:[],
+        },
+        referalId:false,
+    },
+    {
+        id:10,
+        name:'Shardeum Backpacking India',
+        discription: "🌟✨ Embark on the Adventure! Shardeum Backpacking is HERE! 🚀🌍\n\n In Collaboration with IEI CSE TKMCE, Shardeum presents the Shardeum Backpacking India event — a captivating exploration into Web3 and its boundless opportunities.\n\n📅 Date: 15 Nov 2023\n🕟 Time: 4:30 PM to 5:30 PM\n📍 Venue: System Software Lab\n\nJoin the thrill of Web3 and Opportunities with our dynamic speaker:\n\n🎙️ Nived Gop P \nShardeum Contributor\n\n🔥 Embark on an electrifying journey that ignited on 16th August 2023. ",
+        img:'/assets/events/Shardeum-Backpacking-India.jpg',
+        link:'Shardeum-Backpacking-India',
+        isRegistrationOpen:true,
+        date:'15 November 2023',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'4.30 to 5.30',
+        venue:'TKM CE',
+        cordinator: {
+            1: ["Mahmood", "9544499312"],
+            2: ["Amarjith", "7306091402"]
         },
 
         pref1:[
