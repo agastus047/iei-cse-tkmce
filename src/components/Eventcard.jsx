@@ -10,13 +10,11 @@ const Eventcard =({items})=>
         <div className="card-image w-full h-72 relative overflow-hidden border-4 border-cyan-500">
           <img
             src={items.img}
-            className="absolute object-cover object-center h-full w-full rounded-t-md z-10"
+            className="absolute object-cover object-center h-full w-full  z-10"
             alt="Image"
           />
         </div>
-        <div className="flex h-16 bg-nav-bg justify-center items-center text-3xl text-white font-bold border-4 border-cyan-500 border-t-0">
-          {items.name}
-        </div>
+        
     </div>
     
     </Link>
