@@ -31,7 +31,7 @@ const Register = () => {
     <div className='pl-2 pr-2'>
       <div className='md:flex font-Poppins w-full  gap-5 bg-white '>
         <div className='md:w-1/2 flex flex-col gap-4 p-4 md:h-screen  justify-center items-center md:min-h-screen   md:sticky  md:top-0'>
-          <h1 className='text-4xl font-bold '>{eventdata?.name}</h1>
+          <h1 className='md:text-4xl font-bold break-words text-2xl '>{eventdata?.name}</h1>
           <p className="font-semibold whitespace-pre-wrap">{eventdata?.discription}</p>
         </div>
         <div className="md:w-1/2 w-full p-2 ">
