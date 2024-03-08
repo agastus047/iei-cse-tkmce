@@ -9,14 +9,106 @@ const Register = () => {
   const router = useRouter();
   const { link } = router.query;
   const [eventdata, setEventData] = useState(null);
-
+  const [state,setState] = useState({})
   useEffect(() => {
     const eventdata = eventlist.find((event) => event.link === link);
     setEventData(eventdata);
     setamount(eventdata?.price.nonieiMember)
   }, [link]);
+  const onsubmit =(event)=>{
+    event.preventDefault();
+    if(eventdata?.isTeamevent){
+      for (let i = 0; i < eventdata?.teammember; i++) {
+        const memberName = `member${i}`;
+        const email = `email_${i}`;
+        const phonenumber = `phone_number_${i}`;
+        const college = `college_${i}`;
+        const year = `year_${i}`
+        const batch = `batch_${i}`
+        const branch = `branch_${i}`
+        if (
+          !state[memberName] ||
+          !state[email] ||
+          !state[phonenumber] ||
+          !state[college] ||
+          !state[branch] ||
+          !state[batch] ||
+          !state[year] 
+        ){
+          console.log(state)
+        }else{
+          console.log("Enter complete data");
+        }
+      }
+      if(ieiMember){
+        if(!state.member_id){
+          console.log(state);
+        }
+      }else{
+        console.log("Complete the fields");
+      }
+      if(eventdata?.referalId){
+        if(!state.referal_Id){
+          console.log(state);
+        }
+      }
+      if(eventdata?.isPaid){
+        if(
+          !state.upiid ||
+          !state.accholdersname ||
+          !state.transactionId
+          ){
+          console.log(state);
+        }else{
+          console.log("please cmplt the fields ");
+        }
+      }
+    }else if (!eventdata?.isTeamevent) {
+      if(
+        !state.member0 ||
+        !state.email_0 ||
+        !state.phone_number_0 ||
+        !state.college_0 ||
+        !state.year_0 ||
+        !state.branch_0 ||
+        !state.batch_0
+      ){
+        console.log(state)
+      }
+      if(ieiMember){
+        if(!state.member_id){
+          console.log(state);
+        }
+      }else{
+        console.log("Complete the fields");
+      }
+      if(eventdata?.referalId){
+        if(!state.referal_Id){
+          console.log(state);
+        }
+      }
+      if(eventdata?.isPaid){
+        if(
+          !state.upiid ||
+          !state.accholdersname ||
+          !state.transactionId
+          ){
+          console.log(state);
+        }else{
+          console.log("please cmplt the fields ");
+        }
+      }
 
+    }
+  }
+  const  handlechange = (evt) =>{
+    const value = evt.target.value;
 
+    setState({
+      ...state,
+      [evt.target.name]: value,
+    });
+  }
 
   const handlebox = (checked) => {
     if (checked) {
@@ -46,11 +138,12 @@ const Register = () => {
                       </label>
                       <input
                         type="text"
-                        name={`full_name_${index}`}
+                        name={`member${index}`}
                         id={`full_name_${index}`}
-                        className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                        className="h-10 text-[11px] text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
                         required=""
                         placeholder=""
+                        onChange={handlechange}
                       />
                     </div>
                     <div className="relative z-0  px-2 w-full group">
@@ -61,9 +154,10 @@ const Register = () => {
                         type="email"
                         name={`email_${index}`}
                         id={`email_${index}`}
-                        className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                        className="h-10 text-[11px] text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
                         required=""
                         placeholder=""
+                        onChange={handlechange}
                       />
                     </div>
                     <div className="relative z-0  px-2 w-full group">
@@ -77,6 +171,7 @@ const Register = () => {
                         className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
                         required=""
                         placeholder=""
+                        onChange={handlechange}
                       />
                     </div>
                     <div className="relative z-0  px-2 w-full group">
@@ -90,10 +185,12 @@ const Register = () => {
                         className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
                         required=""
                         placeholder=""
+                        onChange={handlechange}
                       />
                     </div>
                     <div className='mt-5'>
                       <select
+                        onChange={handlechange}
                         name={`year_${index}`}
                         className=" w-full py-4 rounded-lg gray-bg opacity-75"
                         defaultValue={"null"}
@@ -109,7 +206,8 @@ const Register = () => {
                     </div>
                     <div className='mt-5'>
                       <select
-                        name={`branch`}
+                        onChange={handlechange}
+                        name={`branch_${index}`}
                         className=" w-full py-4  rounded-lg gray-bg opacity-75"
                         defaultValue={"null"}
                       >
@@ -129,7 +227,7 @@ const Register = () => {
                     </div>
                     <div className='mt-5'>
                       <select
-                        name={`year_${index}`}
+                        name={`batch_${index}`}
                         className=" w-full py-4 rounded-lg gray-bg opacity-75"
                         defaultValue={"null"}
                       >
@@ -149,38 +247,39 @@ const Register = () => {
           bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                   Full Name
                 </label>
-                <input type="text" name="first_name" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" />
+                <input type="text" name="member" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange}/>
               </div>
                 <div className="relative z-0  px-2 w-full group">
                   <label className="font-mono uppercase font-bold  text-11  text-black
           bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                     email
                   </label>
-                  <input type="email" name="first_name" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" />
+                  <input type="email" name="email_0" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                    required="" placeholder="" onChange={handlechange} />
                 </div>
                 <div className="relative z-0  px-2 w-full group">
                   <label className="font-mono uppercase font-bold  text-11  text-black
           bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                     Phone Number
                   </label>
-                  <input type="number" name="first_name" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" />
+                  <input type="number" name="phone_number_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                    required="" placeholder="" onChange={handlechange}/>
                 </div>
                 <div className="relative z-0  px-2 w-full group">
                   <label className="font-mono uppercase font-bold  text-11  text-black
           bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                     College
                   </label>
-                  <input type="text" name="first_name" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" />
+                  <input type="text" name="college_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                    required="" placeholder="" onChange={handlechange}/>
                 </div>
                 <div className="mt-5">
                   <select
-                    name="year"
+                    name="year_0"
                     className=" w-full py-4 rounded-lg gray-bg opacity-75"
                     defaultValue={"null"}
+                    onChange={handlechange}
                   >
                     <option value={"null"} disabled>
                       choose year
@@ -194,9 +293,10 @@ const Register = () => {
                 </div>
                 <div className='mt-5'>
                   <select
-                    name="branch"
+                    name="branch_0"
                     className=" w-full py-4  rounded-lg gray-bg opacity-75"
                     defaultValue={"null"}
+                    onChange={handlechange}
                   >
                     <option value={"null"} disabled>
                       choose branch
@@ -213,9 +313,10 @@ const Register = () => {
                   </select>
                 </div>
                 <select
-                  name={`year`}
+                  name={`batch_0`}
                   className=" w-full py-4 rounded-lg gray-bg opacity-75 mt-5"
                   defaultValue={"null"}
+                  onChange={handlechange}
                 >
                   <option value={"null"} disabled>
                     Enter the Batch
@@ -236,16 +337,16 @@ const Register = () => {
       bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                   IEI membership ID
                 </label>
-                <input type="text" name="first_name" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" />
+                <input type="text" name="member_id" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange}/>
               </div> : <></>}
               {eventdata?.referalId ? <div className="relative z-0  px-2 w-full group">
                 <label className="font-mono uppercase font-bold  text-11  text-gray-900 dark:text-gray-300
       bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                   Referral code
                 </label>
-                <input type="text" name="first_name" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" />
+                <input type="text" name="referal_id" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange}/>
               </div> : <></>}
               <div className='flex flex-col'>
                 {
@@ -255,8 +356,8 @@ const Register = () => {
                         <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                           {desc}
                         </label>
-                        <input type="text" name="first_name" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                          required="" placeholder="" />
+                        <input type="text" name="pref1" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                          required="" placeholder="" onChange={handlechange}/>
                       </div>
                     )
                   })
@@ -306,7 +407,7 @@ const Register = () => {
                       className="input w-full  opacity-75 bg-white text-black rounded-lg"
                       type={"text"}
                       name="upiid"
-
+                      onChange={handlechange}
                     ></input>
                   </div>
 
@@ -325,7 +426,7 @@ const Register = () => {
                     className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
                     type={"text"}
                     name="accholdersname"
-
+                    onChange={handlechange}
                   ></input>
                 </div>
                 <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
@@ -336,7 +437,7 @@ const Register = () => {
                     className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
                     type={"number"}
                     name="transactionid"
-
+                    onChange={handlechange}
                   ></input>
                 </div>
                 <div className="ss grid grid-rows-2 w-3/4 pb-7">
@@ -354,7 +455,7 @@ const Register = () => {
 
 
               <div className="flex justify-end">
-                <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+                <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black" onClick={onsubmit}>
                   Register
                 </button>
               </div>
