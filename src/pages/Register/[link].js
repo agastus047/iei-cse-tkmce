@@ -10,6 +10,7 @@ const Register = () => {
   const { link } = router.query;
   const [eventdata, setEventData] = useState(null);
   const [state,setState] = useState({})
+  const [flag,setFlag]  = useState(0)
   useEffect(() => {
     const eventdata = eventlist.find((event) => event.link === link);
     setEventData(eventdata);
@@ -35,21 +36,12 @@ const Register = () => {
           !state[batch] ||
           !state[year] 
         ){
-          console.log(state)
-        }else{
-          console.log("Enter complete data");
+          setFlag(flag+1);
         }
       }
       if(ieiMember){
         if(!state.member_id){
-          console.log(state);
-        }
-      }else{
-        console.log("Complete the fields");
-      }
-      if(eventdata?.referalId){
-        if(!state.referal_Id){
-          console.log(state);
+          setFlag(flag+1);
         }
       }
       if(eventdata?.isPaid){
@@ -58,11 +50,28 @@ const Register = () => {
           !state.accholdersname ||
           !state.transactionId
           ){
-          console.log(state);
-        }else{
-          console.log("please cmplt the fields ");
+            
         }
       }
+      const count = 0;
+      eventdata?.pref1.map((items,index)=>{
+        const question = `question_${count}`
+        if(
+          !state[question] 
+        ){
+        
+        }
+      })
+      const count2 = 0;
+      for (const key in eventdata?.pref2.desc){
+        const question = `questiontype2_${count2}`
+        if(
+          !state[question] 
+        ){
+         
+        }
+      }
+      console.log(state)
     }else if (!eventdata?.isTeamevent) {
       if(
         !state.member0 ||
@@ -98,6 +107,27 @@ const Register = () => {
           console.log("please cmplt the fields ");
         }
       }
+      const count = 0;
+      eventdata?.pref1.map((items,index)=>{
+        const question = `question_${count}`
+        if(
+          !state[question] 
+        ){
+         
+          console.log(state)
+        
+        }
+      })
+      const count2 = 0;
+      for (const key in eventdata?.pref2.desc){
+        const question = `questiontype2_${count2}`
+        if(
+          !state[question] 
+        ){
+          console.log(state)
+        }
+      }
+     
 
     }
   }
@@ -230,6 +260,7 @@ const Register = () => {
                         name={`batch_${index}`}
                         className=" w-full py-4 rounded-lg gray-bg opacity-75"
                         defaultValue={"null"}
+                        onChange={handlechange}
                       >
                         <option value={"null"} disabled>
                           Enter the Batch
@@ -349,34 +380,44 @@ const Register = () => {
                   required="" placeholder="" onChange={handlechange}/>
               </div> : <></>}
               <div className='flex flex-col'>
-                {
-                  eventdata?.pref2.desc.map(desc => {
-                    return (
-                      <div className="relative z-0  px-2 w-full group">
-                        <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                          {desc}
-                        </label>
-                        <input type="text" name="pref1" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                          required="" placeholder="" onChange={handlechange}/>
-                      </div>
-                    )
-                  })
-                }
+              {
+                eventdata?.pref2.desc.map((desc, index) => {
+                  return (
+                    <div key={index} className="relative z-0  px-2 w-full group">
+                      <label className="font-mono uppercase font-bold text-11 text-black bg-white relative px-1 top-2 left-3 w-auto group-focus-within:text-red-600">
+                        {desc}
+                      </label>
+                      <input
+                        key={index}
+                        type="text"
+                        name={`questiontype2_${index}`}
+                        id={`first_name_${index}`}
+                        className="h-10 text-[11px] text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                        required=""
+                        placeholder=""
+                        onChange={handlechange}
+                      />
+                    </div>
+                  );
+                })
+              }
               </div>
               {
-                eventdata?.pref1.map(items => {
+                eventdata?.pref1.map((items,index) => {
+                  
                   return (
                     <div>
                       <select
-                        name="branch"
+                        name={`question_${index}`}
                         className="w-full py-4 px-1 rounded-lg gray-bg opacity-75"
                         defaultValue={"null"}
+                        onChange={handlechange}
                       >
                         <option value={"null"} disabled>
-                          {items.desc}
+                          {items[index+1].desc}
                         </option>
                         {
-                          items.option.map(options => {
+                          items[index+1].option.map(options => {
                             return (
                               <option value={options}>{options}</option>
                             )

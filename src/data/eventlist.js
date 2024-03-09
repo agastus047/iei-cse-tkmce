@@ -24,12 +24,15 @@ const eventlist=[
         },
         pref1:[
             {
+            1:{
             desc:"Enter the size of the T-shirt ",
             option:["2xl","xl","L","M","S"],
+            }
             
         },
-       
     ],
+       
+    
         pref2:{
             desc:["Enter why did you register for this event","Enter the feedback"],
         },
