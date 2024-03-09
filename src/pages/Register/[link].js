@@ -9,16 +9,18 @@ const Register = () => {
   const router = useRouter();
   const { link } = router.query;
   const [eventdata, setEventData] = useState(null);
-  const [state,setState] = useState({})
-  const [flag,setFlag]  = useState(0)
+  const [state, setState] = useState({})
+  const [flag, setFlag] = useState(0)
+  const [msg, setmsg] = useState('');
+  const [profiledone, setprofiledone] = useState(false)
   useEffect(() => {
     const eventdata = eventlist.find((event) => event.link === link);
     setEventData(eventdata);
     setamount(eventdata?.price.nonieiMember)
   }, [link]);
-  const onsubmit =(event)=>{
+  const onsubmit = (event) => {
     event.preventDefault();
-    if(eventdata?.isTeamevent){
+    if (eventdata?.isTeamevent) {
       for (let i = 0; i < eventdata?.teammember; i++) {
         const memberName = `member${i}`;
         const email = `email_${i}`;
@@ -34,104 +36,221 @@ const Register = () => {
           !state[college] ||
           !state[branch] ||
           !state[batch] ||
-          !state[year] 
-        ){
-          setFlag(flag+1);
+          !state[year]
+        ) {
+          setmsg("Complete the field");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+        }else{
+          setFlag(flag + 1)
         }
       }
-      if(ieiMember){
-        if(!state.member_id){
-          setFlag(flag+1);
+      if (ieiMember) {
+        if (!state.member_id) {
+          setmsg("Complete the field");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+        } else {
+          setFlag(flag + 1)
         }
       }
-      if(eventdata?.isPaid){
-        if(
+      if (eventdata?.isPaid) {
+        if (
           !state.upiid ||
           !state.accholdersname ||
           !state.transactionId
-          ){
-            
+        ) {
+          setmsg("Complete the field");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+        }else{
+          setFlag(flag + 1)
         }
       }
       const count = 0;
-      eventdata?.pref1.map((items,index)=>{
+      eventdata?.pref1.map((items, index) => {
         const question = `question_${count}`
-        if(
-          !state[question] 
-        ){
-        
+        if (
+          !state[question]
+        ) {
+          console.log("Fill all the fields to submit");
         }
       })
       const count2 = 0;
-      for (const key in eventdata?.pref2.desc){
+      for (const key in eventdata?.pref2.desc) {
         const question = `questiontype2_${count2}`
-        if(
-          !state[question] 
-        ){
-         
+        if (
+          !state[question]
+        ) {
+          console.log("Fill all the fields to submit");
         }
       }
-      console.log(state)
-    }else if (!eventdata?.isTeamevent) {
-      if(
-        !state.member0 ||
+      if (eventdata?.isPaid) {
+        if (ieiMember) {
+          if (flag === 3) {
+            console.log("registered ")
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+        else {
+          if (flag === 2) {
+            console.log("registered");
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+      } else {
+        if (ieiMember) {
+          if (flag === 2) {
+            console.log("registered ")
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+        else {
+          if (flag === 1) {
+            console.log("registered");
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+      }
+    } else if (!eventdata?.isTeamevent) {
+      if (
+        !state.member ||
         !state.email_0 ||
         !state.phone_number_0 ||
         !state.college_0 ||
         !state.year_0 ||
         !state.branch_0 ||
         !state.batch_0
-      ){
-        console.log(state)
-      }
-      if(ieiMember){
-        if(!state.member_id){
-          console.log(state);
-        }
+      ) {
+        setmsg("Complete the field h");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
       }else{
-        console.log("Complete the fields");
+        setFlag(flag+1)
       }
-      if(eventdata?.referalId){
-        if(!state.referal_Id){
-          console.log(state);
+      if (ieiMember) {
+        if (!state.member_id) {
+          setmsg("Complete the field");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
         }
+      } else {
+        setFlag(flag+1)
       }
-      if(eventdata?.isPaid){
-        if(
+     
+      if (eventdata?.isPaid) {
+        if (
           !state.upiid ||
           !state.accholdersname ||
           !state.transactionId
-          ){
-          console.log(state);
-        }else{
-          console.log("please cmplt the fields ");
+        ) {
+          setmsg("Complete the field");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
         }
+      }else{
+        setFlag(flag+1)
       }
       const count = 0;
-      eventdata?.pref1.map((items,index)=>{
+      eventdata?.pref1.map((items, index) => {
         const question = `question_${count}`
-        if(
-          !state[question] 
-        ){
-         
-          console.log(state)
-        
+        if (
+          !state[question]
+        ) {
+
         }
       })
       const count2 = 0;
-      for (const key in eventdata?.pref2.desc){
+      for (const key in eventdata?.pref2.desc) {
         const question = `questiontype2_${count2}`
-        if(
-          !state[question] 
-        ){
-          console.log(state)
+        if (
+          !state[question]
+        ) {
         }
       }
-     
+      if (eventdata?.isPaid) {
+        if (ieiMember) {
+          if (flag === 3) {
+            console.log("registered ")
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+        else {
+          if (flag === 2) {
+            console.log("registered");
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+      } else {
+        if (ieiMember) {
+          if (flag === 2) {
+            console.log("registered ")
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
+        else {
+          if (flag === 1) {
+            console.log("registered");
+            console.log(state)
+            setmsg("registered");
+            setprofiledone(true);
+            setTimeout(() => {
+              setprofiledone(false);
+            }, 3000);
+          }
+        }
 
+      }
     }
   }
-  const  handlechange = (evt) =>{
+  const handlechange = (evt) => {
     const value = evt.target.value;
 
     setState({
@@ -279,7 +398,7 @@ const Register = () => {
                   Full Name
                 </label>
                 <input type="text" name="member" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" onChange={handlechange}/>
+                  required="" placeholder="" onChange={handlechange} />
               </div>
                 <div className="relative z-0  px-2 w-full group">
                   <label className="font-mono uppercase font-bold  text-11  text-black
@@ -295,7 +414,7 @@ const Register = () => {
                     Phone Number
                   </label>
                   <input type="number" name="phone_number_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" onChange={handlechange}/>
+                    required="" placeholder="" onChange={handlechange} />
                 </div>
                 <div className="relative z-0  px-2 w-full group">
                   <label className="font-mono uppercase font-bold  text-11  text-black
@@ -303,7 +422,7 @@ const Register = () => {
                     College
                   </label>
                   <input type="text" name="college_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" onChange={handlechange}/>
+                    required="" placeholder="" onChange={handlechange} />
                 </div>
                 <div className="mt-5">
                   <select
@@ -369,7 +488,7 @@ const Register = () => {
                   IEI membership ID
                 </label>
                 <input type="text" name="member_id" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" onChange={handlechange}/>
+                  required="" placeholder="" onChange={handlechange} />
               </div> : <></>}
               {eventdata?.referalId ? <div className="relative z-0  px-2 w-full group">
                 <label className="font-mono uppercase font-bold  text-11  text-gray-900 dark:text-gray-300
@@ -377,34 +496,34 @@ const Register = () => {
                   Referral code
                 </label>
                 <input type="text" name="referal_id" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" onChange={handlechange}/>
+                  required="" placeholder="" onChange={handlechange} />
               </div> : <></>}
               <div className='flex flex-col'>
-              {
-                eventdata?.pref2.desc.map((desc, index) => {
-                  return (
-                    <div key={index} className="relative z-0  px-2 w-full group">
-                      <label className="font-mono uppercase font-bold text-11 text-black bg-white relative px-1 top-2 left-3 w-auto group-focus-within:text-red-600">
-                        {desc}
-                      </label>
-                      <input
-                        key={index}
-                        type="text"
-                        name={`questiontype2_${index}`}
-                        id={`first_name_${index}`}
-                        className="h-10 text-[11px] text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                        required=""
-                        placeholder=""
-                        onChange={handlechange}
-                      />
-                    </div>
-                  );
-                })
-              }
+                {
+                  eventdata?.pref2.desc.map((desc, index) => {
+                    return (
+                      <div key={index} className="relative z-0  px-2 w-full group">
+                        <label className="font-mono uppercase font-bold text-11 text-black bg-white relative px-1 top-2 left-3 w-auto group-focus-within:text-red-600">
+                          {desc}
+                        </label>
+                        <input
+                          key={index}
+                          type="text"
+                          name={`questiontype2_${index}`}
+                          id={`first_name_${index}`}
+                          className="h-10 text-[11px] text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                          required=""
+                          placeholder=""
+                          onChange={handlechange}
+                        />
+                      </div>
+                    );
+                  })
+                }
               </div>
               {
-                eventdata?.pref1.map((items,index) => {
-                  
+                eventdata?.pref1.map((items, index) => {
+
                   return (
                     <div>
                       <select
@@ -414,10 +533,10 @@ const Register = () => {
                         onChange={handlechange}
                       >
                         <option value={"null"} disabled>
-                          {items[index+1].desc}
+                          {items[index + 1].desc}
                         </option>
                         {
-                          items[index+1].option.map(options => {
+                          items[index + 1].option.map(options => {
                             return (
                               <option value={options}>{options}</option>
                             )
@@ -500,6 +619,11 @@ const Register = () => {
                   Register
                 </button>
               </div>
+              {profiledone && (
+                <div className="fixed bottom-5 right-5 bg-cyan-500 text-white p-3 rounded">
+                  {msg}
+                </div>
+              )}
             </div>
           </form>
         </div>
