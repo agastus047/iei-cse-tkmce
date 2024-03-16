@@ -10,14 +10,13 @@ const eventlist=[
         isTeamevent:true,
         teammember:2,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
         },
         time:'10 to 10pm',
         venue:'Hackerrank',
-        teamevent:true,
-        teammmber:2,
         cordinator: {
             1: ["Abhinand", "8590813125"],
             2: ["Sangheeth", "8589011080"]
@@ -49,6 +48,7 @@ const eventlist=[
         isTeamevent:true,
         teammember:2,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -79,6 +79,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:2,
         isPaid:false,
+        enddate:'4/4/2024',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -109,6 +110,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:2,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -140,6 +142,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -170,6 +173,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -201,6 +205,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -231,6 +236,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -263,6 +269,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -292,6 +299,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
@@ -323,6 +331,7 @@ const eventlist=[
         isTeamevent:false,
         teammember:1,
         isPaid:false,
+        enddate:'',
         price:{
             ieiMember:0,
             nonieiMember:0
