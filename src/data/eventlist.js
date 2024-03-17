@@ -9,7 +9,7 @@ const eventlist=[
         date:'11-12-2023',
         isTeamevent:true,
         teammember:2,
-        isPaid:false,
+        isPaid:true,
         enddate:'',
         price:{
             ieiMember:0,

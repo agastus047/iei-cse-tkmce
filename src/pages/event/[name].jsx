@@ -24,7 +24,11 @@ const Eventpage = () => {
         <div className='flex flex-col gap-4 md:w-full '>
           <div className='flex flex-col pt-5 md:mt-0'>
             <h3 className='font-bold  '>Price</h3>
-            <p>Rs.{eventdata?.price.ieiMember}</p>
+            {eventdata?.isPaid?<>
+              <div className='flex flex-col pl-2 '>
+                <p><span className='font-semibold'>For IeiMember:</span> Rs.{eventdata.price.ieiMember}</p>
+                <p><span className='font-bold'>For Non-IeiMember:</span> Rs.{eventdata.price.nonieiMember}</p>
+              </div></>:<p>free</p>}
           </div>
           <div className={eventdata?.enddate !==''? 'md:flex justify-between  grid xs:grid-cols-3 grid-cols-2  xs:gap-5':'md:flex gap-20  grid xs:grid-cols-3 grid-cols-2  xs:gap-5'} >
 
