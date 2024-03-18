@@ -1,18 +1,19 @@
 import eventlist from '@/data/eventlist';
+import { Flag } from '@mui/icons-material';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 
 const Register = () => {
-
   const [ieiMember, setieimember] = useState(false);
   const [amount, setamount] = useState()
   const router = useRouter();
   const { link } = router.query;
   const [eventdata, setEventData] = useState(null);
   const [state, setState] = useState({})
-  const [flag, setFlag] = useState(0)
+  // const [flag, setFlag] = useState(0)
   const [msg, setmsg] = useState('');
   const [profiledone, setprofiledone] = useState(false)
+  // const [teammcount,setteammcount] = useState(0);
   useEffect(() => {
     const eventdata = eventlist.find((event) => event.link === link);
     setEventData(eventdata);
@@ -20,9 +21,32 @@ const Register = () => {
   }, [link]);
   const onsubmit = (event) => {
     event.preventDefault();
+    var flag = 0;
+    var ex1 = 0 ;
+    var ex2 = 0;
+    var questions = 0;
     if (eventdata?.isTeamevent) {
-      for (let i = 0; i < eventdata?.teammember; i++) {
-        const memberName = `member${i}`;
+      var teammcount = 0;
+      if (
+        !state.member_0 ||
+        !state.email_0 ||
+        !state.phone_number_0 ||
+        !state.college_0 ||
+        !state.year_0 ||
+        !state.branch_0 ||
+        !state.batch_0
+      ) {
+        setmsg("Complete the personal details");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+        }, 3000);
+        return;
+      } else {
+        flag++
+      }
+      for (let i = 1; i <= eventdata?.teammember - 1; i++) {
+        const memberName = `member_${i}`;
         const email = `email_${i}`;
         const phonenumber = `phone_number_${i}`;
         const college = `college_${i}`;
@@ -38,65 +62,102 @@ const Register = () => {
           !state[batch] ||
           !state[year]
         ) {
-          setmsg("Complete the field");
+        
+          setmsg("Complete the personal details");
           setprofiledone(true);
           setTimeout(() => {
-            setprofiledone(false);
-          }, 3000);
-        }else{
-          setFlag(flag + 1)
+          setprofiledone(false);
+          return;
+        }, 3000);
+        } else {
+          teammcount++;
         }
+      }
+      
+      if(teammcount === eventdata?.teammember - 1  ){
+        flag++
+      }else{
+        setmsg("Complete the personal details");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+        }, 3000);
+        return
       }
       if (ieiMember) {
         if (!state.member_id) {
-          setmsg("Complete the field");
+          setmsg("Enter the membership id");
           setprofiledone(true);
           setTimeout(() => {
             setprofiledone(false);
           }, 3000);
+          return;
         } else {
-          setFlag(flag + 1)
+          flag++
         }
       }
+      
       if (eventdata?.isPaid) {
         if (
           !state.upiid ||
           !state.accholdersname ||
-          !state.transactionId
+          !state.transactionid
         ) {
-          setmsg("Complete the field");
+          setmsg("Complete the payment field");
           setprofiledone(true);
           setTimeout(() => {
             setprofiledone(false);
           }, 3000);
+          return;
+        } else {
+          flag++
+        }
+      }
+      for(let i = 0;i<eventdata?.pref2.length;i++){
+        const question = `questiontype2_${i}`
+        if (
+          !state[question]
+        ) {
+          setmsg("Complete all the Questions");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+          return;
         }else{
-          setFlag(flag + 1)
+          ex1++;
+          flag++;
         }
       }
-      const count = 0;
-      eventdata?.pref1.map((items, index) => {
-        const question = `question_${count}`
+      for(let i = 0;i<eventdata?.pref1.length;i++){
+        const question = `questiontype1_${i}`
         if (
           !state[question]
         ) {
-          console.log("Fill all the fields to submit");
-        }
-      })
-      const count2 = 0;
-      for (const key in eventdata?.pref2.desc) {
-        const question = `questiontype2_${count2}`
-        if (
-          !state[question]
-        ) {
-          console.log("Fill all the fields to submit");
+          setmsg("Complete all the Questions");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+          return;
+        }else{
+        
+          ex2++;
+          flag++;
         }
       }
+      
+    
+      if(ex1 === eventdata?.pref2.length && ex2 === eventdata?.pref1.length){
+        questions = eventdata?.pref2.length + eventdata?.pref1.length
+      }
+      console.log(questions+"questions")
       if (eventdata?.isPaid) {
         if (ieiMember) {
-          if (flag === 3) {
-            console.log("registered ")
+          if (flag === (4+questions)) {
+            console.log("Registered ")
             console.log(state)
-            setmsg("registered");
+            setmsg("Registered");
             setprofiledone(true);
             setTimeout(() => {
               setprofiledone(false);
@@ -104,10 +165,10 @@ const Register = () => {
           }
         }
         else {
-          if (flag === 2) {
-            console.log("registered");
+          if (flag === (3+questions)) {
+            console.log("Registered");
             console.log(state)
-            setmsg("registered");
+            setmsg("Registered");
             setprofiledone(true);
             setTimeout(() => {
               setprofiledone(false);
@@ -116,10 +177,10 @@ const Register = () => {
         }
       } else {
         if (ieiMember) {
-          if (flag === 2) {
-            console.log("registered ")
+          if (flag === (3+questions)) {
+            console.log("Registered ")
             console.log(state)
-            setmsg("registered");
+            setmsg("Registered");
             setprofiledone(true);
             setTimeout(() => {
               setprofiledone(false);
@@ -127,20 +188,21 @@ const Register = () => {
           }
         }
         else {
-          if (flag === 1) {
-            console.log("registered");
+          if (flag === (2+questions)) {
+            console.log("Registered");
             console.log(state)
-            setmsg("registered");
+            setmsg("Registered");
             setprofiledone(true);
             setTimeout(() => {
               setprofiledone(false);
             }, 3000);
           }
         }
+       
       }
     } else if (!eventdata?.isTeamevent) {
       if (
-        !state.member ||
+        !state.member_0 ||
         !state.email_0 ||
         !state.phone_number_0 ||
         !state.college_0 ||
@@ -148,64 +210,92 @@ const Register = () => {
         !state.branch_0 ||
         !state.batch_0
       ) {
-        setmsg("Complete the field h");
-          setprofiledone(true);
-          setTimeout(() => {
-            setprofiledone(false);
-          }, 3000);
-      }else{
-        setFlag(flag+1)
+        setmsg("Complete the profile details ");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+        }, 3000);
+        return;
+      } else {
+        flag++
       }
+    
       if (ieiMember) {
         if (!state.member_id) {
-          setmsg("Complete the field");
+          setmsg("Enter the iei membership id");
           setprofiledone(true);
           setTimeout(() => {
             setprofiledone(false);
           }, 3000);
+          return;
         }
-      } else {
-        setFlag(flag+1)
-      }
+        else {
+          flag++
+        }
+      } 
      
+
       if (eventdata?.isPaid) {
         if (
           !state.upiid ||
           !state.accholdersname ||
-          !state.transactionId
+          !state.transactionid
         ) {
-          setmsg("Complete the field");
+          setmsg("Enter  the payement detail");
           setprofiledone(true);
           setTimeout(() => {
             setprofiledone(false);
           }, 3000);
+          return;
         }
-      }else{
-        setFlag(flag+1)
+        else {
+          flag++
+        }
+      } 
+    
+      for(let i = 0;i<eventdata?.pref2.length;i++){
+        const question = `questiontype2_${i}`
+        if (
+          !state[question]
+        ) {
+          setmsg("Complete all the questions");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+          return;
+        }else{
+          ex1++;
+          flag++;
+        }
       }
-      const count = 0;
-      eventdata?.pref1.map((items, index) => {
-        const question = `question_${count}`
+      for(let i = 0;i<eventdata?.pref1.length;i++){
+        const question = `questiontype1_${i}`
         if (
           !state[question]
         ) {
-
+          setmsg("Complete the field 432423");
+          setprofiledone(true);
+          setTimeout(() => {
+            setprofiledone(false);
+          }, 3000);
+          return;
+        }else{
+         
+          ex2++;
+          flag++;
         }
-      })
-      const count2 = 0;
-      for (const key in eventdata?.pref2.desc) {
-        const question = `questiontype2_${count2}`
-        if (
-          !state[question]
-        ) {
-        }
+      }
+      
+      if(ex1 === eventdata?.pref2.length && ex2 === eventdata?.pref1.length){
+        questions = eventdata?.pref2.length + eventdata?.pref1.length
       }
       if (eventdata?.isPaid) {
         if (ieiMember) {
-          if (flag === 3) {
-            console.log("registered ")
+          if (flag === (3+questions)) {
+            console.log("Registered ")
             console.log(state)
-            setmsg("registered");
+            setmsg("Registered");
             setprofiledone(true);
             setTimeout(() => {
               setprofiledone(false);
@@ -213,10 +303,10 @@ const Register = () => {
           }
         }
         else {
-          if (flag === 2) {
-            console.log("registered");
+          if (flag === (2+questions)) {
+            console.log("Registered");
             console.log(state)
-            setmsg("registered");
+            setmsg("Registered");
             setprofiledone(true);
             setTimeout(() => {
               setprofiledone(false);
@@ -225,7 +315,7 @@ const Register = () => {
         }
       } else {
         if (ieiMember) {
-          if (flag === 2) {
+          if (flag === (2+questions)) {
             console.log("registered ")
             console.log(state)
             setmsg("registered");
@@ -236,7 +326,7 @@ const Register = () => {
           }
         }
         else {
-          if (flag === 1) {
+          if (flag === (1+questions)) {
             console.log("registered");
             console.log(state)
             setmsg("registered");
@@ -246,13 +336,13 @@ const Register = () => {
             }, 3000);
           }
         }
+       
 
       }
     }
   }
   const handlechange = (evt) => {
     const value = evt.target.value;
-
     setState({
       ...state,
       [evt.target.name]: value,
@@ -278,203 +368,208 @@ const Register = () => {
         <div className="md:w-1/2 w-full p-2 ">
           <form className='flex flex-col justify-center items-center'>
             <div className='flex flex-col gap-5'>
-              {eventdata?.isTeamevent ? <>{
-                Array.from({ length: eventdata?.teammember }).map((_, index) => (
-                  <div key={index}>
-                    <div className="relative z-0  px-2 w-full group">
-                      <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                        Enter member {index + 1}
-                      </label>
-                      <input
-                        type="text"
-                        name={`member${index}`}
-                        id={`full_name_${index}`}
-                        className="h-10 text-[11px] text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                        required=""
-                        placeholder=""
-                        onChange={handlechange}
-                      />
-                    </div>
-                    <div className="relative z-0  px-2 w-full group">
-                      <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        name={`email_${index}`}
-                        id={`email_${index}`}
-                        className="h-10 text-[11px] text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                        required=""
-                        placeholder=""
-                        onChange={handlechange}
-                      />
-                    </div>
-                    <div className="relative z-0  px-2 w-full group">
-                      <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                        Phone Number
-                      </label>
-                      <input
-                        type="number"
-                        name={`phone_number_${index}`}
-                        id={`phone_number_${index}`}
-                        className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                        required=""
-                        placeholder=""
-                        onChange={handlechange}
-                      />
-                    </div>
-                    <div className="relative z-0  px-2 w-full group">
-                      <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                        College
-                      </label>
-                      <input
-                        type="text"
-                        name={`college_${index}`}
-                        id={`college_${index}`}
-                        className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                        required=""
-                        placeholder=""
-                        onChange={handlechange}
-                      />
-                    </div>
-                    <div className='mt-5'>
-                      <select
-                        onChange={handlechange}
-                        name={`year_${index}`}
-                        className=" w-full py-4 rounded-lg gray-bg opacity-75"
-                        defaultValue={"null"}
-                      >
-                        <option value={"null"} disabled>
-                          Choose Year
-                        </option>
-                        <option value={"1"}>1</option>
-                        <option value={"2"}>2</option>
-                        <option value={"3"}>3</option>
-                        <option value={"4"}>4</option>
-                      </select>
-                    </div>
-                    <div className='mt-5'>
-                      <select
-                        onChange={handlechange}
-                        name={`branch_${index}`}
-                        className=" w-full py-4  rounded-lg gray-bg opacity-75"
-                        defaultValue={"null"}
-                      >
-                        <option value={"null"} disabled>
-                          Choose Branch
-                        </option>
-                        <option value={"ece"}>ECE (T)</option>
-                        <option value={"mech"}>Mech (M)</option>
-                        <option value={"civil"}>Civil (C)</option>
-                        <option value={"cs"}>CS (R)</option>
-                        <option value={"eee"}>EEE (E)</option>
-                        <option value={"chem"}>Chem(H)</option>
-                        <option value={"arch"}>Arch(A)</option>
-                        <option value={"mech-pro"}>Mech Pro</option>
-                        <option value={"electrical&computer"}>ERE</option>
-                      </select>
-                    </div>
-                    <div className='mt-5'>
-                      <select
-                        name={`batch_${index}`}
-                        className=" w-full py-4 rounded-lg gray-bg opacity-75"
-                        defaultValue={"null"}
-                        onChange={handlechange}
-                      >
-                        <option value={"null"} disabled>
-                          Enter the Batch
-                        </option>
-                        <option value={"A"}>A</option>
-                        <option value={"B"}>B</option>
-                        <option value={"C"}>C</option>
-                      </select>
-                    </div>
-                  </div>
-                ))
-              }
-              </> : <><div className="relative z-0  px-2 w-full group">
+              <div className="relative z-0  px-2 w-full group">
                 <label className="font-mono uppercase font-bold  text-11  text-black
-          bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+      bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
                   Full Name
                 </label>
-                <input type="text" name="member" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                <input type="text" name="member_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
                   required="" placeholder="" onChange={handlechange} />
               </div>
-                <div className="relative z-0  px-2 w-full group">
-                  <label className="font-mono uppercase font-bold  text-11  text-black
-          bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                    email
-                  </label>
-                  <input type="email" name="email_0" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" onChange={handlechange} />
-                </div>
-                <div className="relative z-0  px-2 w-full group">
-                  <label className="font-mono uppercase font-bold  text-11  text-black
-          bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                    Phone Number
-                  </label>
-                  <input type="number" name="phone_number_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" onChange={handlechange} />
-                </div>
-                <div className="relative z-0  px-2 w-full group">
-                  <label className="font-mono uppercase font-bold  text-11  text-black
-          bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                    College
-                  </label>
-                  <input type="text" name="college_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                    required="" placeholder="" onChange={handlechange} />
-                </div>
-                <div className="mt-5">
-                  <select
-                    name="year_0"
-                    className=" w-full py-4 rounded-lg gray-bg opacity-75"
-                    defaultValue={"null"}
-                    onChange={handlechange}
-                  >
-                    <option value={"null"} disabled>
-                      choose year
-                    </option>
-                    <option value={"1"}>1</option>
-                    <option value={"2"}>2</option>
-                    <option value={"3"}>3</option>
-                    <option value={"4"}>4</option>
-
-                  </select>
-                </div>
-                <div className='mt-5'>
-                  <select
-                    name="branch_0"
-                    className=" w-full py-4  rounded-lg gray-bg opacity-75"
-                    defaultValue={"null"}
-                    onChange={handlechange}
-                  >
-                    <option value={"null"} disabled>
-                      choose branch
-                    </option>
-                    <option value={"ece"}>ECE (T)</option>
-                    <option value={"mech"}>Mech (M)</option>
-                    <option value={"civil"}>Civil (C)</option>
-                    <option value={"cs"}>CS (R)</option>
-                    <option value={"eee"}>EEE (E)</option>
-                    <option value={"chem"}>Chem(H)</option>
-                    <option value={"arch"}>Arch(A)</option>
-                    <option value={"mech-pro"}>Mech Pro</option>
-                    <option value={"electrical&computer"}>ERE</option>
-                  </select>
-                </div>
+              <div className="relative z-0  px-2 w-full group">
+                <label className="font-mono uppercase font-bold  text-11  text-black
+      bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                  email
+                </label>
+                <input type="email" name="email_0" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange} />
+              </div>
+              <div className="relative z-0  px-2 w-full group">
+                <label className="font-mono uppercase font-bold  text-11  text-black
+      bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                  Phone Number
+                </label>
+                <input type="number" name="phone_number_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange} />
+              </div>
+              <div className="relative z-0  px-2 w-full group">
+                <label className="font-mono uppercase font-bold  text-11  text-black
+      bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                  College
+                </label>
+                <input type="text" name="college_0" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange} />
+              </div>
+              <div className="mt-5">
                 <select
-                  name={`batch_0`}
-                  className=" w-full py-4 rounded-lg gray-bg opacity-75 mt-5"
+                  name="year_0"
+                  className=" w-full py-4 rounded-lg gray-bg opacity-75"
                   defaultValue={"null"}
                   onChange={handlechange}
                 >
                   <option value={"null"} disabled>
-                    Enter the Batch
+                    choose year
                   </option>
-                  <option value={"A"}>A</option>
-                  <option value={"B"}>B</option>
-                  <option value={"C"}>C</option>
-                </select></>}
+                  <option value={"1"}>1</option>
+                  <option value={"2"}>2</option>
+                  <option value={"3"}>3</option>
+                  <option value={"4"}>4</option>
+
+                </select>
+              </div>
+              <div className='mt-5'>
+                <select
+                  name="branch_0"
+                  className=" w-full py-4  rounded-lg gray-bg opacity-75"
+                  defaultValue={"null"}
+                  onChange={handlechange}
+                >
+                  <option value={"null"} disabled>
+                    choose branch
+                  </option>
+                  <option value={"ece"}>ECE (T)</option>
+                  <option value={"mech"}>Mech (M)</option>
+                  <option value={"civil"}>Civil (C)</option>
+                  <option value={"cs"}>CS (R)</option>
+                  <option value={"eee"}>EEE (E)</option>
+                  <option value={"chem"}>Chem(H)</option>
+                  <option value={"arch"}>Arch(A)</option>
+                  <option value={"mech-pro"}>Mech Pro</option>
+                  <option value={"electrical&computer"}>ERE</option>
+                </select>
+              </div>
+              <select
+                name={`batch_0`}
+                className=" w-full py-4 rounded-lg gray-bg opacity-75 mt-5"
+                defaultValue={"null"}
+                onChange={handlechange}
+              >
+                <option value={"null"} disabled>
+                  Enter the Batch
+                </option>
+                <option value={"A"}>A</option>
+                <option value={"B"}>B</option>
+                <option value={"C"}>C</option>
+              </select>
+              {eventdata?.isTeamevent ? <>{
+
+                Array.from({ length: eventdata?.teammember - 1 }).map((_, index) => (
+                  <>
+                    <div><p className='font-mono uppercase font-bold p-2'>Enter the detail of member {index + 2}</p></div>
+                    <div key={index}>
+                      <div className="relative z-0  px-2 w-full group">
+                        <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          name={`member_${index + 1}`}
+                          id={`full_name_${index + 1}`}
+                          className="h-10 text-[11px] text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                          required=""
+                          placeholder=""
+                          onChange={handlechange}
+                        />
+                      </div>
+                      <div className="relative z-0  px-2 w-full group">
+                        <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          name={`email_${index + 1}`}
+                          id={`email_${index + 1}`}
+                          className="h-10 text-[11px] text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                          required=""
+                          placeholder=""
+                          onChange={handlechange}
+                        />
+                      </div>
+                      <div className="relative z-0  px-2 w-full group">
+                        <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                          Phone Number
+                        </label>
+                        <input
+                          type="number"
+                          name={`phone_number_${index + 1}`}
+                          id={`phone_number_${index + 1}`}
+                          className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                          required=""
+                          placeholder=""
+                          onChange={handlechange}
+                        />
+                      </div>
+                      <div className="relative z-0  px-2 w-full group">
+                        <label className="font-mono uppercase font-bold  text-11  text-black bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                          College
+                        </label>
+                        <input
+                          type="text"
+                          name={`college_${index + 1}`}
+                          id={`college_${index + 1}`}
+                          className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                          required=""
+                          placeholder=""
+                          onChange={handlechange}
+                        />
+                      </div>
+                      <div className='mt-5'>
+                        <select
+                          onChange={handlechange}
+                          name={`year_${index + 1}`}
+                          className=" w-full py-4 rounded-lg gray-bg opacity-75"
+                          defaultValue={"null"}
+                        >
+                          <option value={"null"} disabled>
+                            Choose Year
+                          </option>
+                          <option value={"1"}>1</option>
+                          <option value={"2"}>2</option>
+                          <option value={"3"}>3</option>
+                          <option value={"4"}>4</option>
+                        </select>
+                      </div>
+                      <div className='mt-5'>
+                        <select
+                          onChange={handlechange}
+                          name={`branch_${index + 1}`}
+                          className=" w-full py-4  rounded-lg gray-bg opacity-75"
+                          defaultValue={"null"}
+                        >
+                          <option value={"null"} disabled>
+                            Choose Branch
+                          </option>
+                          <option value={"ece"}>ECE (T)</option>
+                          <option value={"mech"}>Mech (M)</option>
+                          <option value={"civil"}>Civil (C)</option>
+                          <option value={"cs"}>CS (R)</option>
+                          <option value={"eee"}>EEE (E)</option>
+                          <option value={"chem"}>Chem(H)</option>
+                          <option value={"arch"}>Arch(A)</option>
+                          <option value={"mech-pro"}>Mech Pro</option>
+                          <option value={"electrical&computer"}>ERE</option>
+                        </select>
+                      </div>
+                      <div className='mt-5'>
+                        <select
+                          name={`batch_${index + 1}`}
+                          className=" w-full py-4 rounded-lg gray-bg opacity-75"
+                          defaultValue={"null"}
+                          onChange={handlechange}
+                        >
+                          <option value={"null"} disabled>
+                            Enter the Batch
+                          </option>
+                          <option value={"A"}>A</option>
+                          <option value={"B"}>B</option>
+                          <option value={"C"}>C</option>
+                        </select>
+                      </div>
+                    </div>
+                  </>
+                ))
+              }
+              </> : <></>}
               <div className="flex justify-center items-center">
                 <label className="inline-flex items-center cursor-pointer">
                   <input type="checkbox" value={ieiMember} className="sr-only peer " onChange={(e) => handlebox(e.target.checked)} />
@@ -493,18 +588,18 @@ const Register = () => {
               {eventdata?.referalId ? <div className="relative z-0  px-2 w-full group">
                 <label className="font-mono uppercase font-bold  text-11  text-gray-900 dark:text-gray-300
       bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                  Referral code
+                  Referral code(IF APPLICABLE)
                 </label>
                 <input type="text" name="referal_id" id="first_name" className="h-10 text-[11px]text-10 w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
                   required="" placeholder="" onChange={handlechange} />
               </div> : <></>}
               <div className='flex flex-col'>
                 {
-                  eventdata?.pref2.desc.map((desc, index) => {
+                  eventdata?.pref2.map((desc, index) => {
                     return (
                       <div key={index} className="relative z-0  px-2 w-full group">
                         <label className="font-mono uppercase font-bold text-11 text-black bg-white relative px-1 top-2 left-3 w-auto group-focus-within:text-red-600">
-                          {desc}
+                          {desc.question}
                         </label>
                         <input
                           key={index}
@@ -527,16 +622,16 @@ const Register = () => {
                   return (
                     <div>
                       <select
-                        name={`question_${index}`}
+                        name={`questiontype1_${index}`}
                         className="w-full py-4 px-1 rounded-lg gray-bg opacity-75"
                         defaultValue={"null"}
                         onChange={handlechange}
                       >
                         <option value={"null"} disabled>
-                          {items[index + 1].desc}
+                          {items.desc}
                         </option>
                         {
-                          items[index + 1].option.map(options => {
+                          items.option.map(options => {
                             return (
                               <option value={options}>{options}</option>
                             )
@@ -547,6 +642,8 @@ const Register = () => {
                   )
                 })
               }
+              {eventdata?.isPaid ?
+              <>
               <div className="bg-cyan-500  indicator rounded-md w-full p-4 mb-4 flex flex-col items-center justify-center shadow-xl">
                 <span className="indicator-item indicator-center badge badge-info"></span>
                 <label className="">Amount</label>
@@ -612,24 +709,28 @@ const Register = () => {
 
                 </div>
               </div>
+              </>:<></>}
 
 
-              <div className="flex justify-end">
-                <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black" onClick={onsubmit}>
-                  Register
-                </button>
-              </div>
-              {profiledone && (
-                <div className="fixed bottom-5 right-5 bg-cyan-500 text-white p-3 rounded">
-                  {msg}
-                </div>
-              )}
+            <div className="flex justify-end">
+              <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black" onClick={onsubmit}>
+                Register
+              </button>
             </div>
-          </form>
+            
         </div>
-
-      </div>
+      </form>
+      
     </div>
+    {profiledone && (
+      <div className="fixed bottom-10 left-0 w-full flex justify-center">
+        <div className="bg-cyan-500 text-white font-bold font-mono p-3 rounded">
+          {msg}
+        </div>
+      </div>
+    )}
+      </div >
+    </div >
   )
 }
 

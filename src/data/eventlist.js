@@ -4,11 +4,11 @@ const eventlist=[
         name:'Codebytes - Romeo & Juliet',
         discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
         img:'/assets/events/Codebytes-Romeo&Juliet.jpg',
-        link:'Codebytes-Romeo&Juliet',
+        link:'Codebytes-Romeo&Juliet1',
         isRegistrationOpen:true,
         date:'11-12-2023',
-        isTeamevent:true,
-        teammember:2,
+        isTeamevent:false,
+        teammember:1,
         isPaid:true,
         enddate:'',
         price:{
@@ -23,18 +23,146 @@ const eventlist=[
         },
         pref1:[
             {
-            1:{
             desc:"Enter the size of the T-shirt ",
             option:["2xl","xl","L","M","S"],
             }
-            
-        },
     ],
-       
-    
-        pref2:{
-            desc:["Enter why did you register for this event","Enter the feedback"],
+    pref2:[
+        {question:"Enter why did you register for this event"},
+        {question:"Enter the feedback"},
+    ],
+        referalId:true,
+    },
+    {
+        id:0,
+        name:'Codebytes - Romeo & Juliet',
+        discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
+        img:'/assets/events/Codebytes-Romeo&Juliet.jpg',
+        link:'Codebytes-Romeo&Juliet2',
+        isRegistrationOpen:true,
+        date:'11-12-2023',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
         },
+        time:'10 to 10pm',
+        venue:'Hackerrank',
+        cordinator: {
+            1: ["Abhinand", "8590813125"],
+            2: ["Sangheeth", "8589011080"]
+        },
+        pref1:[
+         
+    ],
+        pref2:[
+            
+        ],
+        referalId:false,
+    },
+    {
+        id:0,
+        name:'Codebytes - Romeo & Juliet',
+        discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
+        img:'/assets/events/Codebytes-Romeo&Juliet.jpg',
+        link:'Codebytes-Romeo&Juliet3',
+        isRegistrationOpen:true,
+        date:'11-12-2023',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'10 to 10pm',
+        venue:'Hackerrank',
+        cordinator: {
+            1: ["Abhinand", "8590813125"],
+            2: ["Sangheeth", "8589011080"]
+        },
+        pref1:[
+            {
+            desc:"Enter the size of the T-shirt ",
+            option:["2xl","xl","L","M","S"],
+            }
+    ],
+        pref2:[
+            {question:"Enter why did you register for this event"},
+            {question:"Enter the feedback"},
+        ],
+        referalId:false,
+    },
+    {
+        id:0,
+        name:'Codebytes - Romeo & Juliet',
+        discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
+        img:'/assets/events/Codebytes-Romeo&Juliet.jpg',
+        link:'Codebytes-Romeo&Juliet4',
+        isRegistrationOpen:true,
+        date:'11-12-2023',
+        isTeamevent:true,
+        teammember:2,
+        isPaid:true,
+        enddate:'',
+        price:{
+            ieiMember:100,
+            nonieiMember:200
+        },
+        time:'10 to 10pm',
+        venue:'Hackerrank',
+        cordinator: {
+            1: ["Abhinand", "8590813125"],
+            2: ["Sangheeth", "8589011080"]
+        },
+        pref1:[
+            {
+            desc:"Enter the size of the T-shirt ",
+            option:["2xl","xl","L","M","S"],
+            },
+    ],
+        pref2:[
+            {question:"Enter why did you register for this event"},
+            {question:"Enter the feedback"},
+        ],
+        referalId:false,
+    },
+    {
+        id:0,
+        name:'Codebytes - Romeo & Juliet',
+        discription:' Hola peeps✨ Welcome to CODEBYTES, the thrilling coding competition brought to you by IEI CSE TKMCE as a part of THE WEEKEND SHOW. Get ready for an exhilarating coding experience that will challenge your skills, ignite your passion, and fuel your competitive spirit.',
+        img:'/assets/events/Codebytes-Romeo&Juliet.jpg',
+        link:'Codebytes-Romeo&Juliet5',
+        isRegistrationOpen:true,
+        date:'11-12-2023',
+        isTeamevent:true,
+        teammember:2,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'10 to 10pm',
+        venue:'Hackerrank',
+        cordinator: {
+            1: ["Abhinand", "8590813125"],
+            2: ["Sangheeth", "8589011080"]
+        },
+        pref1:[
+            {
+            desc:"Enter the size of the T-shirt ",
+            option:["2xl","xl","L","M","S"],
+            }
+    ],
+        pref2:[
+            {question:"Enter why did you register for this event"},
+            {question:"Enter the feedback"},
+        ],
         referalId:false,
     },
     {
