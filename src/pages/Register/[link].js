@@ -22,7 +22,7 @@ const Register = () => {
   const onsubmit = (event) => {
     event.preventDefault();
     var flag = 0;
-    var ex1 = 0 ;
+    var ex1 = 0;
     var ex2 = 0;
     var questions = 0;
     if (eventdata?.isTeamevent) {
@@ -62,21 +62,21 @@ const Register = () => {
           !state[batch] ||
           !state[year]
         ) {
-        
+
           setmsg("Complete the personal details");
           setprofiledone(true);
           setTimeout(() => {
-          setprofiledone(false);
-          return;
-        }, 3000);
+            setprofiledone(false);
+            return;
+          }, 3000);
         } else {
           teammcount++;
         }
       }
-      
-      if(teammcount === eventdata?.teammember - 1  ){
+
+      if (teammcount === eventdata?.teammember - 1) {
         flag++
-      }else{
+      } else {
         setmsg("Complete the personal details");
         setprofiledone(true);
         setTimeout(() => {
@@ -96,8 +96,8 @@ const Register = () => {
           flag++
         }
       }
-      
-      if (eventdata?.isPaid) {
+
+      if (eventdata?.isPaid && amount> 0) {
         if (
           !state.upiid ||
           !state.accholdersname ||
@@ -113,7 +113,7 @@ const Register = () => {
           flag++
         }
       }
-      for(let i = 0;i<eventdata?.pref2.length;i++){
+      for (let i = 0; i < eventdata?.pref2.length; i++) {
         const question = `questiontype2_${i}`
         if (
           !state[question]
@@ -124,12 +124,12 @@ const Register = () => {
             setprofiledone(false);
           }, 3000);
           return;
-        }else{
+        } else {
           ex1++;
           flag++;
         }
       }
-      for(let i = 0;i<eventdata?.pref1.length;i++){
+      for (let i = 0; i < eventdata?.pref1.length; i++) {
         const question = `questiontype1_${i}`
         if (
           !state[question]
@@ -140,21 +140,22 @@ const Register = () => {
             setprofiledone(false);
           }, 3000);
           return;
-        }else{
-        
+        } else {
+
           ex2++;
           flag++;
         }
       }
-      
-    
-      if(ex1 === eventdata?.pref2.length && ex2 === eventdata?.pref1.length){
+
+
+      if (ex1 === eventdata?.pref2.length && ex2 === eventdata?.pref1.length) {
         questions = eventdata?.pref2.length + eventdata?.pref1.length
       }
-      console.log(questions+"questions")
-      if (eventdata?.isPaid) {
+      console.log(flag)
+      console.log(questions + "questions")
+      if (eventdata?.isPaid && amount > 0) {
         if (ieiMember) {
-          if (flag === (4+questions)) {
+          if (flag === (4 + questions)) {
             console.log("Registered ")
             console.log(state)
             setmsg("Registered");
@@ -165,7 +166,7 @@ const Register = () => {
           }
         }
         else {
-          if (flag === (3+questions)) {
+          if (flag === (3 + questions)) {
             console.log("Registered");
             console.log(state)
             setmsg("Registered");
@@ -177,7 +178,7 @@ const Register = () => {
         }
       } else {
         if (ieiMember) {
-          if (flag === (3+questions)) {
+          if (flag === (3 + questions)) {
             console.log("Registered ")
             console.log(state)
             setmsg("Registered");
@@ -188,7 +189,7 @@ const Register = () => {
           }
         }
         else {
-          if (flag === (2+questions)) {
+          if (flag === (2 + questions)) {
             console.log("Registered");
             console.log(state)
             setmsg("Registered");
@@ -198,7 +199,7 @@ const Register = () => {
             }, 3000);
           }
         }
-       
+
       }
     } else if (!eventdata?.isTeamevent) {
       if (
@@ -219,7 +220,7 @@ const Register = () => {
       } else {
         flag++
       }
-    
+
       if (ieiMember) {
         if (!state.member_id) {
           setmsg("Enter the iei membership id");
@@ -232,14 +233,15 @@ const Register = () => {
         else {
           flag++
         }
-      } 
-     
+      }
+
 
       if (eventdata?.isPaid) {
         if (
           !state.upiid ||
           !state.accholdersname ||
-          !state.transactionid
+          !state.transactionid ||
+          !state.imageUrl
         ) {
           setmsg("Enter  the payement detail");
           setprofiledone(true);
@@ -251,9 +253,9 @@ const Register = () => {
         else {
           flag++
         }
-      } 
-    
-      for(let i = 0;i<eventdata?.pref2.length;i++){
+      }
+
+      for (let i = 0; i < eventdata?.pref2.length; i++) {
         const question = `questiontype2_${i}`
         if (
           !state[question]
@@ -264,35 +266,35 @@ const Register = () => {
             setprofiledone(false);
           }, 3000);
           return;
-        }else{
+        } else {
           ex1++;
           flag++;
         }
       }
-      for(let i = 0;i<eventdata?.pref1.length;i++){
+      for (let i = 0; i < eventdata?.pref1.length; i++) {
         const question = `questiontype1_${i}`
         if (
           !state[question]
         ) {
-          setmsg("Complete the field 432423");
+          setmsg("Complete all the questions");
           setprofiledone(true);
           setTimeout(() => {
             setprofiledone(false);
           }, 3000);
           return;
-        }else{
-         
+        } else {
+
           ex2++;
           flag++;
         }
       }
-      
-      if(ex1 === eventdata?.pref2.length && ex2 === eventdata?.pref1.length){
+
+      if (ex1 === eventdata?.pref2.length && ex2 === eventdata?.pref1.length) {
         questions = eventdata?.pref2.length + eventdata?.pref1.length
       }
       if (eventdata?.isPaid) {
         if (ieiMember) {
-          if (flag === (3+questions)) {
+          if (flag === (3 + questions)) {
             console.log("Registered ")
             console.log(state)
             setmsg("Registered");
@@ -303,7 +305,7 @@ const Register = () => {
           }
         }
         else {
-          if (flag === (2+questions)) {
+          if (flag === (2 + questions)) {
             console.log("Registered");
             console.log(state)
             setmsg("Registered");
@@ -315,7 +317,7 @@ const Register = () => {
         }
       } else {
         if (ieiMember) {
-          if (flag === (2+questions)) {
+          if (flag === (2 + questions)) {
             console.log("registered ")
             console.log(state)
             setmsg("registered");
@@ -326,7 +328,7 @@ const Register = () => {
           }
         }
         else {
-          if (flag === (1+questions)) {
+          if (flag === (1 + questions)) {
             console.log("registered");
             console.log(state)
             setmsg("registered");
@@ -336,7 +338,7 @@ const Register = () => {
             }, 3000);
           }
         }
-       
+
 
       }
     }
@@ -451,6 +453,21 @@ const Register = () => {
                 <option value={"B"}>B</option>
                 <option value={"C"}>C</option>
               </select>
+              <div className="flex justify-center items-center">
+                <label className="inline-flex items-center cursor-pointer">
+                  <input type="checkbox" value={ieiMember} className="sr-only peer " onChange={(e) => handlebox(e.target.checked)} />
+                  <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span className="ms-3 text-sm font-medium text-black">IEI MEMBER?</span>
+                </label>
+              </div>
+              {ieiMember ? <div className="relative z-0  px-2 w-full group">
+                <label className="font-mono uppercase font-bold  text-11  text-black
+    bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
+                  IEI membership ID
+                </label>
+                <input type="text" name="member_id" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
+                  required="" placeholder="" onChange={handlechange} />
+              </div> : <></>}
               {eventdata?.isTeamevent ? <>{
 
                 Array.from({ length: eventdata?.teammember - 1 }).map((_, index) => (
@@ -570,21 +587,7 @@ const Register = () => {
                 ))
               }
               </> : <></>}
-              <div className="flex justify-center items-center">
-                <label className="inline-flex items-center cursor-pointer">
-                  <input type="checkbox" value={ieiMember} className="sr-only peer " onChange={(e) => handlebox(e.target.checked)} />
-                  <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-                  <span className="ms-3 text-sm font-medium text-black">IEI MEMBER?</span>
-                </label>
-              </div>
-              {ieiMember ? <div className="relative z-0  px-2 w-full group">
-                <label className="font-mono uppercase font-bold  text-11  text-black
-      bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
-                  IEI membership ID
-                </label>
-                <input type="text" name="member_id" id="first_name" className="h-10 text-[11px]text-10  w-full border py-55-rem border-cyan-500 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5  dark:focus:ring-blue-500 dark:focus:border-cyan-500"
-                  required="" placeholder="" onChange={handlechange} />
-              </div> : <></>}
+
               {eventdata?.referalId ? <div className="relative z-0  px-2 w-full group">
                 <label className="font-mono uppercase font-bold  text-11  text-gray-900 dark:text-gray-300
       bg-white relative px-1 top-2  left-3 w-auto group-focus-within:text-red-600 ">
@@ -642,93 +645,106 @@ const Register = () => {
                   )
                 })
               }
-              {eventdata?.isPaid ?
-              <>
-              <div className="bg-cyan-500  indicator rounded-md w-full p-4 mb-4 flex flex-col items-center justify-center shadow-xl">
-                <span className="indicator-item indicator-center badge badge-info"></span>
-                <label className="">Amount</label>
-                <div className="bg-cyan-500  bg-opacity-50 rounded w-3/4 grid text-center justify-center">
-                  <span className="pb-10 pt-7">
-                    <span>Rs </span>
-                    <span>{String(amount)}</span>
-                  </span>
-                  <div>
-                    <img src={"gpay.jpeg"} />
-                  </div>
-                  <div className="acc-name  w-full p-2 flex flex-col justify-center items-center">
-                    <span className="pb-1 ">
-                      <label>UPI ID</label>
-                    </span>
+              {eventdata?.isPaid && amount>0 ?
+                <>
+                  <div className="bg-cyan-500  indicator rounded-md w-full p-4 mb-4 flex flex-col items-center justify-center shadow-xl">
+                    <span className="indicator-item indicator-center badge badge-info"></span>
+                    <label className="">Amount</label>
+                    <div className="bg-cyan-500  bg-opacity-50 rounded w-3/4 grid text-center justify-center">
+                      <span className="pb-10 pt-7">
+                        <span>Rs </span>
+                        <span>{String(amount)}</span>
+                      </span>
+                      <div>
+                        <img src={"gpay.jpeg"} />
+                      </div>
+                      <div className="acc-name  w-full p-2 flex flex-col justify-center items-center">
+                        <span className="pb-1 ">
+                          <label>UPI ID</label>
+                        </span>
 
+                        <input
+                          className="input w-full  opacity-75 bg-white text-black rounded-lg"
+                          type={"text"}
+                          name="upiid"
+                          onChange={handlechange}
+                        ></input>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div className="grid place-items-center bg-cyan-500 rounded-md indicator border m-4 shadow-xl">
+                    <span className="indicator-item indicator-center badge badge-info"></span>
+                    <div className="text-xl uppercase font-bold py-8">
+                      transaction details
+                    </div>
+                    <div className="acc-name grid grid-rows-2  w-3/4 pb-7">
+                      <span className="pb-3">
+                        <label>Account Holders Name</label>
+                      </span>
+                      <input
+                        className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
+                        type={"text"}
+                        name="accholdersname"
+                        onChange={handlechange}
+                      ></input>
+                    </div>
+                    <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
+                      <span className="pb-3">
+                        <label>Transaction ID</label>
+                      </span>
+                      <input
+                        className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
+                        type={"number"}
+                        name="transactionid"
+                        onChange={handlechange}
+                      ></input>
+                    </div>
+                    <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
+                    <span className="pb-3">
+                      <label>Screenshot</label>
+                    </span>
                     <input
-                      className="input w-full  opacity-75 bg-white text-black rounded-lg"
+                      className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
                       type={"text"}
-                      name="upiid"
+                      name="imageUrl"
                       onChange={handlechange}
                     ></input>
                   </div>
+                    <div className="ss grid grid-rows-2 w-3/4 pb-7">
+                      <span className="pb-3">
+                        <label>Screenshot</label>
+                      </span>
+                   
+                      <div className='flex justify-end'>
+                        <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+                          Upload image
+                        </button>
+                      </div>
 
-                </div>
-              </div>
-              <div className="grid place-items-center bg-cyan-500 rounded-md indicator border m-4 shadow-xl">
-                <span className="indicator-item indicator-center badge badge-info"></span>
-                <div className="text-xl uppercase font-bold py-8">
-                  transaction details
-                </div>
-                <div className="acc-name grid grid-rows-2  w-3/4 pb-7">
-                  <span className="pb-3">
-                    <label>Account Holders Name</label>
-                  </span>
-                  <input
-                    className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
-                    type={"text"}
-                    name="accholdersname"
-                    onChange={handlechange}
-                  ></input>
-                </div>
-                <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
-                  <span className="pb-3">
-                    <label>Transaction ID</label>
-                  </span>
-                  <input
-                    className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
-                    type={"number"}
-                    name="transactionid"
-                    onChange={handlechange}
-                  ></input>
-                </div>
-                <div className="ss grid grid-rows-2 w-3/4 pb-7">
-                  <span className="pb-3">
-                    <label>Screenshot</label>
-                  </span>
-                  <div className='flex justify-end'>
-                    <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
-                      Upload image
-                    </button>
+                    </div>
+                  
                   </div>
+                </> : <></>}
 
-                </div>
+
+              <div className="flex justify-end">
+                <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black" onClick={onsubmit}>
+                  Register
+                </button>
               </div>
-              </>:<></>}
 
-
-            <div className="flex justify-end">
-              <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black" onClick={onsubmit}>
-                Register
-              </button>
             </div>
-            
+          </form>
+
         </div>
-      </form>
-      
-    </div>
-    {profiledone && (
-      <div className="fixed bottom-10 left-0 w-full flex justify-center">
-        <div className="bg-cyan-500 text-white font-bold font-mono p-3 rounded">
-          {msg}
-        </div>
-      </div>
-    )}
+        {profiledone && (
+          <div className="fixed bottom-10 left-0 w-full flex justify-center">
+            <div className="bg-cyan-500 text-white font-bold font-mono p-3 rounded">
+              {msg}
+            </div>
+          </div>
+        )}
       </div >
     </div >
   )
