@@ -3,6 +3,8 @@ import { Flag } from '@mui/icons-material';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Image from "next/image"
+import axios from 'axios';
+
 const Register = () => {
   const [ieiMember, setieimember] = useState(false);
   const [amount, setamount] = useState()
@@ -14,11 +16,54 @@ const Register = () => {
   const [msg, setmsg] = useState('');
   const [profiledone, setprofiledone] = useState(false)
   // const [teammcount,setteammcount] = useState(0);
+
   useEffect(() => {
     const eventdata = eventlist.find((event) => event.link === link);
     setEventData(eventdata);
     setamount(eventdata?.price.nonieiMember)
   }, [link]);
+
+  async function sendData() {
+    try {
+      const response = await axios.post("/api/register",{
+        ...state,
+        event_link: eventdata?.link,
+        amount
+      });
+      if(response.status===200) {
+        setmsg("successfully registered");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+          router.push("/Events");
+        }, 3000);
+      }
+      else {
+        setmsg("Couldn't register. Contact admin for assistance");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+        }, 3000);
+      }
+    }
+    catch(error) {
+      if(error.response.status===400) {
+        setmsg("email already in use");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+        }, 3000);
+      }
+      else {
+        setmsg("Couldn't register. Contact admin for assistance");
+        setprofiledone(true);
+        setTimeout(() => {
+          setprofiledone(false);
+        }, 3000);
+      }
+    }
+  }
+
   const onsubmit = (event) => {
     event.preventDefault();
     var flag = 0;
@@ -156,47 +201,23 @@ const Register = () => {
       if (eventdata?.isPaid && amount > 0) {
         if (ieiMember) {
           if (flag === (4 + questions)) {
-            console.log("Registered ")
-            console.log(state)
-            setmsg("Registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
         else {
           if (flag === (3 + questions)) {
-            console.log("Registered");
-            console.log(state)
-            setmsg("Registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
       } else {
         if (ieiMember) {
           if (flag === (3 + questions)) {
-            console.log("Registered ")
-            console.log(state)
-            setmsg("Registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
         else {
           if (flag === (2 + questions)) {
-            console.log("Registered");
-            console.log(state)
-            setmsg("Registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
 
@@ -294,47 +315,23 @@ const Register = () => {
       if (eventdata?.isPaid) {
         if (ieiMember) {
           if (flag === (3 + questions)) {
-            console.log("Registered ")
-            console.log(state)
-            setmsg("Registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
         else {
           if (flag === (2 + questions)) {
-            console.log("Registered");
-            console.log(state)
-            setmsg("Registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
       } else {
         if (ieiMember) {
           if (flag === (2 + questions)) {
-            console.log("registered ")
-            console.log(state)
-            setmsg("registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
         else {
           if (flag === (1 + questions)) {
-            console.log("registered");
-            console.log(state)
-            setmsg("registered");
-            setprofiledone(true);
-            setTimeout(() => {
-              setprofiledone(false);
-            }, 3000);
+            sendData();
           }
         }
 

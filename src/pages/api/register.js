@@ -3,7 +3,7 @@ import prisma from "../../../lib/prisma"
 export default async function handler(req, res) {
   if(req.method === 'POST') {
     try {
-      const checkIfExist = await prisma.registration.findUnique({
+      const checkIfExist = await prisma.registration.findFirst({
         where: {
           email_0: req.body.email_0, 
           event_link: req.body.event_link
