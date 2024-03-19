@@ -2,7 +2,7 @@ import eventlist from '@/data/eventlist';
 import { Flag } from '@mui/icons-material';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
-
+import Image from "next/image"
 const Register = () => {
   const [ieiMember, setieimember] = useState(false);
   const [amount, setamount] = useState()
@@ -240,8 +240,7 @@ const Register = () => {
         if (
           !state.upiid ||
           !state.accholdersname ||
-          !state.transactionid ||
-          !state.imageUrl
+          !state.transactionid 
         ) {
           setmsg("Enter  the payement detail");
           setprofiledone(true);
@@ -649,27 +648,32 @@ const Register = () => {
                 <>
                   <div className="bg-cyan-500  indicator rounded-md w-full p-4 mb-4 flex flex-col items-center justify-center shadow-xl">
                     <span className="indicator-item indicator-center badge badge-info"></span>
-                    <label className="">Amount</label>
-                    <div className="bg-cyan-500  bg-opacity-50 rounded w-3/4 grid text-center justify-center">
-                      <span className="pb-10 pt-7">
-                        <span>Rs </span>
-                        <span>{String(amount)}</span>
-                      </span>
-                      <div>
-                        <img src={"gpay.jpeg"} />
+                    <div className="bg-cyan-500 bg-opacity-50 rounded w-3/4 grid text-center justify-center font-mono pt-7 pb-7">
+                      <div className="flex ">
+                        <span><span className='font-bold'>Amount</span> : Rs {String(amount)}</span>
                       </div>
-                      <div className="acc-name  w-full p-2 flex flex-col justify-center items-center">
-                        <span className="pb-1 ">
-                          <label>UPI ID</label>
-                        </span>
-
-                        <input
-                          className="input w-full  opacity-75 bg-white text-black rounded-lg"
-                          type={"text"}
-                          name="upiid"
-                          onChange={handlechange}
-                        ></input>
+                      <div className="flex pt-4 ">
+                        <span><span className='font-bold'>ACCOUNT NAME</span> : Bharath Vishnu</span>
                       </div>
+                      <div className="flex pt-4 ">
+                        <span><span className='font-bold'>UPI Id</span> : @okhdfcbank</span>
+                      </div>
+                      <div className="flex pt-4">
+                        <span><span className='font-bold'>PH.NUMBER</span> : 8078213133</span>
+                      </div>
+                      <div className='flex pt-4'>
+                         <div>
+                         <Image
+                         src="/gpay.jpeg"
+                         width={500}
+                         height={500}
+                         alt="Picture of the author"
+                       />
+                   
+                        
+                      </div>
+                      </div>
+                      
 
                     </div>
                   </div>
@@ -689,6 +693,18 @@ const Register = () => {
                         onChange={handlechange}
                       ></input>
                     </div>
+                    <div className="acc-name grid grid-rows-2  w-3/4 pb-7">
+                        <span className="pb-3 ">
+                          <label>UPI ID</label>
+                        </span>
+
+                        <input
+                          className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
+                          type={"text"}
+                          name="upiid"
+                          onChange={handlechange}
+                        ></input>
+                      </div>
                     <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
                       <span className="pb-3">
                         <label>Transaction ID</label>
