@@ -42,23 +42,17 @@ export default function Footer() {
 
         <div className='flex gap-2 md:gap-4 mb-4'>
 
-          <FacebookRoundedIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
+         
 
-          <TwitterIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
+          <Link href={"https://www.instagram.com/iei_tkm_cse/"}><InstagramIcon sx={{ color: 'white' }} className='w-8 h-8 ' /></Link>
 
-          <InstagramIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
+          <Link href={"https://www.linkedin.com/company/iei-cse-tkmce/"}><LinkedInIcon sx={{ color: 'white' }} className='w-8 h-8 ' /></Link>
 
-          <LinkedInIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
-
-          <WhatsAppIcon sx={{ color: 'white' }} className='w-8 h-8 ' />
+          
 
         </div>
 
-        <div className='text-white text-xs mb-4'>
-
-          Terms and conditions
-
-        </div>
+       
 
       </div>
 
@@ -82,17 +76,7 @@ export default function Footer() {
 
           </div>
 
-          <div className={about ? 'text-white text-xs md:block' : 'text-white text-xs hidden md:block'}>
-
-            Vision
-
-          </div>
-
-          <div className={about ? 'text-white text-xs md:block' : 'text-white text-xs hidden md:block'}>
-
-            Mision
-
-          </div>
+          
 
         </div>
 
@@ -107,19 +91,16 @@ export default function Footer() {
             TEAM
 
           </div>
-
+          <Link href={"/Execom"}>
           <div className={team ? 'text-white text-xs md:block' : 'text-white text-xs hidden md:block'}>
 
             Execom
 
           </div>
+          
+          </Link>
 
-          <div className={team ? 'text-white text-xs md:block' : 'text-white text-xs hidden md:block'}>
-
-            Web Team
-
-          </div>
-
+          
         </div>
 
         <div className='flex flex-col gap-2 md:mt-0 mt-2'>

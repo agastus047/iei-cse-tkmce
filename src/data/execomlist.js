@@ -4,7 +4,7 @@ export const execomlist=[
         name:'Sanjay S J',
         img:'/assets/execommember/Sanjay S J.jpg',
         position:'Chairperson',
-        linkedIn:'linkedin.com',
+        linkedIn:'https://www.linkedin.com/in/sanjay-sj/',
         imgcorrect:true
     },
     {
@@ -12,6 +12,7 @@ export const execomlist=[
         name:'Mohammed Sinan Pakkada',
         img:'/assets/execommember/Mohammed sinan pakkada.jpg',
         position:'Secretary',
+        linkedIn:'https://www.linkedin.com/in/sinan-pakkada/',
         imgcorrect:true
     },
     {
@@ -19,6 +20,7 @@ export const execomlist=[
         name:'Bharath Vishnu',
         img:'/assets/execommember/Bharath Vishnu.jpg',
         position:'Treasurer',
+        linkedIn:'https://www.linkedin.com/in/bharath-vishnu-516049228/',
         imgcorrect:false
     },
     {
@@ -26,6 +28,7 @@ export const execomlist=[
         name:'Prathyush Madhusoodhanan',
         img:'/assets/execommember/Prathyush Madhusoodhanan.jpg',
         position:'Program Head',
+        linkedIn:'https://www.linkedin.com/in/prathyushmadhu/',
         imgcorrect:true
     },
     {
@@ -33,6 +36,7 @@ export const execomlist=[
         name:'Agastus Joyson',
         img:'/assets/execommember/AGASTUS JOYSON.jpeg',
         position:'Tech Head',
+        linkedIn:'https://www.linkedin.com/in/agastus-joyson/',
         imgcorrect:true
     },
     {
@@ -40,6 +44,7 @@ export const execomlist=[
         name:'Kripa Anil',
         img:'/assets/execommember/KRIPA ANIL.jpg',
         position:'Design Head',
+        linkedIn:'https://www.linkedin.com/in/kripa-anil-447065267/',
         imgcorrect:true
     },
     {
@@ -47,6 +52,7 @@ export const execomlist=[
         name:'Parvathy S',
         img:'/assets/execommember/PARVATHY S .jpg',
         position:'Documentation Head',
+        linkedIn:'https://www.linkedin.com/in/parvathy-s-6abab1230/',
         imgcorrect:true
     },
     {
@@ -54,6 +60,7 @@ export const execomlist=[
         name:'Saraswathy SP',
         img:'/assets/execommember/Saraswathy SP .jpg',
         position:'P R Head',
+        linkedIn:"https://www.linkedin.com/in/saraswathy-sp-69606a228/",
         imgcorrect:true
     },
     {
@@ -61,6 +68,7 @@ export const execomlist=[
         name:'Anagha Mohan',
         img:'/assets/execommember/Anagha Mohan.jpg',
         position:'Program Coordinator',
+        linkedIn:'https://www.linkedin.com/in/anagha-mohan-8a58a5257/',
         imgcorrect:true
     },
     {
@@ -68,6 +76,7 @@ export const execomlist=[
         name:'Anna Tomson',
         img:'/assets/execommember/ANNA TOMSON.jpg',
         position:'Program Coordinator',
+        linkedIn:'https://www.linkedin.com/in/anna-tomson-153063256/',
         imgcorrect:true
     },
     {
@@ -75,6 +84,7 @@ export const execomlist=[
         name:'Parvathy S Nair',
         img:'/assets/execommember/Parvathy S Nair.jpg',
         position:'Program Coordinator',
+        linkedIn:'https://www.linkedin.com/in/parvathy-s-nair-b02538255/',
         imgcorrect:false
     },
     {
@@ -82,6 +92,7 @@ export const execomlist=[
         name:'Akhila C',
         img:'/assets/execommember/Akhila C.JPG',
         position:'Tech Team',
+        linkedIn:'https://www.linkedin.com/in/akhila-c-aaa063258/',
         imgcorrect:true
     },
     {
@@ -89,6 +100,7 @@ export const execomlist=[
         name:'Amalendu Manoj',
         img:'/assets/execommember/AMALENDU MANOJ.jpg',
         position:'Tech Team',
+        linkedIn:'https://www.linkedin.com/in/amalendu-manoj-970a13253/',
         imgcorrect:true
     },
     {
@@ -96,6 +108,7 @@ export const execomlist=[
         name:'Abhiram Arun',
         img:'/assets/execommember/Abhiram Arun.jpg',
         position:'Design Team',
+        linkedIn:'https://www.linkedin.com/in/abhiram-arun-5b486a258/',
         imgcorrect:true
     },
     {
@@ -103,6 +116,7 @@ export const execomlist=[
         name:'Krishnapriya V R',
         img:'/assets/execommember/Krishnapriya V R.JPG',
         position:'Design Team',
+        linkedIn:'https://www.linkedin.com/in/krishnapriya-v-r-b58855257/',
         imgcorrect:true
     },
     {
@@ -110,6 +124,7 @@ export const execomlist=[
         name:'Nibal Iqbal',
         img:'/assets/execommember/NIBAL IQBAL.jpg',
         position:'Documentation Team',
+        linkedIn:'https://www.linkedin.com/in/nibal-iqbal-211084226/',
         imgcorrect:false
     },
     {
@@ -117,6 +132,7 @@ export const execomlist=[
         name:'Nayana S Babu',
         img:'/assets/execommember/Nayana S Babu.jpg',
         position:'Documentation Team',
+        linkedIn:"https://www.linkedin.com/in/nayana-s-babu-1577b025a/",
         imgcorrect:true
     },
     {
@@ -124,6 +140,7 @@ export const execomlist=[
         name:'Asiya Muhammed ',
         img:'/assets/execommember/Asiya Muhammed .jpg',
         position:'Documentation Team',
+        linkedIn:'https://www.linkedin.com/in/asiya-muhammed-095a97258/',
         imgcorrect:true
     },
     {
@@ -131,6 +148,7 @@ export const execomlist=[
         name:'Sangeeth S ',
         img:'/assets/execommember/SANGEETH S.jpg',
         position:'P R Team',
+        linkedIn:'https://www.linkedin.com/in/sangeeth-s-872aa6282/',
         imgcorrect:true
     },
     

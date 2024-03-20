@@ -349,11 +349,25 @@ const Register = () => {
 
   const handlebox = (checked) => {
     if (checked) {
+   
       setieimember(true)
       setamount(eventdata?.price.ieiMember)
+      if(eventdata?.price.ieiMember <= 0){
+        setState({
+          ...state,
+          upiid: null ,
+          accholdersname:null,
+          transactionid:null,
+          imageUrl:null
+        });
+      }
     } else {
       setieimember(false)
       setamount(eventdata?.price.nonieiMember)
+      setState({
+        ...state,
+        member_id:null,
+      })
     }
   }
   return (
@@ -653,7 +667,7 @@ const Register = () => {
                         <span><span className='font-bold'>ACCOUNT NAME</span> : Bharath Vishnu</span>
                       </div>
                       <div className="flex pt-4 ">
-                        <span><span className='font-bold'>UPI Id</span> : @okhdfcbank</span>
+                        <span><span className='font-bold'>UPI Id</span> : bharathvb1204@okicici</span>
                       </div>
                       <div className="flex pt-4">
                         <span><span className='font-bold'>PH.NUMBER</span> : 8078213133</span>

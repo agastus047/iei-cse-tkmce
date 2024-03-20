@@ -26,7 +26,7 @@ const TestComponent2 = () => {
     <div className='flex-col justify-start '>
       <div className='flex justify-between md:gap-10 lg:gap-5 gap-5  items-center  mr-0 pt-4 pb-4' style={{background:'#00ADB5'}}>
         <div className='flex-col font-Poppins ml-5 lg:ml-20 w-3/6 text-left md:ml-12' style={{background:'#00ADB5'}}>
-          <h1 style={{background:'#00ADB5'}} className='text-white sm:mb-10 mb-2 font-extrabold   md:text-6xl sm:text-4xl text-xl'>Vision</h1>
+          <h1 style={{background:'#00ADB5'}} className='vision text-white sm:mb-10 mb-2 font-extrabold   md:text-6xl sm:text-4xl text-xl'>Vision</h1>
           <p style={{background:'#00ADB5'}} className='text-white md:text-2xl text-sm font-normal p-2'>"A pathway to technological realm"<br /> We envision to be one of the vibrant professional society of technologists and applied scientists in the world.</p>
           <hr style={{top: '20px',border: 'none',height: '4px',background: '#393E46',marginBottom:'10px'}}></hr>
         </div>
