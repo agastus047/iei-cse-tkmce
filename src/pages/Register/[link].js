@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Image from "next/image"
 import axios from 'axios';
+import { CldUploadWidget } from 'next-cloudinary';
 
 const Register = () => {
   const [ieiMember, setieimember] = useState(false);
@@ -25,12 +26,12 @@ const Register = () => {
 
   async function sendData() {
     try {
-      const response = await axios.post("/api/register",{
+      const response = await axios.post("/api/register", {
         ...state,
         event_link: eventdata?.link,
         amount
       });
-      if(response.status===200) {
+      if (response.status === 200) {
         setmsg("successfully registered");
         setprofiledone(true);
         setTimeout(() => {
@@ -46,8 +47,8 @@ const Register = () => {
         }, 3000);
       }
     }
-    catch(error) {
-      if(error.response.status===400) {
+    catch (error) {
+      if (error.response.status === 400) {
         setmsg("email already in use");
         setprofiledone(true);
         setTimeout(() => {
@@ -142,7 +143,7 @@ const Register = () => {
         }
       }
 
-      if (eventdata?.isPaid && amount> 0) {
+      if (eventdata?.isPaid && amount > 0) {
         if (
           !state.upiid ||
           !state.accholdersname ||
@@ -261,7 +262,7 @@ const Register = () => {
         if (
           !state.upiid ||
           !state.accholdersname ||
-          !state.transactionid 
+          !state.transactionid
         ) {
           setmsg("Enter  the payement detail");
           setprofiledone(true);
@@ -349,16 +350,16 @@ const Register = () => {
 
   const handlebox = (checked) => {
     if (checked) {
-   
+
       setieimember(true)
       setamount(eventdata?.price.ieiMember)
-      if(eventdata?.price.ieiMember <= 0){
+      if (eventdata?.price.ieiMember <= 0) {
         setState({
           ...state,
-          upiid: null ,
-          accholdersname:null,
-          transactionid:null,
-          imageUrl:null
+          upiid: null,
+          accholdersname: null,
+          transactionid: null,
+          imageUrl: null
         });
       }
     } else {
@@ -366,7 +367,7 @@ const Register = () => {
       setamount(eventdata?.price.nonieiMember)
       setState({
         ...state,
-        member_id:null,
+        member_id: null,
       })
     }
   }
@@ -655,7 +656,7 @@ const Register = () => {
                   )
                 })
               }
-              {eventdata?.isPaid && amount>0 ?
+              {eventdata?.isPaid && amount > 0 ?
                 <>
                   <div className="bg-cyan-500  indicator rounded-md w-full p-4 mb-4 flex flex-col items-center justify-center shadow-xl">
                     <span className="indicator-item indicator-center badge badge-info"></span>
@@ -673,18 +674,18 @@ const Register = () => {
                         <span><span className='font-bold'>PH.NUMBER</span> : 8078213133</span>
                       </div>
                       <div className='flex pt-4'>
-                         <div>
-                         <Image
-                         src="/gpay.jpeg"
-                         width={500}
-                         height={500}
-                         alt="Picture of the author"
-                       />
-                   
-                        
+                        <div>
+                          <Image
+                            src="/gpay.jpeg"
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                          />
+
+
+                        </div>
                       </div>
-                      </div>
-                      
+
 
                     </div>
                   </div>
@@ -705,17 +706,17 @@ const Register = () => {
                       ></input>
                     </div>
                     <div className="acc-name grid grid-rows-2  w-3/4 pb-7">
-                        <span className="pb-3 ">
-                          <label>UPI ID</label>
-                        </span>
+                      <span className="pb-3 ">
+                        <label>UPI ID</label>
+                      </span>
 
-                        <input
-                          className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
-                          type={"text"}
-                          name="upiid"
-                          onChange={handlechange}
-                        ></input>
-                      </div>
+                      <input
+                        className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
+                        type={"text"}
+                        name="upiid"
+                        onChange={handlechange}
+                      ></input>
+                    </div>
                     <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
                       <span className="pb-3">
                         <label>Transaction ID</label>
@@ -728,29 +729,34 @@ const Register = () => {
                       ></input>
                     </div>
                     <div className="trans-id grid grid-rows-2  w-3/4 pb-7">
-                    <span className="pb-3">
-                      <label>Screenshot</label>
-                    </span>
-                    <input
-                      className="input w-full max-w-xs opacity-75 bg-white text-black rounded-lg"
-                      type={"text"}
-                      name="imageUrl"
-                      onChange={handlechange}
-                    ></input>
-                  </div>
-                    <div className="ss grid grid-rows-2 w-3/4 pb-7">
                       <span className="pb-3">
                         <label>Screenshot</label>
                       </span>
-                   
-                      <div className='flex justify-end'>
-                        <button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
-                          Upload image
-                        </button>
-                      </div>
+
+                      <CldUploadWidget
+                        uploadPreset="i7nid1ke"
+                        onUpload={(result, widget) => {
+                          setState({ ...state, imageUrl:"https://res.cloudinary.com/dafndts9z/image/upload/v1697362053/"+result.info.public_id });
+                        }}
+                      >
+                        {({ open }) => {
+                          function handleOnClick(e) {
+                            e.preventDefault();
+                            open();
+                          }
+                          return (
+                            <div className='flex justify-end'>
+                              <button onClick={handleOnClick} className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+                                Upload image
+                              </button>
+                            </div>
+                          );
+                        }}
+                      </CldUploadWidget>
+
 
                     </div>
-                  
+
                   </div>
                 </> : <></>}
 

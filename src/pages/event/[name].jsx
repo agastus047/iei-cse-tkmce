@@ -62,10 +62,13 @@ const Eventpage = () => {
               <h3 className='font-semibold'>{eventdata?.cordinator[1][0]}</h3>
               <p>{eventdata?.cordinator[1][1]}</p>
             </div>
+            {(eventdata?.cordinator[2])===null?<></>:
             <div className='flex flex-col'>
-              <h3 className='font-semibold'>{eventdata?.cordinator[2][0]}</h3>
-              <p>{eventdata?.cordinator[2][1]}</p>
-            </div>
+            <h3 className='font-semibold'>{eventdata?.cordinator[2][0]}</h3>
+            <p>{eventdata?.cordinator[2][1]}</p>
+          </div>
+            }
+           
           </div>
           <div className='flex justify-end'>
             <Link href={`/Register/${eventdata?.link}`}>
