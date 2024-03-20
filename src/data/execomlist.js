@@ -64,6 +64,14 @@ export const execomlist=[
         imgcorrect:true
     },
     {
+        id:7,
+        name:'Sharon p Raj',
+        img:'/assets/execommember/Sharon p Raj.jpg',
+        position:'Media Head',
+        linkedIn:"",
+        imgcorrect:true
+    },
+    {
         id:8,
         name:'Anagha Mohan',
         img:'/assets/execommember/Anagha Mohan.jpg',
@@ -151,7 +159,23 @@ export const execomlist=[
         linkedIn:'https://www.linkedin.com/in/sangeeth-s-872aa6282/',
         imgcorrect:true
     },
-    
+    {
+        id:19,
+        name:'Ann Maria Jose',
+        img:'/assets/execommember/Ann Maria Jose.jpg',
+        position:'First year representative',
+        linkedIn:'',
+        imgcorrect:true
+    },
+    {
+        id:20,
+        name:'Jasim K Ismail',
+        img:'/assets/execommember/Jasim K Ismail.jpg',
+        position:'First year representative',
+        linkedIn:'',
+        imgcorrect:true
+    },
+
     
     
 ];
