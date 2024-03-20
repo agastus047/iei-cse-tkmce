@@ -56,16 +56,10 @@ const Register = () => {
         }, 3000);
       }
       else {
-        // setmsg("Couldn't register. Contact admin for assistance");
-        // setprofiledone(true);
-        // setTimeout(() => {
-        //   setprofiledone(false);
-        // }, 3000);
-        setmsg("successfully registered");
+        setmsg("Couldn't register. Contact admin for assistance");
         setprofiledone(true);
         setTimeout(() => {
           setprofiledone(false);
-          router.push("/Events");
         }, 3000);
       }
     }
