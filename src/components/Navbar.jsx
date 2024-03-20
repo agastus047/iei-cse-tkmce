@@ -49,12 +49,7 @@ function Navbar() {
             <Link href="/Execom" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
               Team
             </Link>
-            <Link href="/blog" className="text-white hover:text-[#00ADB5]" onClick={closeDrawer}>
-              Blog
-            </Link>
-            <Link href="/login" className="text-white hover:text-blue-500" onClick={closeDrawer}>
-              Login
-            </Link>
+           
           </div>
           <div className="md:hidden">
             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
@@ -83,12 +78,7 @@ function Navbar() {
               <Link href="/Execom" onClick={closeDrawer}>
                 <ListItemText primary="Team" className='hover:text-[#00ADB5]'/>
               </Link>
-              <Link href="/blog" onClick={closeDrawer}>
-                <ListItemText primary="Blog" className='hover:text-[#00ADB5]'/>
-              </Link>
-              <Link href="/login" onClick={closeDrawer}>
-                <ListItemText primary="Login" className='hover:text-[#00ADB5]' />
-              </Link>
+              
           </List>
         </div>
       </Drawer>

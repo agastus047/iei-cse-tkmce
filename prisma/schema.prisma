@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Registration {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  event_link      String
+  creationDate    DateTime
+  member_0        String
+  email_0         String
+  phone_number_0  String
+  college_0       String
+  year_0          String
+  branch_0        String
+  batch_0         String
+  member_id       String?
+  referal_id      String?
+  amount          Int?
+  accholdersname  String?
+  upiid           String?
+  transactionid   String?
+  imageUrl        String?
+  questiontype1_0 String?
+  questiontype1_1 String?
+  questiontype1_2 String?
+  questiontype1_3 String?
+  questiontype1_4 String?
+  questiontype2_0 String?
+  questiontype2_1 String?
+  questiontype2_2 String?
+  questiontype2_3 String?
+  questiontype2_4 String?
+  member_1        String?
+  email_1         String?
+  phone_number_1  String?
+  college_1       String?
+  year_1          String?
+  branch_1        String?
+  batch_1         String?
+  member_2        String?
+  email_2         String?
+  phone_number_2  String?
+  college_2       String?
+  year_2          String?
+  branch_2        String?
+  batch_2         String?
+  member_3        String?
+  email_3         String?
+  phone_number_3  String?
+  college_3       String?
+  year_3          String?
+  branch_3        String?
+  batch_3         String?
+  member_4        String?
+  email_4         String?
+  phone_number_4  String?
+  college_4       String?
+  year_4          String?
+  branch_4        String?
+  batch_4         String?
+}
