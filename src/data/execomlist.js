@@ -175,6 +175,22 @@ export const execomlist=[
         linkedIn:'',
         imgcorrect:true
     },
+    {
+        id:21,
+        name:'Sidharth Hariharan',
+        img:'/assets/execommember/Sidharth-Hariharan.jpg',
+        position:'First year representative',
+        linkedIn:'',
+        imgcorrect:true
+    },
+    {
+        id:22,
+        name:'Mary Joicy Thomas',
+        img:'/assets/execommember/MARY-JOICY-THOMAS.jpg',
+        position:'First year representative',
+        linkedIn:'',
+        imgcorrect:true
+    },
 
     
     

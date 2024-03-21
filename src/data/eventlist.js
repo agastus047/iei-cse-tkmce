@@ -1,11 +1,127 @@
 const eventlist=[
+    
+    {
+        id:16,
+        name:'Deep Learning Workshop',
+        discription:"🧠💡 Explore the Frontiers of Innovation with Deep Learning Workshop as a part of PyWeekby by IEI CSE TKMCE.  Embark on an electrifying journey into the heart of artificial intelligence and neural networks.\n\nIn this enlightening session, unlock the secrets of deep learning and dive into its limitless possibilities. From revolutionizing computer vision to mastering natural language processing, immerse yourself in the cutting-edge technology shaping our future!",
+        img:'/assets/events/Deep-Learning-Workshop.jpg',
+        link:'Deep-Learning-Workshop',
+        isRegistrationOpen:false,
+        date:'24 March',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'7:30 PM - 9:30 PM',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Akhila ","8590885459"],
+            2: ["Shihabudheen", "8547177987"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:false,
+    },
+    {
+        id:15,
+        name:'Exploring Generative AI with LLM',
+        discription:" Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE. Join us for Exploring Generative AI with LLM, an enlightening workshop dedicated to unraveling the mysteries of generative artificial intelligence.\n\n💻Embark with us as we delve into the fundamental concepts of Generative AI with LLM, building a robust foundation for your journey into this dynamic field and engage on discussions promising a rewarding learning experience for all attendees as we take our first steps into the world of Generative AI.",
+        img:'/assets/events/Exploring-Generative-AI-with-LLM.png',
+        link:'Exploring-Generative-AI-with-LLM',
+        isRegistrationOpen:false,
+        date:'23 March',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:' 10:30 am - 12:30 pm',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Mareena Joseph ","+917510701853"],
+            2: ["Anu Thomson", "+919562607325"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:false,
+    },
+    
+    {
+        id:14,
+        name:'Model Forge',
+        discription:" 🚀 Get ready to immerse yourself in an adrenaline-fueled 24-hour machine learning competition with Model Forge brought to you as part of PyWeek conducted by IEI CSE TKMCE.\n\n🎉 Join us for an epic battle to claim the ML champion title. 💻 Train your models, submit predictions, and ascend the leaderboard to secure victory! 🏆 Don't miss out on this thrilling opportunity to showcase your skills and compete against the best in the field. 🔥",
+        img:'/assets/events/Model-Forge.png',
+        link:'Model-Forge',
+        isRegistrationOpen:false,
+        date:'24 March',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:true,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:25
+        },
+        time:'9:00 am',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Muhammed Sinan","7356492394"],
+            2: ["Stanzin Chozen", "9103228985"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:false,
+    },
+    
+    {
+        id:13,
+        name:'Data Science Workshop',
+        discription:" 👨🏻‍💻Dive into the world of data science with our interactive workshop designed to introduce you to fundamental concepts and techniques.\n\nAs part of PYWEEK, IEI CSE TKMCE brings you 'Data Science Workshop', where you'll learn how to analyze, visualize, and derive insights from complex datasets📊 alongside learn about various data science concepts, tools and techniques. Demystify the world of data science and gain a clear understanding of its concepts .\n\n💻📈Immerse yourself in a comprehensive data science experience with our workshop designed to equip you with the skills needed for success. ",
+        img:'/assets/events/Data-Science-Workshop.jpeg',
+        link:'Data-Science-Workshop',
+        isRegistrationOpen:true,
+        date:'March 22',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'5:00 - 6:30 pm',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Sneha","7356492394"],
+            2: ["Shikha", "9400414005"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:false,
+    },
+    
     {
         id:12,
         name:'Basics of Python',
         discription:" 🐍 Get ready to unleash the power of Python at PYWEEK by IEI CSE TKMCE – Join us for an enlightening workshop on ' Basics Of Python ' , dedicated to unraveling the fundamentals of Python programming. \n\nIn this engaging session, participants will explore key concepts of programming on Python , laying a strong foundation for their Python journey. Our session and hands-on activities ensure an enriching learning experience for all attendees. ",
         img:'/assets/events/Basic-of-Python.jpeg',
         link:'Basic-of-Python',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'March 21,2024',
         isTeamevent:false,
         teammember:1,
