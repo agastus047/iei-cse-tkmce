@@ -786,9 +786,9 @@ const Register = () => {
           )}
         </div >
       </div >
-      <div className='h-full w-full fixed flex justify-center items-center'>
+      
         {isLoading && <Loading />}
-      </div>
+      
     </>
   )
 }
