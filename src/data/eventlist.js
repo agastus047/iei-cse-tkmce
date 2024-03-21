@@ -63,7 +63,7 @@ const eventlist=[
         discription: "Ready to test your coding prowess and put your consistency to the ultimate challenge?🚀\n\n💻Introducing CodeStreak, a 60-day Coding Challenge brought to you by Coding Club TKMCE & IEI CSE TKMCE ! \n\nHey wait, it's not just your classic coding challenge😃 – we've got some surprises in store.🎁 Check out the guidelines in the next poster to uncover the excitement! ",
         img:'/assets/events/CodeStreak.jpg',
         link:'CodeStreak',
-        isRegistrationOpen:false,
+        isRegistrationOpen:true,
         date:'5 februery 2024',
         isTeamevent:false,
         teammember:2,
