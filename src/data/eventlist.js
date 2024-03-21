@@ -1,11 +1,69 @@
 const eventlist=[
+    
+    {
+        id:16,
+        name:'Deep Learning Workshop',
+        discription:"🧠💡 Explore the Frontiers of Innovation with Deep Learning Workshop as a part of PyWeekby by IEI CSE TKMCE.  Embark on an electrifying journey into the heart of artificial intelligence and neural networks.\n\nIn this enlightening session, unlock the secrets of deep learning and dive into its limitless possibilities. From revolutionizing computer vision to mastering natural language processing, immerse yourself in the cutting-edge technology shaping our future!",
+        img:'/assets/events/Deep-Learning-Workshop.jpg',
+        link:'Deep-Learning-Workshop',
+        isRegistrationOpen:false,
+        date:'24 March',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'7:30 PM - 9:30 PM',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Akhila ","8590885459"],
+            2: ["Shihabudheen", "8547177987"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:false,
+    },
+    {
+        id:15,
+        name:'Exploring Generative AI with LLM',
+        discription:" Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE. Join us for Exploring Generative AI with LLM, an enlightening workshop dedicated to unraveling the mysteries of generative artificial intelligence.\n\n💻Embark with us as we delve into the fundamental concepts of Generative AI with LLM, building a robust foundation for your journey into this dynamic field and engage on discussions promising a rewarding learning experience for all attendees as we take our first steps into the world of Generative AI.",
+        img:'/assets/events/Exploring-Generative-AI-with-LLM.png',
+        link:'Exploring-Generative-AI-with-LLM',
+        isRegistrationOpen:false,
+        date:'23 March',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:' 10:30 am - 12:30 pm',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Mareena Joseph ","+917510701853"],
+            2: ["Anu Thomson", "+919562607325"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:false,
+    },
+    
     {
         id:14,
         name:'Model Forge',
         discription:" 🚀 Get ready to immerse yourself in an adrenaline-fueled 24-hour machine learning competition with Model Forge brought to you as part of PyWeek conducted by IEI CSE TKMCE.\n\n🎉 Join us for an epic battle to claim the ML champion title. 💻 Train your models, submit predictions, and ascend the leaderboard to secure victory! 🏆 Don't miss out on this thrilling opportunity to showcase your skills and compete against the best in the field. 🔥",
         img:'/assets/events/Model-Forge.png',
         link:'Model-Forge',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'24 March',
         isTeamevent:false,
         teammember:1,
