@@ -31,8 +31,8 @@ const eventlist=[
     {
         id:15,
         name:'Exploring Generative AI with LLM',
-        discription:" Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE. Join us for Exploring Generative AI with LLM, an enlightening workshop dedicated to unraveling the mysteries of generative artificial intelligence.\n\n💻Embark with us as we delve into the fundamental concepts of Generative AI with LLM, building a robust foundation for your journey into this dynamic field and engage on discussions promising a rewarding learning experience for all attendees as we take our first steps into the world of Generative AI.",
-        img:'/assets/events/Exploring-Generative-AI-with-LLM.png',
+        discription:" 🚀Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE . Join us for Exploring Generative AI with LLM , an enlightening workshop dedicated to unraveling the mysteries of generative artificial intelligence.\n\nEmbark on this journey led by Risal Rasheed , an Associate Software Engineer at KeyValue Software Systems , who will guide you through fundamental concepts and engaging discussions.",
+        img:'/assets/events/Exploring-Generative-AI-with-LLM.jpeg',
         link:'Exploring-Generative-AI-with-LLM',
         isRegistrationOpen:true,
         date:'23 March',
@@ -44,7 +44,7 @@ const eventlist=[
             ieiMember:0,
             nonieiMember:0
         },
-        time:' 10:30 am - 12:30 pm',
+        time:' 3:00 - 5:00 pm',
         venue:'Gmeet',
         cordinator: {
             1: ["Mareena Joseph ","+917510701853"],
