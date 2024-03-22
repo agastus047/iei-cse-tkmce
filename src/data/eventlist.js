@@ -34,7 +34,7 @@ const eventlist=[
         discription:" Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE. Join us for Exploring Generative AI with LLM, an enlightening workshop dedicated to unraveling the mysteries of generative artificial intelligence.\n\n💻Embark with us as we delve into the fundamental concepts of Generative AI with LLM, building a robust foundation for your journey into this dynamic field and engage on discussions promising a rewarding learning experience for all attendees as we take our first steps into the world of Generative AI.",
         img:'/assets/events/Exploring-Generative-AI-with-LLM.png',
         link:'Exploring-Generative-AI-with-LLM',
-        isRegistrationOpen:false,
+        isRegistrationOpen:true,
         date:'23 March',
         isTeamevent:false,
         teammember:1,
@@ -54,7 +54,7 @@ const eventlist=[
             
          ],
          pref2:[],
-        referalId:false,
+        referalId:true,
     },
     
     {
