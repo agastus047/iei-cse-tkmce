@@ -34,7 +34,7 @@ const eventlist=[
         discription:" 🚀Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE . Join us for Exploring Generative AI with LLM , an enlightening workshop dedicated to unraveling the mysteries of generative artificial intelligence.\n\nEmbark on this journey led by Risal Rasheed , an Associate Software Engineer at KeyValue Software Systems , who will guide you through fundamental concepts and engaging discussions.",
         img:'/assets/events/Exploring-Generative-AI-with-LLM.jpeg',
         link:'Exploring-Generative-AI-with-LLM',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'23 March',
         isTeamevent:false,
         teammember:1,
