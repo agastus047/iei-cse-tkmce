@@ -71,11 +71,13 @@ const Eventpage = () => {
            
           </div>
           <div className='flex justify-end'>
-            <Link href={`/Register/${eventdata?.link}`}>
-              {eventdata?.isRegistrationOpen?<button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+            
+              {eventdata?.isRegistrationOpen?<Link href={`/Register/${eventdata?.link}`}><button className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
               Register
-            </button>:<></>}
-            </Link>
+            </button></Link>:<><button className="bg-nav-bg text-white font-bold p-4 w-40  rounded-full">
+            Closed
+          </button></>}
+            
           </div>
         </div>
 
