@@ -6,7 +6,7 @@ const eventlist=[
         discription:"🧠💡 Explore the Frontiers of Innovation with Deep Learning Workshop as a part of PyWeekby by IEI CSE TKMCE.  Embark on an electrifying journey into the heart of artificial intelligence and neural networks.\n\nIn this enlightening session, unlock the secrets of deep learning and dive into its limitless possibilities. From revolutionizing computer vision to mastering natural language processing, immerse yourself in the cutting-edge technology shaping our future!",
         img:'/assets/events/Deep-Learning-Workshop.jpg',
         link:'Deep-Learning-Workshop',
-        isRegistrationOpen:open,
+        isRegistrationOpen:true,
         date:'24 March',
         isTeamevent:false,
         teammember:1,
