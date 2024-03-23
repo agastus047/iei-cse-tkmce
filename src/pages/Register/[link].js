@@ -5,8 +5,8 @@ import React, { useEffect, useState } from 'react'
 import Image from "next/image"
 import axios from 'axios';
 import { CldUploadWidget } from 'next-cloudinary';
-import Loading from '@/components/Loading';
 
+import { FaCheckCircle } from "react-icons/fa";
 const Register = () => {
   const [ieiMember, setieimember] = useState(false);
   const [amount, setamount] = useState()
@@ -759,9 +759,14 @@ const Register = () => {
                             }
                             return (
                               <div className='flex justify-end'>
-                                <button onClick={handleOnClick} className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
+                                {
+                                  state.imageUrl ==null?<button onClick={handleOnClick} className="bg-nav-bg text-white font-bold p-4 w-40 hover:bg-cyan-500 rounded-full hover:text-black">
                                   Upload image
-                                </button>
+                                </button>:<button onClick={handleOnClick} className="bg-nav-bg  text-white font-bold p-4 w-40 hover:bg-nav-bg rounded-full hover:text-white">
+                                <div className='flex justify-center items-center gap-5'> <p>Uploaded</p> <FaCheckCircle /></div>
+                              </button> 
+                                }
+                                
                               </div>
                             );
                           }}
