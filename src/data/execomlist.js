@@ -66,7 +66,7 @@ export const execomlist=[
     {
         id:7,
         name:'Sharon p Raj',
-        img:'/assets/execommember/Sharon p Raj.jpg',
+        img:'/assets/execommember/Sharon p Ajay.jpg',
         position:'Media Head',
         linkedIn:"",
         imgcorrect:true
