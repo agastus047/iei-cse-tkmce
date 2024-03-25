@@ -1,5 +1,32 @@
 const eventlist=[
-    
+    {
+        id:17,
+        name:'Django Workshop',
+        discription:"🌟 Step into the realm of web development magic with Django! 🌟\n\nUnleash your creativity and ignite innovation as you embark on an immersive journey guided by the powerful Django framework.🐍 Join us for an exclusive Django Workshop presented by PYWEEK , hosted by IEI CSE TKMCE .\n\n🚀 Discover the secrets of crafting dynamic web applications with Django's clean and pragmatic design.\n\nMark your calendars and reserve your spot today!",
+        img:'/assets/events/Django-Workshop.jpeg',
+        link:'Deep-Learning-Workshop',
+        isRegistrationOpen:true,
+        date:'28-29 March 2024',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'7:30 PM - 9:30 PM',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Muhammed Noufal N","9895756635"],
+            2: ["Irish Ann Rajan", "8606079720"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
     {
         id:16,
         name:'Deep Learning Workshop',
