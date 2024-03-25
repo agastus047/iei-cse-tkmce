@@ -1,5 +1,33 @@
 const eventlist=[
     {
+        id:18,
+        name:'Gen AI Image Generation',
+        discription:"🚀Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE . Join us for Pixel Craft , an enlightening workshop dedicated to exploring and experiencing the craft of prompt engineering.\n\nEmbark on this journey led by Amal Nath , an Associate Software Engineer at KeyValue Software Systems , who will guide you through fundamental concepts and engaging discussions.\n\n📆Date: March 27, 2024\n 🕧Time: 8:30pm-9:30pm \n📍Mode: Online ",
+        img:'/assets/events/Gen-AI-Image-Generation.jpeg',
+        link:'Gen-AI-Image-Generation',
+        isRegistrationOpen:true,
+        date:'March 27, 2024',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:0
+        },
+        time:'8:30pm-9:30pm',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Siya Pillai","9497246124"],
+            2: ["Rameesa MK", "8281900584"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
+    {
         id:17,
         name:'Django Workshop',
         discription:"🌟 Step into the realm of web development magic with Django! 🌟\n\nUnleash your creativity and ignite innovation as you embark on an immersive journey guided by the powerful Django framework.🐍 Join us for an exclusive Django Workshop presented by PYWEEK , hosted by IEI CSE TKMCE .\n\n🚀 Discover the secrets of crafting dynamic web applications with Django's clean and pragmatic design.\n\nMark your calendars and reserve your spot today!",
@@ -33,7 +61,7 @@ const eventlist=[
         discription:"🧠💡 Explore the Frontiers of Innovation with Deep Learning Workshop as a part of PyWeekby by IEI CSE TKMCE.  Embark on an electrifying journey into the heart of artificial intelligence and neural networks.\n\nIn this enlightening session, unlock the secrets of deep learning and dive into its limitless possibilities. From revolutionizing computer vision to mastering natural language processing, immerse yourself in the cutting-edge technology shaping our future!",
         img:'/assets/events/Deep-Learning-Workshop.jpg',
         link:'Deep-Learning-Workshop',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'24 March',
         isTeamevent:false,
         teammember:1,
@@ -90,7 +118,7 @@ const eventlist=[
         discription:" 🚀 Get ready to immerse yourself in an adrenaline-fueled 24-hour machine learning competition with Model Forge brought to you as part of PyWeek conducted by IEI CSE TKMCE.\n\n🎉 Join us for an epic battle to claim the ML champion title. 💻 Train your models, submit predictions, and ascend the leaderboard to secure victory! 🏆 Don't miss out on this thrilling opportunity to showcase your skills and compete against the best in the field. 🔥 🗓️ Date: 24 March 2024\n\n🕘 Time: 9:00 am\n🛑 Mode: Online\n🏆 First Prize: ₹500\n📍 Reg fee:₹50\n🤩 Free for IEI members",
         img:'/assets/events/Model-Forge.png',
         link:'Model-Forge',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'24 March',
         isTeamevent:false,
         teammember:1,
