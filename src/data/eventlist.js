@@ -1,5 +1,33 @@
 const eventlist=[
     {
+        id:19,
+        name:'🎨 Artifex: Where Creativity Meets Competition! 🖌️',
+        discription:"Calling all artists and enthusiasts! Join us for Artifex, an exhilarating image generation competition hosted by IEI CSE TKMCE as part of Pyweek.\n\n 🤩Unleash your imagination and create captivating images based on themed prompts. Whether you're a seasoned artist or just starting, Artifex welcomes all skill levels!🔥\n🗓️ Date: March 28th\n 🕙 Time: 10:00 AM - 10:00 PM\n💰 Prizes Worth Rs. 250\n📝 Registration: Rs. 25\n🤩 Free for IEI Members📍 ",
+        img:'/assets/events/Artifex-Where-Creativity-Meets-Competition.jpeg',
+        link:'Artifex-Where-Creativity-Meets-Competition',
+        isRegistrationOpen:true,
+        date:'March 28th ',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:true,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:25
+        },
+        time:'10:00 AM - 10:00 PM',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Muhammed Fayis "," 8129229935"],
+            2: ["Shahina Shanavas", "6235730260"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
+    {
         id:18,
         name:'Gen AI Image Generation',
         discription:"🚀Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE . Join us for Pixel Craft , an enlightening workshop dedicated to exploring and experiencing the craft of prompt engineering.\n\nEmbark on this journey led by Amal Nath , an Associate Software Engineer at KeyValue Software Systems , who will guide you through fundamental concepts and engaging discussions.\n\n📆Date: March 27, 2024\n 🕧Time: 8:30pm-9:30pm \n📍Mode: Online ",
