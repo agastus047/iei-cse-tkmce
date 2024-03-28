@@ -53,12 +53,12 @@ const Index = () => {
         setWrong(true)
       } else {
         setWrong(false)
-        setResponse(response.data.data);
+        setResponse(response1.data.data);
       }
 
 
       setData(true);
-      if (response.status === 200) {
+      if (response1.status === 200) {
         setData(true);
         console.log(response)
       } else {
