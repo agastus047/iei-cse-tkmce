@@ -1,3 +1,5 @@
+import { FlashAuto } from "@mui/icons-material";
+
 const eventlist=[
     {
         id:19,
@@ -5,7 +7,7 @@ const eventlist=[
         discription:"Calling all artists and enthusiasts! Join us for Artifex, an exhilarating image generation competition hosted by IEI CSE TKMCE as part of Pyweek.\n\n 🤩Unleash your imagination and create captivating images based on themed prompts. Whether you're a seasoned artist or just starting, Artifex welcomes all skill levels!🔥\n🗓️ Date: March 28th\n 🕙 Time: 10:00 AM - 10:00 PM\n💰 Prizes Worth Rs. 250\n📝 Registration: Rs. 25\n🤩 Free for IEI Members📍 ",
         img:'/assets/events/Artifex-Where-Creativity-Meets-Competition.jpeg',
         link:'Artifex-Where-Creativity-Meets-Competition',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'March 28th ',
         isTeamevent:false,
         teammember:1,
@@ -33,7 +35,7 @@ const eventlist=[
         discription:"🚀Gear up to explore the realm of Generative AI with LLM at PYWEEK by IEI CSE TKMCE . Join us for Pixel Craft , an enlightening workshop dedicated to exploring and experiencing the craft of prompt engineering.\n\nEmbark on this journey led by Amal Nath , an Associate Software Engineer at KeyValue Software Systems , who will guide you through fundamental concepts and engaging discussions.\n\n📆Date: March 27, 2024\n 🕧Time: 8:30pm-9:30pm \n📍Mode: Online ",
         img:'/assets/events/Gen-AI-Image-Generation.jpeg',
         link:'Gen-AI-Image-Generation',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'March 27, 2024',
         isTeamevent:false,
         teammember:1,
@@ -61,7 +63,7 @@ const eventlist=[
         discription:"🌟 Step into the realm of web development magic with Django! 🌟\n\nUnleash your creativity and ignite innovation as you embark on an immersive journey guided by the powerful Django framework.🐍 Join us for an exclusive Django Workshop presented by PYWEEK , hosted by IEI CSE TKMCE .\n\n🚀 Discover the secrets of crafting dynamic web applications with Django's clean and pragmatic design.\n\nMark your calendars and reserve your spot today!",
         img:'/assets/events/Django-Workshop.jpeg',
         link:'Deep-Learning-Workshop',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'28-29 March 2024',
         isTeamevent:false,
         teammember:1,
@@ -175,7 +177,7 @@ const eventlist=[
         discription:" 👨🏻‍💻Dive into the world of data science with our interactive workshop designed to introduce you to fundamental concepts and techniques.\n\nAs part of PYWEEK, IEI CSE TKMCE brings you 'Data Science Workshop', where you'll learn how to analyze, visualize, and derive insights from complex datasets📊 alongside learn about various data science concepts, tools and techniques. Demystify the world of data science and gain a clear understanding of its concepts .\n\n💻📈Immerse yourself in a comprehensive data science experience with our workshop designed to equip you with the skills needed for success. ",
         img:'/assets/events/Data-Science-Workshop.jpeg',
         link:'Data-Science-Workshop',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'March 22',
         isTeamevent:false,
         teammember:1,
