@@ -9,9 +9,9 @@ const Index = () => {
   const [data, setData] = useState(false);
   const [events, setEvents] = useState([]);
   const [retrieve, setRetrieve] = useState(false);
-
+  const [wrong, setWrong] = useState(false)
   function handlechange(e) {
-    
+
     setAccesskey({
       ...accesskey,
       key: e.target.value,
@@ -43,13 +43,19 @@ const Index = () => {
   }, []);
 
   async function onSubmit(event) {
-   
+
     event.preventDefault();
     setLoading(true);
     try {
-     
-      const response = await axios.post("/api/kjbdskvdsiv", accesskey);
-      setResponse(response.data.data);
+
+      const response1 = await axios.post("/api/kjbdskvdsiv", accesskey);
+      if (response1.data.data === "Wrong password") {
+        setWrong(true)
+      } else {
+        setWrong(false)
+        setResponse(response.data.data);
+      }
+
 
       setData(true);
       if (response.status === 200) {
@@ -75,15 +81,17 @@ const Index = () => {
             </label>
             <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="" onChange={handlechange} />
             <p className="text-red-500 text-xs italic">Please enter a password.</p>
+            {wrong ? <><p className="text-red-500 text-xs italic">Wrong password</p></> : <></>}
           </div>
+
           {retrieve && (
             <div className="mb-6">
               <label className="block text-gray-700 text-sm font-bold mb-2" >
                 Select Event
               </label>
               <select onChange={handleSelect}>
-                <option value={"null"} disabled>
-                  Select an event
+                <option value={"null"} >
+                  Choose event
                 </option>
                 {events.data.map(option => (
                   <option key={option.id} value={option.event_link}>{option.event_link}</option>

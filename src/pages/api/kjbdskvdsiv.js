@@ -2,7 +2,7 @@ import prisma from "../../../lib/prisma";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    if (req.body.key === "amal") {
+    if (req.body.key === "npoqknvl") {
     try {
       const usersData =  await prisma.registration.findMany({
         where: {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
   }
   else{
-    return res.status(200).json({ });
+    return res.status(200).json({data:"Wrong password" });
   } 
 }else {
   return res.status(405).json({ data: "Method Not Allowed" });
