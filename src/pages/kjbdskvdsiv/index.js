@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Excelsheet from '@/components/Excelsheet';
+import eventlist from '@/data/eventlist';
 
 const Index = () => {
   const [accesskey, setAccesskey] = useState();
@@ -25,21 +26,12 @@ const Index = () => {
   }
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await axios.post("/api/getevent");
-        if (res.status === 200) {
-          console.log(res);
-          setEvents(res.data); // Assuming response.data is an array of events
-          setRetrieve(true);
-        } else {
-          setRetrieve(false);
-        }
-      } catch (error) {
-        console.error("Error fetching events:", error);
-      }
+    setEvents(eventlist);
+    if(events){
+      setRetrieve(true)
+    }else{
+      setRetrieve(false)
     }
-    fetchData();
   }, []);
 
   async function onSubmit(event) {
@@ -93,8 +85,9 @@ const Index = () => {
                 <option value={"null"} >
                   Choose event
                 </option>
-                {events.data.map(option => (
-                  <option key={option.id} value={option.event_link}>{option.event_link}</option>
+                {events.map(option => (
+                  
+                  <option key={option.id} value={option.link} className='text-black'>{option.link}</option>
                 ))}
               </select>
             </div>
