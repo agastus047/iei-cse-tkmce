@@ -43,19 +43,15 @@ const Index = () => {
       const response1 = await axios.post("/api/kjbdskvdsiv", accesskey);
       if (response1.data.data === "Wrong password") {
         setWrong(true)
+        setData(false)
       } else {
         setWrong(false)
+        setData(true)
         setResponse(response1.data.data);
       }
 
 
-      setData(true);
-      if (response1.status === 200) {
-        setData(true);
-        console.log(response)
-      } else {
-        setData(false);
-      }
+      
     } catch (error) {
       console.error(error);
     } finally {
