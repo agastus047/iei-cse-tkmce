@@ -1,6 +1,7 @@
 import prisma from "../../../lib/prisma";
 
 export default async function handler(req, res) {
+  console.log(req.method)
   if (req.method === "POST") {
     if (req.body.key === "npoqknvl") {
     try {
@@ -9,7 +10,6 @@ export default async function handler(req, res) {
           event_link:req.body.event,
         },
       });
-      console.log(usersData)
       return res.status(200).json({ data: usersData });
     } catch (error) {
       console.error("Error fetching users:", error);
