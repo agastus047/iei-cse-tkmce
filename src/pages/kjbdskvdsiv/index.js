@@ -62,7 +62,7 @@ const Index = () => {
   return (
     <div className='w-full h-full '>
       <div className='flex flex-col w-full h-full justify-center items-center pt-20'>
-        <form className='flex-col' onSubmit={onSubmit}>
+        <div className='flex-col'>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" >
               Password
@@ -99,7 +99,7 @@ const Index = () => {
               </button>
             )}
           </div>
-        </form>
+        </div>
         <div className="">
           {response && data ? (
             <Excelsheet excelData={response} fileName={"Excel Export"} />
