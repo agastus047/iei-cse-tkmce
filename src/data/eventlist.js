@@ -63,7 +63,7 @@ const eventlist=[
         discription:"🌟 Step into the realm of web development magic with Django! 🌟\n\nUnleash your creativity and ignite innovation as you embark on an immersive journey guided by the powerful Django framework.🐍 Join us for an exclusive Django Workshop presented by PYWEEK , hosted by IEI CSE TKMCE .\n\n🚀 Discover the secrets of crafting dynamic web applications with Django's clean and pragmatic design.\n\nMark your calendars and reserve your spot today!",
         img:'/assets/events/Django-Workshop.jpeg',
         link:'Django-Workshop',
-        isRegistrationOpen:true,
+        isRegistrationOpen:false,
         date:'9 March 2024',
         isTeamevent:false,
         teammember:1,
