@@ -1,4 +1,4 @@
-export const execomlist=[
+export const execomlist23=[
     {
         id:0,
         name:'Sanjay S J',
@@ -195,7 +195,7 @@ export const execomlist=[
     
     
 ];
-export const webteam=[
+export const webteam23=[
     {
         id:19,
         name:'Anjana K J',
@@ -212,4 +212,10 @@ export const webteam=[
         linkedIn:'https://www.linkedin.com/in/anjana-kj-312136229/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         imgcorrect:true
     },
+]
+export const execomlist24 = [
+
+]
+export const webteam24 =[
+
 ]
