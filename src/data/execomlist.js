@@ -354,7 +354,7 @@ export const execomlist24 = [
     {
         id:13,
         name:'GAUTHAM S',
-        img:'/assets/execommember/GAUTHAM S.JPG',
+        img:'/assets/execommember/Gautham S.JPG',
         position:'Media Team',
         linkedIn:'https://www.linkedin.com/in/gautham-s-a9873a256/',
         imgcorrect:true
