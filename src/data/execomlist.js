@@ -74,7 +74,7 @@ export const execomlist23=[
     {
         id:8,
         name:'Anagha Mohan',
-        img:'/assets/execommember/Anagha Mohan.jpg',
+        img:'/assets/execommember/Anagha Mohan.jpeg',
         position:'Program Coordinator',
         linkedIn:'https://www.linkedin.com/in/anagha-mohan-8a58a5257/',
         imgcorrect:true
