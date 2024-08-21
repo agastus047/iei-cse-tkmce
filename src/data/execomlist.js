@@ -241,7 +241,7 @@ export const execomlist24 = [
     {
         id:3,
         name:'Joel Paul John',
-        img:'/assets/execommember/Joel Paul.jpg',
+        img:'/assets/execommember/Joel Paul.JPG',
         position:'Program Head',
         linkedIn:'https://www.linkedin.com/in/joel-paul-john/',
         imgcorrect:true
@@ -290,7 +290,7 @@ export const execomlist24 = [
     {
         id:8,
         name:'Anu Thomson',
-        img:'/assets/execommember/ANU THOMSON.jpg',
+        img:'/assets/execommember/ANU THOMSON.JPG',
         position:'Program Coordinator',
         linkedIn:'https://www.linkedin.com/in/anu-thomson-9b9636291/',
         imgcorrect:true
@@ -314,7 +314,7 @@ export const execomlist24 = [
     {
         id:11,
         name:'Gautham Binu',
-        img:'/assets/execommember/GAUTHAM BINU.JPG',
+        img:'/assets/execommember/GAUTHAM BINU.jpg',
         position:'Web Team',
         linkedIn:'https://www.linkedin.com/in/gautham-binu-60920524b/',
         imgcorrect:true
@@ -338,7 +338,7 @@ export const execomlist24 = [
     {
         id:14,
         name:'Sruthin N',
-        img:'/assets/execommember/Sruthin N.JPG',
+        img:'/assets/execommember/Sruthin N.jpg',
         position:'Design Team',
         linkedIn:'https://www.linkedin.com/in/sruthin-n-112615291/',
         imgcorrect:true
@@ -346,7 +346,7 @@ export const execomlist24 = [
     {
         id:14,
         name:'Angelina Rose',
-        img:'/assets/execommember/Angelina Rose.JPG',
+        img:'/assets/execommember/Angelina Rose.jpg',
         position:'Design Team',
         linkedIn:'https://www.linkedin.com/in/angelina-rose-9b312b324/',
         imgcorrect:true
