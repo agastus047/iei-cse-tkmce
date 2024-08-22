@@ -105,7 +105,7 @@ export const execomlist23=[
     },
     {
         id:12,
-        name:'Amalendu Manoj',
+        name:'Amalendu',
         img:'/assets/execommember/AMALENDU MANOJ.jpg',
         position:'Tech Team',
         linkedIn:'https://www.linkedin.com/in/amalendu-manoj-970a13253/',
