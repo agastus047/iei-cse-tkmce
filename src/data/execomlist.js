@@ -273,7 +273,7 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id:32,
+        id: 32,
         name:'Asiya Muhammed',
         img:'/assets/execommember/Asiya Muhammed 2.jpg',
         position:'Documentation Head',
