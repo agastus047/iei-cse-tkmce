@@ -233,7 +233,7 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id:2,
+        id:28,
         name:'Archana V M',
         img:'/assets/execommember/Archana V M.jpg',
         position:'Treasurer',
@@ -273,7 +273,7 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id:6,
+        id:32,
         name:'Asiya Muhammed',
         img:'/assets/execommember/Asiya Muhammed 2.jpg',
         position:'Documentation Head',
@@ -305,7 +305,7 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id:10,
+        id:37,
         name:'Aishwarya Prakash',
         img:'/assets/execommember/Aishwarya Prakash .jpg',
         position:'Program Coordinator',
@@ -361,7 +361,7 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id:13,
+        id:44,
         name:'JASIM K',
         img:'/assets/execommember/Jasim K Ismail 2.JPG',
         position:'Media Team',
