@@ -238,7 +238,7 @@ export const execomlist24 = [
         img:'/assets/execommember/Archana V M.jpg',
         position:'Treasurer',
         linkedIn:'https://www.linkedin.com/in/archana-vm-056705260/',
-        imgcorrect:false
+        imgcorrect:true
     },
     {
         id: 29,
@@ -310,7 +310,7 @@ export const execomlist24 = [
         img:'/assets/execommember/Aishwarya Prakash .jpg',
         position:'Program Coordinator',
         linkedIn:'https://www.linkedin.com/in/aishwarya--prakash/',
-        imgcorrect:false
+        imgcorrect:true
     },
     {
         id: 38,
