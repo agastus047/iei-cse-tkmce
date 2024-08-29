@@ -233,12 +233,12 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id: 28,
-        name: 'Archana V M',
-        img: '/assets/execommember/Archana V M.jpg',
-        position: 'Treasurer',
-        linkedIn: 'https://www.linkedin.com/in/archana-vm-056705260/',
-        imgcorrect: true
+        id:2,
+        name:'Archana V M',
+        img:'/assets/execommember/Archana V M.jpg',
+        position:'Treasurer',
+        linkedIn:'https://www.linkedin.com/in/archana-vm-056705260/',
+        imgcorrect:false
     },
     {
         id: 29,
@@ -273,12 +273,12 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id: 33,
-        name: 'Asiya Muhammed',
-        img: '/assets/execommember/Asiya Muhammed .jpg',
-        position: 'Documentation Head',
-        linkedIn: 'https://www.linkedin.com/in/asiya-muhammed-095a97258/',
-        imgcorrect: true
+        id:6,
+        name:'Asiya Muhammed',
+        img:'/assets/execommember/Asiya Muhammed .jpg',
+        position:'Documentation Head',
+        linkedIn:'https://www.linkedin.com/in/asiya-muhammed-095a97258/',
+        imgcorrect:true
     },
     {
         id: 34,
@@ -305,12 +305,12 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id: 37,
-        name: 'Aishwarya Prakash',
-        img: '/assets/execommember/Aishwarya Prakash .jpg',
-        position: 'Program Coordinator',
-        linkedIn: 'https://www.linkedin.com/in/aishwarya--prakash/',
-        imgcorrect: true
+        id:10,
+        name:'Aishwarya Prakash',
+        img:'/assets/execommember/Aishwarya Prakash .jpg',
+        position:'Program Coordinator',
+        linkedIn:'https://www.linkedin.com/in/aishwarya--prakash/',
+        imgcorrect:false
     },
     {
         id: 38,
@@ -361,12 +361,12 @@ export const execomlist24 = [
         imgcorrect: true
     },
     {
-        id: 44,
-        name: 'JASIM K',
-        img: '/assets/execommember/Jasim K Ismail.jpg',
-        position: 'Media Team',
-        linkedIn: 'https://www.linkedin.com/in/jasim-k-ismail-89b4a627a/',
-        imgcorrect: true
+        id:13,
+        name:'JASIM K',
+        img:'/assets/execommember/Jasim K Ismail.jpg',
+        position:'Media Team',
+        linkedIn:'https://www.linkedin.com/in/jasim-k-ismail-89b4a627a/',
+        imgcorrect:true
     },
     {
         id: 45,
