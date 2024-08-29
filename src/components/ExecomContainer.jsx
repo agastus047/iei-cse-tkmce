@@ -9,8 +9,8 @@ const ExecutiveTeam = () => {
      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <div className="mt-0 md:mt-10 rounded-lg overflow-hidden p-6 mx-auto">
-          <img src='/assets/execommember/Sanjay S J.jpg' className="bg-cyanblue border-4 border-cyanblue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg mx-auto" />
-          <h1 className="text-2xl font-bold text-center">Sanjay S J</h1>
+          <img src='/assets/execommember/Anagha Mohan.jpeg' className="bg-cyanblue border-4 border-cyanblue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg mx-auto" />
+          <h1 className="text-2xl font-bold text-center">Anagha Mohan</h1>
           <h2 className="text-xl font-medium mb-4 text-center">Chairperson</h2>
         </div>
 
@@ -21,8 +21,8 @@ const ExecutiveTeam = () => {
         </div>
 
         <div className="mt-0 md:mt-10 rounded-lg overflow-hidden p-6 mx-auto">
-          <img src='/assets/execommember/Mohammed sinan pakkada.jpg' className="bg-cyanblue border-4 border-cyanblue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg mx-auto" />
-          <h1 className="text-2xl font-bold text-center">Mohammed Sinan Pakkada</h1>
+          <img src='/assets/execommember/K R ABHINAND.jpg' className="bg-cyanblue border-4 border-cyanblue shadow-md w-48 h-48 md:w-64 md:h-64 object-cover rounded-lg mx-auto" />
+          <h1 className="text-2xl font-bold text-center">K R Abhinand</h1>
           <h2 className="text-xl font-medium mb-4 text-center">General Secretary</h2>
         </div>
 

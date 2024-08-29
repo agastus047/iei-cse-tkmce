@@ -1,7 +1,12 @@
 import prisma from "../../../lib/prisma";
 
 export default async function handler(req, res) {
-  if (req.method ===  "POST") {
+
+  
+
+  
+  if (req.method === "POST") {
+
     if (req.body.key === "npoqknvl") {
     try {
       const usersData =  await prisma.registration.findMany({
@@ -9,7 +14,6 @@ export default async function handler(req, res) {
           event_link:req.body.event,
         },
       });
-      console.log(usersData)
       return res.status(200).json({ data: usersData });
     } catch (error) {
       console.error("Error fetching users:", error);

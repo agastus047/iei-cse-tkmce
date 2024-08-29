@@ -319,10 +319,15 @@ const eventlist=[
     },
     {
         id:8,
-        name:'CP&DSA Dynamics:Placements pro',
+        name:'CP&DSA Dynamics: Placements pro',
         discription: "Hey everyone!\n\nCoding Club TKMCE in collaboration with IEI CSE TKMCE presents you CP & DSA Dynamics: Placements Pro ,an online session to uncover the power of Data Structures and Algorithms (DSA) and Competitive Programming in Career Success. This session aims to shed light on the significance of these skills in securing lucrative job opportunities and excelling in technical interviews",
-        img:'/assets/events/CP&DSA-Dynamics:Placements-pro.jpg',
+
+        img:'/assets/events/CP&DSA-DynamicsPlacements-pro.jpg',
         link:'CP&DSA-DynamicsPlacements-pro',
+
+
+       
+
         isRegistrationOpen:false,
         date:'27 January 2024',
         isTeamevent:false,
