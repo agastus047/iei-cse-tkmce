@@ -309,7 +309,7 @@ export const execomlist24 = [
         img:'/assets/execommember/Aishwarya Prakash .jpg',
         position:'Program Coordinator',
         linkedIn:'https://www.linkedin.com/in/aishwarya--prakash/',
-        imgcorrect:false
+        imgcorrect:true
     },
     {
         id:11,
