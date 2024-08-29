@@ -74,7 +74,7 @@ export const execomlist23=[
     {
         id:8,
         name:'Anagha Mohan',
-        img:'/assets/execommember/Anagha Mohan.jpg',
+        img:'/assets/execommember/Anagha Mohan.jpeg',
         position:'Program Coordinator',
         linkedIn:'https://www.linkedin.com/in/anagha-mohan-8a58a5257/',
         imgcorrect:true
@@ -236,7 +236,7 @@ export const execomlist24 = [
         img:'/assets/execommember/Archana V M.jpg',
         position:'Treasurer',
         linkedIn:'https://www.linkedin.com/in/archana-vm-056705260/',
-        imgcorrect:false
+        imgcorrect:true
     },
     {
         id:3,
@@ -273,7 +273,7 @@ export const execomlist24 = [
     {
         id:6,
         name:'Asiya Muhammed',
-        img:'/assets/execommember/Asiya Muhammed .jpg',
+        img:'/assets/execommember/Asiya Muhammed 2.jpg',
         position:'Documentation Head',
         linkedIn:'https://www.linkedin.com/in/asiya-muhammed-095a97258/',
         imgcorrect:true
@@ -309,7 +309,7 @@ export const execomlist24 = [
         img:'/assets/execommember/Aishwarya Prakash .jpg',
         position:'Program Coordinator',
         linkedIn:'https://www.linkedin.com/in/aishwarya--prakash/',
-        imgcorrect:false
+        imgcorrect:true
     },
     {
         id:11,
@@ -362,7 +362,7 @@ export const execomlist24 = [
     {
         id:13,
         name:'JASIM K',
-        img:'/assets/execommember/Jasim K Ismail.jpg',
+        img:'/assets/execommember/Jasim K Ismail 2.JPG',
         position:'Media Team',
         linkedIn:'https://www.linkedin.com/in/jasim-k-ismail-89b4a627a/',
         imgcorrect:true
