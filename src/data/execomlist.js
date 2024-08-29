@@ -275,7 +275,7 @@ export const execomlist24 = [
     {
         id:6,
         name:'Asiya Muhammed',
-        img:'/assets/execommember/Asiya Muhammed .jpg',
+        img:'/assets/execommember/Asiya Muhammed 2.jpg',
         position:'Documentation Head',
         linkedIn:'https://www.linkedin.com/in/asiya-muhammed-095a97258/',
         imgcorrect:true
@@ -363,7 +363,7 @@ export const execomlist24 = [
     {
         id:13,
         name:'JASIM K',
-        img:'/assets/execommember/Jasim K Ismail.jpg',
+        img:'/assets/execommember/Jasim K Ismail 2.JPG',
         position:'Media Team',
         linkedIn:'https://www.linkedin.com/in/jasim-k-ismail-89b4a627a/',
         imgcorrect:true
