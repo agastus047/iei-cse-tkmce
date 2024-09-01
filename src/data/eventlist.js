@@ -2,6 +2,62 @@ import { FlashAuto } from "@mui/icons-material";
 
 const eventlist=[
     {
+        id:21,
+        name:'Freelancing in web3',
+        discription:"Eager to explore the transformative power of cutting-edge technology?\n\nYour moment has arrived!\n\nIEI CSE TKMCE presents an exclusive Web3/Blockchain talk session with Jijo Johny, a Web3 blockchain expert who captivates audiences with his insights. Discover key concepts that will reshape your understanding of Web3 and Blockchain!\n\n📌 Date: 27 August 2024  \n📌 Time: 7:00 PM  \n📌 Mode: Online",
+        img:'/assets/events/Freelancinginweb3.jpeg',
+        link:'Freelancinginweb3',
+        isRegistrationOpen:false,
+        date:'Aug 27',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:25
+        },
+        time:'7:00 PM - 8:00 PM',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Joel ","+919447359118"],
+            2: ["Ann", "+919744198622"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
+    {
+        id:20,
+        name:'Freelancing in Web Development',
+        discription:"Want to turn your web development skills into a thriving freelance career?\n\nWe’ve got the perfect opportunity for you!\n\nIEI CSE TKM is hosting an exclusive online talk session on Freelancing in Web Development with Amit P, Web Development Freelancer & Enthusiast. He will share his journey, practical tips, and strategies for success. 📈\n\n🗓 Date: 26th August 2024 \n⏰ Time: 7:00 PM  \n💻 Venue: Online",
+        img:'/assets/events/Freelancing in Web Development.jpeg',
+        link:'Freelancing-in-Web-Development',
+        isRegistrationOpen:false,
+        date:'Aug 26',
+        isTeamevent:false,
+        teammember:1,
+        isPaid:false,
+        enddate:'',
+        price:{
+            ieiMember:0,
+            nonieiMember:25
+        },
+        time:'7:00 PM - 8:00 PM',
+        venue:'Gmeet',
+        cordinator: {
+            1: ["Joel ","+919447359118"],
+            2: ["Ann", "+919744198622"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
+    {
         id:19,
         name:'🎨 Artifex: Where Creativity Meets Competition! 🖌️',
         discription:"Calling all artists and enthusiasts! Join us for Artifex, an exhilarating image generation competition hosted by IEI CSE TKMCE as part of Pyweek.\n\n 🤩Unleash your imagination and create captivating images based on themed prompts. Whether you're a seasoned artist or just starting, Artifex welcomes all skill levels!🔥\n🗓️ Date: March 28th\n 🕙 Time: 10:00 AM - 10:00 PM\n💰 Prizes Worth Rs. 250\n📝 Registration: Rs. 25\n🤩 Free for IEI Members📍 ",
