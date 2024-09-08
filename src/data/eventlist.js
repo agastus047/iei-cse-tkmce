@@ -1,8 +1,9 @@
 import { FlashAuto } from "@mui/icons-material";
 
 const eventlist=[
+   
     {
-        id:21,
+        id:23,
         name:'Freelancing in web3',
         discription:"Eager to explore the transformative power of cutting-edge technology?\n\nYour moment has arrived!\n\nIEI CSE TKMCE presents an exclusive Web3/Blockchain talk session with Jijo Johny, a Web3 blockchain expert who captivates audiences with his insights. Discover key concepts that will reshape your understanding of Web3 and Blockchain!\n\n📌 Date: 27 August 2024  \n📌 Time: 7:00 PM  \n📌 Mode: Online",
         img:'/assets/events/Freelancinginweb3.jpeg',
@@ -30,7 +31,7 @@ const eventlist=[
         referalId:true,
     },
     {
-        id:20,
+        id:22,
         name:'Freelancing in Web Development',
         discription:"Want to turn your web development skills into a thriving freelance career?\n\nWe’ve got the perfect opportunity for you!\n\nIEI CSE TKM is hosting an exclusive online talk session on Freelancing in Web Development with Amit P, Web Development Freelancer & Enthusiast. He will share his journey, practical tips, and strategies for success. 📈\n\n🗓 Date: 26th August 2024 \n⏰ Time: 7:00 PM  \n💻 Venue: Online",
         img:'/assets/events/Freelancing in Web Development.jpeg',
@@ -50,6 +51,62 @@ const eventlist=[
         cordinator: {
             1: ["Joel ","+919447359118"],
             2: ["Ann", "+919744198622"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
+    {
+        id:21,
+        name:'Quantum Computing Unleashed ',
+        discription:"Imagine computers that, enabled by the power of quantum physics and qubits, are able to solve problems at incredibly fast speeds.\n\n𝗛𝗲𝘀𝘁𝗶𝗮 ‘𝟮𝟰 welcomes you to delve into the world of quantum computing, where you’ll uncover the mysteries of superposition, entanglement, and quantum gates. Discover how this advanced technology is poised to transform industries like cybersecurity, healthcare, and finance at Quantum Computing Unleashed .\n\nDon’t miss this opportunity to explore the limitless potential of quantum computing. See you at the workshop!",
+        img:'/assets/events/QuantumComputing.jpg',
+        link:'Quantum-Computing-Unleashed',
+        isRegistrationOpen:false,
+        date:'5th May',
+        isTeamevent:false,
+        teammember:0,
+        isPaid:true,
+        enddate:'',
+        price:{
+            ieiMember:500,
+            nonieiMember:500
+        },
+        time:'10:00 am - 1:00 pm',
+        venue:'FOSS lab',
+        cordinator: {
+            1: ["Anagha","9526681782"],
+            2: ["Kripa", "9400197902"]
+        },
+        pref1:[
+            
+         ],
+         pref2:[],
+        referalId:true,
+    },
+    {
+        id:20,
+        name:'Capture The Flag',
+        discription:"Unravel the mysteries, conquer the challenges, and let your skills unfurl like never before!_\n\nPrepare for an exhilarating challenge where uncovering vulnerabilities, seizing opportunities, and emerging victorious are the ultimate goals! \n\nJoin us for Capture The Flag, an adrenaline-pumping cybersecurity competition presented by Hestia'24.\n\nForm your team of up to four members and gear up for a day filled with intense challenges. With a prize pool worth 7.5k, the stakes are high!\n\n_Gear up, strategize, and prepare to emerge victorious in the ultimate cybersecurity challenge!_",
+        img:'/assets/events/ctf.jpeg',
+        link:'Capture-The-Flag',
+        isRegistrationOpen:false,
+        date:'4th May',
+        isTeamevent:true,
+        teammember:4,
+        isPaid:true,
+        enddate:'',
+        price:{
+            ieiMember:300,
+            nonieiMember:300
+        },
+        time:'9:00 am - 4:00 pm',
+        venue:'Foss Lab',
+        cordinator: {
+            1: ["Bharath Vishnu ","9947269031"],
+            2: ["Saraswathy S P", "9446167669"]
         },
         pref1:[
             
