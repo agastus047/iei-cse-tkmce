@@ -129,7 +129,7 @@ export const execomlist23=[
     },
     {
         id:16,
-        name:'Nibal Iqbal',
+        name:'Nibal Iqbal ',
         img:'/assets/execommember/NIBAL IQBAL.jpg',
         position:'Documentation Team',
         linkedIn:'https://www.linkedin.com/in/nibal-iqbal-211084226/',
