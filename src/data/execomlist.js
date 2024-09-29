@@ -403,5 +403,4 @@ export const execomlist24 = [
 ];
 
 export const webteam24 =[
-
 ]
