@@ -28,7 +28,7 @@ export default function Footer() {
 
         <div className="text-2xl text-white font-bold font-clash tracking-wider mb-4">
 
-          IEI TKMCE
+          IEI CSE TKMCE
 
 
 
