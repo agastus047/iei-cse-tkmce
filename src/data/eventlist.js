@@ -1,35 +1,7 @@
 import { FlashAuto } from "@mui/icons-material";
 
 const eventlist=[
-    
-    {
-        id:23,
-        name:'Prep Talk',
-        discription:"Unlock Your Career Potential with Expert Guidance!\n\nDo you want to know what it takes to stand out and secure your dream job?\n\nJoin PrepTalk, a Placement Guidance Session organized by @iei.cse.tkm and @codingclub_tkmce . Learn pro tips to nail interviews, build a standout resume, and secure your dream job!\n\n🎯 Date: 21st September 2024\n⏰ Time: 7:00 PM\n📍 Platform: Google Meet\n📣 Speaker: Nithin Jose, Software Developer at IBM ISL\n\n✨ Elevate your Career game .Don’t miss out!\n\n🔗Register Now and Secure Your Spot!\nhttp://bit.ly/47Apuv6\n\nIn case of any queries contact\nCoordinators\n📞 Anu - 95626 07325\n📞 Jobin - 8590556326",
-        img:'/assets/events/preptalk.jpg',
-        link:'Prep-Talk',
-        isRegistrationOpen:false,
-        date:'Sept 21',
-        isTeamevent:false,
-        teammember:1,
-        isPaid:false,
-        enddate:'',
-        price:{
-            ieiMember:0,
-            nonieiMember:25
-        },
-        time:'7:00 PM - 8:00 PM',
-        venue:'Gmeet',
-        cordinator: {
-            1: ["Jobin","8590556326"],
-            2: ["Anu", "9562607325"]
-        },
-        pref1:[
-            
-         ],
-         pref2:[],
-        referalId:true,
-    },
+   
     {
         id:23,
         name:'Freelancing in web3',
